@@ -1,0 +1,786 @@
+* {
+    margin: 0; /* Elimina márgenes por defecto */
+    padding: 0; /* Elimina rellenos por defecto */
+    box-sizing: border-box; /* Incluye borde y relleno dentro del tamaño total */
+}
+
+body {
+    background-color: white; /* Establece el color de fondo del cuerpo */
+    margin: 0; /* Elimina márgenes por defecto */
+    padding: 0; /* Elimina rellenos por defecto */
+    width: 100%; /* Establece el ancho al 100% */
+    overflow-x: hidden; /* Evita que se muestre el desplazamiento horizontal */
+    display: flex; /* Usa flexbox para organizar los elementos */
+    flex-direction: column; /* Organiza los elementos de arriba hacia abajo */
+    min-height: 100vh; /* Asegura que el cuerpo tenga al menos el alto de la pantalla */
+}
+
+.textos {
+    font-size: 15px; /* Tamaño de fuente */
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; /* Tipografía */
+    margin-top: 5px; /* Márgenes en la parte superior */
+    text-align: center; /* Alineación de texto centrada */
+}
+
+.contenedor-principal {
+    flex: 1; /* Toma todo el espacio disponible */
+    display: flex; /* Usa flexbox para organizar los elementos */
+    flex-direction: column; /* Organiza los elementos de arriba hacia abajo */
+}
+
+.logo img {
+    width: 200px; /* Establece el tamaño del logo */
+    margin-left: 50px; /* Añade espacio a la izquierda del logo */
+}
+
+.cabecera {
+    display: flex; /* Usa flexbox para organizar los elementos */
+    justify-content: space-between; /* Distribuye los elementos a los extremos */
+    align-items: center; /* Alinea los elementos al centro verticalmente */
+    background-color: #000000; /* Fondo negro */
+    padding: 10px; /* Relleno en la cabecera */
+}
+
+.envio-gratis {
+    text-align: center; /* Alinea el texto al centro */
+    color: white; /* Color blanco para el texto */
+    font-size: 20px; /* Tamaño de fuente */
+}
+
+.busqueda {
+    display: flex; /* Usa flexbox para organizar los elementos */
+    align-items: center; /* Alinea los elementos al centro verticalmente */
+    font-size: 20px; /* Tamaño de fuente */
+}
+
+.busqueda input {
+    width: 400px; /* Establece el ancho del campo de búsqueda */
+    padding: 10px; /* Relleno dentro del campo */
+    border: 1px solid #ccc; /* Borde gris claro */
+    border-radius: 4px 0 0 4px; /* Bordes redondeados en la parte izquierda */
+}
+
+.busqueda button {
+    padding: 10px 15px; /* Relleno dentro del botón */
+    margin-left: 10px; /* Espacio a la izquierda del botón */
+    background-color: #8A9A5B; /* Color de fondo verde oliva */
+    color: white; /* Color blanco para el texto */
+    border: none; /* Sin borde */
+    border-radius: 4px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor cuando pasa sobre el botón */
+}
+
+.busqueda button:hover {
+    background-color: #7A8A4B; /* Cambia el color de fondo cuando pasa el mouse */
+}
+
+.acciones {
+    display: flex; /* Usa flexbox para organizar los elementos */
+    align-items: center; /* Alinea los elementos al centro verticalmente */
+}
+
+.enlace-cabecera, .enlace-footer {
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    color: white; /* Color blanco para el texto de los enlaces */
+}
+
+.acciones .enlace-cabecera {
+    margin-left: 15px; /* Añade espacio a la izquierda */
+    display: flex; /* Usa flexbox para organizar los elementos */
+    align-items: center; /* Alinea los elementos al centro verticalmente */
+}
+
+.acciones .enlace-cabecera i {
+    margin-right: 5px; /* Añade espacio a la derecha del icono */
+    font-size: 20px; /* Tamaño del icono */
+}
+
+.contador-carrito {
+    position: relative; /* Posiciona de manera relativa respecto a su contenedor */
+    top: -8px; /* Mueve hacia arriba */
+    left: -5px; /* Mueve hacia la izquierda */
+    background-color: red; /* Color de fondo rojo */
+    color: white; /* Color del texto blanco */
+    border-radius: 50%; /* Hace que el contador tenga forma circular */
+    padding: 5px 8px; /* Relleno dentro del contador */
+    font-size: 14px; /* Tamaño de fuente */
+    font-weight: bold; /* Fuente en negrita */
+}
+
+.contenido {
+    display: flex; /* Usa flexbox para organizar los elementos */
+    flex-direction: column; /* Organiza los elementos de arriba hacia abajo */
+}
+
+/* Estilos generales para el menú */
+.menu-navegacion {
+    background-color: #39da24a4; /* Color de fondo verde */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; /* Tipografía */
+    position: relative; /* Posición relativa */
+    z-index: 100; /* Asegura que el menú esté por encima de otros elementos */
+    margin-bottom: 20px; /* Añade espacio en la parte inferior */
+}
+
+.menu-navegacion ul {
+    list-style: none; /* Elimina los puntos de las listas */
+    margin: 0; /* Elimina márgenes */
+    padding: 0; /* Elimina rellenos */
+    display: flex; /* Usa flexbox para organizar los elementos */
+    justify-content: center; /* Alinea los elementos al centro */
+}
+
+.menu-navegacion a {
+    color: black; /* Color negro para los enlaces */
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    padding: 10px 20px; /* Relleno dentro de los enlaces */
+    display: block; /* Hace que el enlace sea un bloque */
+}
+
+.menu-navegacion a:hover {
+    color: white; /* Cambia el color del texto al pasar el mouse */
+}
+
+.menu-desplegable .submenu {
+    display: none; /* Oculta el submenú por defecto */
+    position: absolute; /* Posiciona el submenú de manera absoluta */
+    background-color: #39da24a4; /* Color de fondo verde */
+    top: 100%; /* Posiciona el submenú justo debajo del menú */
+    width: auto; /* Ancho automático */
+    max-height: auto; /* Altura automática */
+    opacity: 0; /* Hace el submenú invisible */
+    display: flex; /* Usa flexbox para organizar los elementos dentro del submenú */
+    flex-direction: column; /* Organiza los elementos de arriba hacia abajo */
+}
+
+.menu-desplegable .submenu li {
+    flex-basis: 30%; /* Establece el tamaño base de cada elemento */
+    text-align: center; /* Alinea el texto al centro */
+    padding: 10px; /* Relleno dentro de los elementos */
+}
+
+.menu-desplegable:hover .submenu {
+    display: flex; /* Muestra el submenú al pasar el mouse sobre el menú */
+    opacity: 1; /* Hace visible el submenú */
+}
+
+.carrusel-container {
+    position: relative; /* Posiciona de manera relativa el contenedor del carrusel */
+    width: 100vw; /* Establece el ancho al 100% de la vista */
+    height: 600px; /* Establece la altura del carrusel */
+    margin: 0; /* Elimina márgenes */
+    overflow: hidden; /* Elimina el desbordamiento de contenido fuera del contenedor */
+}
+
+.carrusel-images {
+    display: flex; /* Usa flexbox para organizar las imágenes en fila */
+    width: 100%; /* Establece el ancho de las imágenes al 100% del contenedor */
+    transition: transform 0.5s ease; /* Añade una transición suave al mover las imágenes */
+}
+
+.carrusel-images .imagen-carrusel {
+    width: 100vw; /* Ancho de cada imagen igual al ancho de la pantalla */
+    height: 600px; /* Altura de las imágenes */
+    object-fit: cover; /* Asegura que las imágenes cubran el área sin deformarse */
+}
+
+.botones-carrusel {
+    position: absolute; /* Posiciona los botones de manera absoluta */
+    top: 50%; /* Posiciona los botones en el centro vertical */
+    width: 100%; /* Ancho al 100% */
+    display: flex; /* Usa flexbox para organizar los botones */
+    justify-content: space-between; /* Distribuye los botones a los extremos */
+    transform: translateY(-50%); /* Centra verticalmente los botones */
+}
+
+.boton-prev, .boton-next {
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semi-transparente */
+    color: white; /* Texto blanco */
+    border: none; /* Sin borde */
+    font-size: 24px; /* Tamaño de los iconos */
+    padding: 30px; /* Relleno dentro de los botones */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+}
+
+.boton-prev:hover, .boton-next:hover {
+    background-color: rgba(0, 0, 0, 0.7); /* Cambia el fondo a un color oscuro cuando se pasa el mouse */
+}
+
+/* Fotos iniciales */
+.entrada {
+    display: grid; /* Utiliza grid para organizar las fotos */
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas con igual ancho */
+    gap: 20px; /* Espacio entre las columnas */
+    max-width: 100%; /* No supera el 100% del contenedor */
+    margin: 50px auto; /* Centrado con márgenes arriba y abajo */
+    padding: 0 20px; /* Padding lateral */
+}
+
+.entrada img {
+    width: 100%; /* Las imágenes ocupan todo el ancho del contenedor */
+    height: auto; /* Mantiene la relación de aspecto */
+    object-fit: cover; /* Asegura que las imágenes cubran el espacio sin deformarse */
+    border-radius: 8px; /* Bordes redondeados */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transiciones suaves para transformaciones */
+    cursor: pointer; /* Cambia el cursor a mano */
+    border: 2px solid green; /* Borde verde */
+}
+
+/* Estilos para los productos */
+.productos-container {
+    display: flex; /* Utiliza flexbox para la disposición */
+    justify-content: space-around; /* Espaciado uniforme entre productos */
+    margin-top: 40px; /* Margen superior */
+    gap: 20px; /* Espacio entre productos */
+    background-color: #f0f0f0; /* Fondo gris claro */
+    flex-wrap: wrap; /* Permite que los productos se acomoden en varias líneas si es necesario */
+    width: 100%; /* Ocupa todo el ancho disponible */
+    box-sizing: border-box; /* Incluye el padding y el borde en el ancho total */
+    text-align: center; /* Centra el texto */
+}
+
+/* Estilos para el título */
+.titulo-ofertas {
+    width: 100%; /* Ocupa todo el ancho */
+    text-align: center; /* Centrado del texto */
+    margin-bottom: 20px; /* Espacio debajo del título */
+    font-size: 30px; /* Tamaño de la fuente */
+    color: green; /* Color verde */
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; /* Fuente */
+    margin-top: 20px; /* Espacio arriba */
+}
+
+.producto {
+    border: 1px solid #37fe00; /* Borde verde brillante */
+    padding: 15px; /* Espaciado interno */
+    width: 250px; /* Ancho fijo */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    transition: transform 0.3s ease-in-out; /* Transición suave al pasar el mouse */
+    position: relative; /* Posicionamiento relativo */
+    background-color: white; /* Fondo blanco */
+    margin-top: 20px; /* Margen superior */
+    margin-bottom: 20px; /* Margen inferior */
+}
+
+.producto-img {
+    max-width: 100%; /* Limita el tamaño de la imagen */
+    height: auto; /* Mantiene la relación de aspecto */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+.producto-titulo {
+    font-size: 15px; /* Tamaño de la fuente */
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; /* Fuente */
+    margin-top: 10px; /* Espacio superior */
+    font-weight: bold; /* Negrita */
+}
+
+.texto-ofertas {
+    font-size: 15px; /* Tamaño de la fuente */
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; /* Fuente */
+    margin-top: 5px; /* Espacio superior */
+    text-align: center; /* Centrado del texto */
+}
+
+.producto-precio-tachado {
+    font-size: 15px; /* Tamaño de la fuente */
+    color: #ccc; /* Color gris */
+    text-decoration: line-through; /* Texto tachado */
+}
+
+.producto-precio {
+    font-size: 16px; /* Tamaño de la fuente */
+    color: red; /* Color rojo */
+    margin-top: 10px; /* Espacio superior */
+}
+
+.producto-oferta {
+    color: orange; /* Color naranja */
+    font-weight: bold; /* Negrita */
+    margin-top: 5px; /* Espacio superior */
+}
+
+/* Estilos generales del contador */
+.contador-tiempo {
+    margin-top: 15px; /* Margen superior */
+    background-color: #f4f4f4; /* Fondo gris claro */
+    border-radius: 8px; /* Bordes redondeados */
+    padding: 15px; /* Espaciado interno */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    text-align: center; /* Centrado del texto */
+    font-size: 1.2rem; /* Tamaño de la fuente */
+    color: #333; /* Color gris oscuro */
+    display: flex; /* Flexbox para alineación */
+    justify-content: space-between; /* Distribuye el espacio */
+    align-items: center; /* Alineación vertical */
+    gap: 2px; /* Espacio entre los elementos */
+    width: 100%; /* Ancho completo */
+    box-sizing: border-box; /* Incluye el padding y el borde en el ancho total */
+}
+
+/* Contenedor de cada unidad (Días, Horas, Minutos, Segundos) */
+.unidad-container {
+    display: flex; /* Flexbox para disposición en fila */
+    flex-direction: column; /* Disposición en columna */
+    align-items: center; /* Alineación centrada */
+}
+
+/* Estilos de las unidades (Días, Horas, Minutos, Segundos) */
+.unidad {
+    font-weight: bold; /* Negrita */
+    color: green; /* Color verde */
+    font-size: 20px; /* Tamaño de la fuente */
+    margin-bottom: 5px; /* Espacio inferior */
+}
+
+/* Estilos para los números del contador */
+.tiempo {
+    font-size: 20px; /* Tamaño de la fuente */
+    font-weight: bold; /* Negrita */
+    color: black; /* Color negro */
+}
+
+/* Clases para cambios de color cuando el tiempo es crítico */
+.contador .finalizado {
+    color: red; /* Color rojo cuando se ha finalizado */
+}
+
+/* Estilo para cambiar color cuando quedan menos de 10 minutos */
+.contador.cambio-color {
+    color: orange; /* Color naranja para tiempo crítico */
+}
+
+.btn-agregar {
+    background-color: #28a745; /* Color verde */
+    color: white; /* Texto blanco */
+    border: none; /* Sin borde */
+    padding: 10px; /* Espaciado interno */
+    margin-top: 15px; /* Margen superior */
+    cursor: pointer; /* Cursor de mano */
+    border-radius: 5px; /* Bordes redondeados */
+    width: 100%; /* Ocupa todo el ancho */
+}
+
+.btn-agregar:hover {
+    background-color: #218838; /* Color verde más oscuro al pasar el mouse */
+}
+
+/* Efecto hover en productos */
+.producto:hover {
+    transform: translateY(-5px); /* Eleva el producto */
+    border-color: green; /* Cambia el borde a verde */
+}
+
+.producto:hover .btn-agregar {
+    background-color: #218838; /* Cambia el color del botón al pasar el mouse */
+}
+
+.producto:hover .producto-titulo,
+.producto:hover .producto-precio {
+    color: green; /* Cambia el color del título y precio a verde */
+}
+
+/* Contenedor principal de la galería */
+.galeria {
+    display: grid; /* Utiliza grid */
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas de igual tamaño */
+    grid-template-rows: repeat(2, 1fr); /* Dos filas de igual altura */
+    gap: 20px; /* Espacio entre elementos */
+    max-width: 100%; /* Ancho máximo al 100% */
+    margin: 0 auto; /* Centrado horizontal */
+    margin-top: 50px; /* Margen superior */
+    margin-bottom: 50px; /* Margen inferior */
+}
+
+/* Estilo de las imágenes cuadradas */
+.galeria img {
+    width: 100%; /* Ocupa todo el ancho disponible en cada celda */
+    height: auto; /* Mantiene la proporción de la imagen */
+    max-height: 400px; /* Limita la altura máxima de la imagen */
+    object-fit: cover; /* Asegura que la imagen cubra el espacio sin deformarse */
+    border-radius: 8px; /* Bordes redondeados */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transiciones suaves */
+    cursor: pointer; /* Cambia el cursor a mano */
+    border: green 2px solid; /* Borde verde */
+}
+
+
+.galeria img:hover {
+    transform: scale(1.05); /* Aumenta el tamaño al pasar el mouse */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra en el hover */
+}
+
+/* Estilos para la sección de productos destacados */
+.productos-destacados-container {
+    background-color: #f0f0f0; /* Color de fondo gris claro */
+    padding: 20px; /* Espaciado interior */
+}
+
+/* Título de la sección de productos destacados */
+.titulo-destacados {
+    font-size: 30px; /* Tamaño de fuente */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; /* Tipo de letra */
+    margin-top: 10px; /* Margen superior */
+    font-weight: bold; /* Texto en negrita */
+    text-align: center; /* Centrado */
+    color: green; /* Color verde */
+}
+
+.productos-destacados {
+    display: grid; /* Usando grid para la distribución */
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas de tamaño igual */
+    gap: 20px; /* Espacio entre los elementos */
+    justify-items: center; /* Centra los elementos en sus celdas */
+}
+
+.producto-img {
+    width: 100%; /* La imagen ocupa todo el contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    border-radius: 8px; /* Bordes redondeados */
+}
+
+.producto-precio-destacado {
+    font-size: 16px; /* Tamaño del texto */
+    color: red; /* Color rojo */
+    font-weight: bold; /* Texto en negrita */
+}
+
+.producto-descripcion {
+    font-size: 16px; /* Tamaño del texto */
+    font-family: 'Times New Roman', Times, serif; /* Fuente de tipo serif */
+    text-align: center; /* Centrado */
+}
+
+/* Estilos para los cuadros de información */
+.cajon-informacion {
+    background-color: white; /* Fondo blanco */
+    padding: 15px; /* Espaciado interior */
+    text-align: justify; /* Alinea el texto a la izquierda y derecha */
+}
+
+.cajon-informacion h2, h3 {
+    text-align: center; /* Centra los títulos */
+}
+
+/* Lista alineada a la izquierda */
+.alinear-lista {
+    list-style-type: none; /* Elimina los puntos */
+    padding: 0; /* Elimina el padding */
+    margin: 0; /* Elimina el margen */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Tipo de letra */
+}
+
+.alinear-lista li {
+    margin-bottom: 10px; /* Espacio entre los elementos de la lista */
+}
+
+/* Estilos para la sección de suscripción */
+.cajon-suscribirse {
+    background-color: #1ed11eb7; /* Color de fondo verde claro */
+    padding: 15px; /* Espaciado interior */
+    margin-bottom: 20px; /* Margen inferior */
+    margin-top: 20px; /* Margen superior */
+    text-align: center; /* Centrado */
+}
+
+/* Estilos del popup */
+.popup {
+    display: none; /* Inicialmente oculto */
+    position: fixed; /* Posición fija */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(124, 255, 127, 0.712); /* Fondo semitransparente */
+    justify-content: center; /* Centrado de contenido */
+    align-items: center; /* Alineación vertical */
+}
+
+.popup-contenido {
+    background-color: white; /* Fondo blanco */
+    padding: 30px; /* Espaciado interior */
+    border-radius: 5px; /* Bordes redondeados */
+    box-shadow: 0 0 10px rgba(75, 197, 41, 0.742); /* Sombra verde */
+    width: 100%;
+    max-width: 400px; /* Ancho máximo */
+    text-align: center; /* Centrado de texto */
+}
+
+.cerrar {
+    cursor: pointer; /* Hace que sea clickeable */
+    color: #aaa; /* Color gris */
+    float: right; /* Lo alinea a la derecha */
+    font-size: 20px; /* Tamaño de la letra */
+}
+
+.cerrar:hover {
+    color: rgba(58, 173, 56, 0.759); /* Color verde al pasar el ratón */
+}
+
+/* Estilos para la sección de opiniones */
+.opiniones {
+    padding: 15px; /* Espaciado interior */
+    background-color: #f0f0f0cc; /* Fondo gris claro */
+    margin-top: 20px; /* Margen superior */
+    margin-bottom: 20px; /* Margen inferior */
+}
+
+/* Estilos para los títulos */
+.titulo-opiniones,
+.titulo-mision,
+.titulo-bienvenida,
+.titulo-productos {
+    font-size: 25px; /* Tamaño de fuente */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; /* Tipo de letra */
+    margin-top: 5px; /* Margen superior */
+    font-weight: bold; /* Texto en negrita */
+    text-align: center; /* Centrado */
+    color: green; /* Color verde */
+}
+
+.titulo-novedades {
+    font-size: 30px; /* Tamaño de fuente */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; /* Tipo de letra */
+    margin-top: 20px; /* Margen superior */
+    font-weight: bold; /* Texto en negrita */
+    text-align: center; /* Centrado */
+    color: green; /* Color verde */
+}
+
+.titulo-suscribirse {
+    color: black; /* Color negro */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; /* Tipo de letra */
+    text-align: center; /* Centrado */
+    font-weight: bold; /* Texto en negrita */
+}
+
+/* Estilos para el contenedor de opiniones */
+.contenedor-opiniones {
+    display: flex; /* Usar flexbox */
+    justify-content: space-between; /* Espacio entre los elementos */
+    flex-wrap: wrap; /* Permitir que los elementos se ajusten */
+}
+
+.opinion {
+    background-color: white; /* Fondo blanco */
+    padding: 10px; /* Espaciado interior */
+    border-radius: 5px; /* Bordes redondeados */
+    border: green 2px solid; /* Borde verde */
+    margin: 10px; /* Margen entre opiniones */
+    width: 18%; /* Ancho de cada opinión */
+    text-align: center; /* Centrado del contenido */
+}
+
+/* Estilos para las estrellas */
+.estrellas {
+    display: flex; /* Usar flexbox */
+    cursor: pointer; /* Clickeable */
+    justify-content: center; /* Centrado de las estrellas */
+}
+
+.estrellas .estrella {
+    font-size: 24px; /* Tamaño de la estrella */
+    color: gray; /* Color gris */
+    cursor: pointer; /* Clickeable */
+}
+
+.estrellas .estrella.active {
+    color: gold; /* Color dorado cuando está activa */
+}
+
+.estrella-titulo {
+    color: gold; /* Título en color dorado */
+}
+
+/* Estilos para el pie de página */
+.pie {
+    display: flex; /* Usar flexbox */
+    justify-content: space-between; /* Espacio entre los elementos */
+    background-color: black; /* Fondo negro */
+    color: white; /* Texto blanco */
+    padding: 20px; /* Espaciado interior */
+}
+
+.pie div {
+    width: 23%; /* Ancho de cada columna en el pie */
+}
+
+/* Línea horizontal */
+hr {
+    border: none; /* Sin borde */
+    height: 2px; /* Altura de la línea */
+    background-color: white; /* Color de la línea */
+    margin-top: 5px; /* Margen superior */
+    margin-bottom: 5px; /* Margen inferior */
+}
+
+/* Estilos para los contenedores de información */
+.informacion-adicional,
+.informacion,
+.redes-sociales,
+.sobre-nosotros {
+    text-align: center; /* Centrado de texto */
+}
+
+/* Estilos para los iconos del pie de página */
+.icono-footer {
+    width: 40px; /* Tamaño de los iconos */
+    height: 40px; /* Mantener la proporción */
+    margin-bottom: 5px; /* Espacio debajo de los iconos */
+}
+
+/* Estilos para las imágenes de las ofertas */
+.imagen-oferta {
+    width: 90%; /* Ancho de la imagen */
+    max-width: 1200px; /* Ancho máximo */
+    height: auto; /* Mantener la proporción */
+    display: block; /* Elimina el espacio debajo de la imagen */
+    margin: 0 auto; /* Centrado horizontal */
+    border: 3px solid #ccc; /* Borde gris claro */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    margin-bottom: 20px; /* Margen inferior */
+}
+
+/* Estilos para las imágenes dentro de la oferta */
+.imagen-oferta img {
+    width: 100%; /* Imagen ocupa todo el contenedor */
+    height: auto; /* Mantener la proporción de la imagen */
+    object-fit: cover; /* Ajustar la imagen al contenedor */
+}
+
+
+/* Media Query para pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+    .logo img {
+        width: 150px; /* Ajusta el tamaño del logo en móviles */
+        margin-left: 20px; /* Reduce el margen izquierdo */
+    }
+
+    .cabecera {
+        flex-direction: column; /* Alinea los elementos en columna */
+        padding: 20px 10px; /* Ajusta el padding */
+    }
+
+    .envio-gratis {
+        font-size: 16px; /* Reduce el tamaño del texto */
+    }
+
+    .busqueda input {
+        width: 80%; /* Ajusta el ancho de la búsqueda */
+    }
+
+    .busqueda button {
+        padding: 8px 12px; /* Reduce el tamaño del botón */
+    }
+
+    .acciones {
+        justify-content: space-between; /* Alinea los elementos de forma horizontal */
+    }
+
+    .productos-container {
+        flex-direction: column; /* Organiza los productos en columna */
+        align-items: center; /* Centra los productos */
+        gap: 10px; /* Reduce el espacio entre productos */
+    }
+
+    .producto {
+        width: 100%; /* Hace que los productos ocupen todo el ancho */
+        margin: 10px 0; /* Ajusta el margen */
+    }
+
+    .producto-precio {
+        font-size: 14px; /* Ajusta el tamaño de la fuente del precio */
+    }
+
+    .carrusel-container {
+        height: 400px; /* Reduce la altura del carrusel */
+    }
+
+    .carrusel-images .imagen-carrusel {
+        height: 400px; /* Ajusta la altura de las imágenes del carrusel */
+    }
+
+    .galeria {
+        grid-template-columns: repeat(2, 1fr); /* Reduce el número de columnas a 2 */
+    }
+
+    .menu-navegacion ul {
+        flex-direction: column; /* Muestra el menú en columna */
+        gap: 10px; /* Espacio entre los elementos del menú */
+    }
+
+    .productos-destacados {
+        grid-template-columns: repeat(2, 1fr); /* Ajusta el número de columnas a 2 */
+    }
+
+    .producto-img {
+        max-height: 200px; /* Limita la altura de la imagen */
+    }
+
+    .titulo-ofertas {
+        font-size: 24px; /* Ajusta el tamaño del título */
+    }
+
+    .contador-tiempo {
+        flex-direction: column; /* Organiza los elementos del contador en columna */
+        gap: 10px; /* Añade espacio entre los elementos */
+    }
+
+    .popup-contenido {
+        width: 90%; /* Hace que el popup ocupe más espacio en pantallas pequeñas */
+    }
+
+    .cajon-informacion {
+        padding: 10px; /* Reduce el padding en pantallas pequeñas */
+    }
+    .opinion {
+        width: 100%; /* En pantallas pequeñas, cada opinión ocupa el 100% del ancho */
+        margin-bottom: 20px; /* Espacio entre opiniones cuando se apilan */
+      }
+}
+
+/* Media Query para pantallas muy pequeñas (móviles muy pequeños) */
+@media (max-width: 480px) {
+    .logo img {
+        width: 120px; /* Ajusta aún más el tamaño del logo */
+    }
+
+    .cabecera {
+        padding: 10px 5px; /* Reduce aún más el padding */
+    }
+
+    .busqueda input {
+        width: 70%; /* Ajusta aún más el ancho de la búsqueda */
+    }
+
+    .busqueda button {
+        padding: 6px 10px; /* Reduce aún más el tamaño del botón */
+    }
+
+    .titulo-ofertas {
+        font-size: 20px; /* Ajusta el tamaño del título */
+    }
+
+    .productos-destacados {
+        grid-template-columns: 1fr; /* Muestra los productos destacados en una sola columna */
+    }
+
+    .galeria {
+        grid-template-columns: 1fr; /* Muestra las imágenes de la galería en una sola columna */
+    }
+
+    .producto {
+        width: 90%; /* Ajusta el tamaño de los productos */
+    }
+
+    .producto-precio {
+        font-size: 14px; /* Reduce el tamaño del precio */
+    }
+    .opinion {
+        width: 100%; /* En pantallas pequeñas, cada opinión ocupa el 100% del ancho */
+        margin-bottom: 20px; /* Espacio entre opiniones cuando se apilan */
+      }
+}
+
+

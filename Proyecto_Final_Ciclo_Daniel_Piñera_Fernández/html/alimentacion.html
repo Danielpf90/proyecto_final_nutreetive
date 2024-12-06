@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="../img/logo.ico">
+    <link rel="stylesheet" href="../css/estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Nutreetive- Alimentacion</title>
+</head>
+<body>
+    <!-- Contenedor principal -->
+    <div class="contenedor-principal">
+        <!-- Cabecera -->
+        <header class="cabecera">
+            <div class="logo">
+                <a href="../html/index.html"><img src="../img/logo.png" alt="Logo"></a>
+            </div>
+            <div class="envio-gratis">¡Envío gratis a partir de 50€!</div>
+            <div class="busqueda">
+                <input type="text" placeholder="Buscar producto..." id="producto">
+                <button onclick="buscarProducto()">Buscar</button>
+            </div>
+            <div class="acciones">
+                <a href="../html/login.html" class="enlace-cabecera"><i class="fas fa-user"></i>Iniciar Sesión</a>
+                <a href="../html/registrarse.html" class="enlace-cabecera"><i class="fas fa-user-plus"></i>Crear cuenta</a>
+                <a href="../html/carrito.html" class="enlace-cabecera"><i class="fas fa-shopping-cart"></i></a>
+                <span id="precioTotal" class="contador-carrito">0 €</span>
+            </div>
+        </header>
+        <!-- Menú de navegación -->
+        <nav class="menu-navegacion">
+            <ul>
+              <li class="menu-desplegable">
+                <a href="#">PRODUCTOS</a>
+                <ul class="submenu">
+                  <li><a href="../html/alimentacion.html">ALIMENTACIÓN</a></li>
+                  <li><a href="../html/complementos.html">NUTRICIÓN DEPORTIVA</a></li>
+                  <li><a href="../html/depurativos.html">HERBOLARIO</a></li>
+                  <li><a href="../html/cabello.html">HIGIENE</a></li>
+                  <li><a href="../html/energeticos.html">ENERGÉTICOS</a></li>
+                </ul>
+              </li>
+              <li><a href="../html/ofertas.html">OFERTAS</a></li>
+              <li><a href="../html/sobre-nosotros.html">SOBRE NOSOTROS</a></li>
+              <li><a href="../html/blog.html">BLOG</a></li>
+              <li><a href="../html/contacto.html">CONTACTO</a></li>
+            </ul>
+          </nav>
+          <!--Imagenes entrada -->
+          <div class="imagen-oferta">
+            <a href="../html/alimentacion.html"><img src="../img/alimentacion.jpg" alt="alimentacion"></a>
+        </div>        
+    <!-- Sección de productos -->
+    <section class="productos-destacados-container">
+        <h2 class="titulo-destacados"><i class="fas fa-lemon" style="color: yellow;"></i></i> ALIMENTACIÓN</h2><br>
+        <p class="producto-descripcion">Descubre cómo nuestros productos de alimentación de alta calidad pueden transformar tu bienestar. Con ingredientes naturales y cuidadosamente seleccionados, cada producto está diseñado para ofrecerte energía, vitalidad y equilibrio. </p>
+    <div class="productos-destacados">
+        <!-- Producto 1 -->
+        <div class="producto">
+            <a href="../productos/arroz-blanco.html"><img src="../img/arroz-basmati.jpg" alt="Arroz" class="producto-img"></a>
+            <h3 class="producto-titulo">ARROZ BLANCO BASMATI BIO</h3><br>
+            <p class="producto-descripcion">Arroz blanco basmati con una textura más suelta y tersa y un sabor muy ligero, seco y perfumado. Con un grano largo.</p><br>
+            <span class="producto-precio-destacado">6.05 €</span><br>
+            <button class="btn-agregar" onclick="agregarAlCarrito(6.05, 'ARROZ BLANCO BASMATI BIO', '../img/arroz-basmati.jpg')">AÑADIR</button>
+        </div>
+        <!-- Producto 2 -->
+        <div class="producto">
+            <a href="../productos/copo-avena.html"><img src="../img/copos-avena.jpg" alt="copo avena" class="producto-img"></a>
+            <h3 class="producto-titulo">COPOS DE AVENA FINOS INTEGRALES SUAVES BIO</h3><br>
+            <p class="producto-descripcion">Los copos de avena de agricultura ecológica son un cereal muy completo y equilibrado. <br>Junto a los carbohidratos y la fibra, aporta más proteína, grasa y minerales que otros cereales.</p><br>
+            <span class="producto-precio-destacado">3.15 €</span><br>
+            <button class="btn-agregar" onclick="agregarAlCarrito(3.15, 'COPOS DE AVENA FINOS INTEGRALES SUAVES BIO', '../img/copos-avena.jpg')">AÑADIR</button>
+        </div>
+        <!-- Producto 3 -->
+        <div class="producto">
+            <a href="../productos/evogumy.html"><img src="../img/evogumy.jpg" alt="evogumi" class="producto-img"></a>
+            <h3 class="producto-titulo">EVOGUMMY RECOVERY GUMMY BAR</h3><br>
+            <p class="producto-descripcion">Barritas energéticas a base de pasta de manzana. <br>Con L-glutamina y L-carnitina L-tartrato. 30 gramos. Fácil de transportar. Apertura cómoda.</p><br>
+            <span class="producto-precio-destacado">1.23 €</span><br>
+            <button class="btn-agregar" onclick="agregarAlCarrito(1.23, 'EVOGUMMY RECOVERY GUMMY BAR', '../img/evogumy.jpg')">AÑADIR</button>
+        </div>
+        <!-- Producto 4 -->
+        <div class="producto">
+            <a href="../productos/mantequilla.html"><img src="../img/mantequilla.jpg" alt="mantequilla" class="producto-img"></a>
+            <h3 class="producto-titulo">GHEE MANTEQUILLA CLARIFICADA BIO</h3><br>
+            <p class="producto-descripcion">El ghee mantequilla clarificada se obtiene a partir de la mantequilla de leche de vaca, constituye la parte oleosa de la mantequilla. <br>Es ideal para la dieta cetogénica puesto que contiene un 98% en grasas.</p><br>
+            <span class="producto-precio-destacado">15.25 €</span><br>
+            <button class="btn-agregar" onclick="agregarAlCarrito(15.5, 'GHEE MANTEQUILLA CLARIFICADA BIO', '../img/mantequilla.jpg')">AÑADIR</button>
+        </div>
+        <!-- Producto 5 -->
+        <div class="producto">
+            <a href="../productos/lentejas.html"><img src="../img/lentejas.jpg" alt="lentejas" class="producto-img"></a>
+            <h3 class="producto-titulo">LENTEJAS ROJAS BIO</h3><br>
+            <p class="producto-descripcion">La lenteja roja no tiene piel, por lo que su digestión es más sencilla. <br>Debido a su alto contenido en fibra son beneficiosas para la memoria, facilitan el tránsito intestinal y destacan por su alto contenido en ácido fólico.</p><br>
+            <span class="producto-precio-destacado">2.55 €</span><br>
+            <button class="btn-agregar" onclick="agregarAlCarrito(2.55, 'LENTEJAS ROJAS BIO', '../img/lentejas.jpg')">AÑADIR</button>
+        </div>
+        <!-- Producto 6 -->
+        <div class="producto">
+            <a href="../productos/salsa-soja.html"><img src="../img/salsa-soja.jpg" alt="salsa soja" class="producto-img"></a>
+            <h3 class="producto-titulo">SALSA DE SOJA TAMARI SIN GLUTEN BIO</h3><br>
+            <p class="producto-descripcion">La Salsa de Soja Tamari sin gluten Bio de Naturitas es una salsa elaborada con semillas de soja de cultivo ecológico pasteurizada. <br>Esta salsa a diferencia de la salsa shoyu, no lleva trigo (ni gluten) y su sabor es bastante más intenso.</p><br>
+            <span class="producto-precio-destacado">3.69 €</span><br>
+            <button class="btn-agregar" onclick="agregarAlCarrito(3.69, 'SALSA DE SOJA TAMARI SIN GLUTEN BIO', '../img/salsa-soja.jpg')">AÑADIR</button>
+        </div>
+        <!-- Producto 7 -->
+        <div class="producto">
+            <a href="../productos/evocakes.html"><img src="../img/evocakes.jpg" alt="evocakes" class="producto-img"></a>
+            <h3 class="producto-titulo">EVOCAKES 2.0 (TORTITAS PROTEICAS)</h3><br>
+            <p class="producto-descripcion">Tortitas proteicas. Bajas en azúcar. Prepara un delicioso y rápido desayuno o merienda. <br>Con Harina de Avena y Huevos de Gallinas no enjauladas. Apta para vegetarianos.</p><br>
+            <span class="producto-precio-destacado">14.25 €</span><br>
+            <button class="btn-agregar" onclick="agregarAlCarrito(14.25, 'EVOCAKES 2.0 TORTITAS PROTEICAS', '../img/producto7.jpg')">AÑADIR</button>
+        </div>
+        <!-- Producto 8 -->
+        <div class="producto">
+            <a href="../productos/nutry-bowl.html"><img src="../img/producto8.jpg" alt="nutribowl" class="producto-img"></a>
+            <h3 class="producto-titulo">NUTRY BOWL</h3><br>
+            <p class="producto-descripcion">Recetas preparadas para añadir agua caliente y disfrutar. <br>Plato deshidratado listo para consumir en el propio bowl</p><br>
+            <span class="producto-precio-destacado">1.99 €</span><br>
+            <button class="btn-agregar" onclick="agregarAlCarrito(1.99, 'NUTRY BOWL', '../img/producto8.jpg')">AÑADIR</button>
+        </div>
+         <!-- Producto 9 -->
+         <div class="producto">
+            <a href="../productos/harina-coco.html"><img src="../img/coco-esentials.png" alt="harina coco" class="producto-img"></a>
+            <h3 class="producto-titulo">HARINA DE COCO</h3><br>
+            <p class="producto-descripcion">Harina de coco natural. <br>Extrafina y Fácil de integrar. <br>Sin azúcares añadidos. <br>Gusto neutro.</p><br>
+            <span class="producto-precio-destacado">3.25 €</span><br>
+            <button class="btn-agregar" onclick="agregarAlCarrito(3.25, 'HARINA DE COCO', '../img/coco-esentials.png')">AÑADIR</button>
+        </div>         <!-- Producto 10 -->
+         <div class="producto">
+            <a href="../productos/aceite-sesamo.html"><img src="../img/aceite.jpg" alt="aceite sesamo" class="producto-img"></a>
+            <h3 class="producto-titulo">ACEITE DE SÉSAMO BIO</h3><br>
+            <p class="producto-descripcion">El Aceite de Sésamo Bio de Naturitas a base de sésamo de cultivo ecológico y sin conservantes.</p><br>
+            <span class="producto-precio-destacado">9.15 €</span><br>
+            <button class="btn-agregar" onclick="agregarAlCarrito(9.15, 'ACEITE DE SÉSAMO BIO', '../img/aceite.jpg')">AÑADIR</button>
+        </div>
+         <!-- Producto 11 -->
+         <div class="producto">
+            <a href="../productos/pan.html"><img src="../img/pan.jpg" alt="pan proteico" class="producto-img"></a>
+            <h3 class="producto-titulo">PAN PROTEICO</h3><br>
+            <p class="producto-descripcion">El pan proteico de naturitas es el pan ideal para dietas bajas en carbohidratos, ya que solo contiene un 3%. <br>Es la forma saludable de comer pan sin la carga glucémica que aportan la mayoría de panes del mercado.</p><br>
+            <span class="producto-precio-destacado">4.99 €</span><br>
+            <button class="btn-agregar" onclick="agregarAlCarrito(4.99, 'PAN PROTEICO', '../img/pan.jpg')">AÑADIR</button>
+        </div>
+         <!-- Producto 12 -->
+         <div class="producto">
+            <a href="../productos/salsa-queso.html"><img src="../img/cheddar.jpg" alt="Producto 3" class="producto-img"></a>
+            <h3 class="producto-titulo">SALSA DE QUESO CHEDDAR</h3><br>
+            <p class="producto-descripcion">Deliciosa salsa de Cheddar elaborada con auténtico queso</p><br>
+            <span class="producto-precio">2.45 €</span><br><br>
+            <button class="btn-agregar" onclick="agregarAlCarrito(2.45, 'SALSA DE QUESO CHEDDAR', '../img/cheddar.jpg')">AÑADIR</button>
+        </div>
+    </div>
+</section>
+<!-- Sección de Alimentación Saludable -->
+<div class="cajon-informacion">
+    <h2 class="titulo-bienvenida">ALIMENTACIÓN SALUDABLE: NUTRE TU CUERPO CON PRODUCTOS NATURALES</h2><br>
+    <p class="textos">En nuestra sección de Alimentación Saludable, te ofrecemos una cuidada selección de productos naturales y orgánicos que nutren tu cuerpo de manera equilibrada. <br> Desde superalimentos ricos en nutrientes hasta snacks saludables, aquí encuentras opciones que complementan tu dieta y mejoran tu bienestar diario.</p>
+    <p class="textos">Disfruta de ingredientes sin aditivos ni conservantes, ideales para mantener una alimentación consciente. Además, contamos con una variedad de productos aptos para vegetarianos, veganos y personas con intolerancias alimentarias, porque creemos que el cuidado de la salud comienza con una alimentación adaptada a cada necesidad.</p>   
+    <p class="textos">Incluye en tu cesta alimentos que aportan energía, fortalecen tu sistema inmune y te ayudan a mantener una vida saludable.</p>
+</div>
+
+ <!-- Sección de Opiniones de Usuarios -->
+<div class="opiniones">
+    <h2 class="titulo-opiniones">OPINIONES DE USUARIOS</h2><br>
+    <div class="contenedor-opiniones">
+        <div class="opinion">
+            <h2>MARÍA</h2><br>
+            <p class="textos">Desde que comencé a usar las almohadas viscoelásticas de esta tienda, mi descanso ha mejorado muchísimo. <br> Me despertaba con dolor de cuello, pero ahora me siento mucho más cómoda y relajada por las mañanas. <br> La calidad es excelente, y se nota que están hechas con materiales de primera. ¡Las recomiendo sin dudar!</p>
+            <div class="estrellas" data-valor="5">
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+            </div>
+        </div>
+        <div class="opinion">
+            <h2>ANDRÉS</h2><br>
+            <p class="textos">Soy muy exigente con la calidad de los productos que uso para dormir, y esta tienda me ha sorprendido. <br> Compré una funda personalizada y una almohada ergonómica, y ambos productos han superado mis expectativas. <br> El servicio al cliente también es excelente, muy atentos y profesionales. ¡Seguiré comprando aquí!</p>
+            <div class="estrellas" data-valor="4">
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9734;</span>
+            </div>
+        </div>
+        <div class="opinion">
+            <h2>ELENA</h2><br>
+            <p class="textos">Compré una almohada para mejorar mi postura y no podría estar más satisfecha. <br> La calidad del sueño es impresionante; me ayuda a relajarme y a evitar dolores en la espalda. <br> Lo que más me gustó es que es un producto sostenible, algo que valoro mucho. ¡Totalmente recomendada!</p>
+            <div class="estrellas" data-valor="5">
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+            </div>
+        </div>
+        <div class="opinion">
+            <h2>FERNANDO</h2><br>
+            <p class="textos">Desde que probé los productos de esta tienda, mi descanso ha mejorado notablemente. <br> Compré una almohada ergonómica para el cuello y es una maravilla, ¡duermo como nunca! <br> La tienda es confiable, y el proceso de compra es fácil y rápido. Estoy muy satisfecho.</p>
+            <div class="estrellas" data-valor="4">
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9734;</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Pie de página -->
+<footer class="pie">
+    <div class="informacion-adicional">
+        <h4>NUTREETIVE</h4>
+        <hr>
+        <br>
+        <p class="textos">Fray Paulino s/n 33600 Mieres</p><br>
+        <p class="textos">Email: Nutreetive@gmail.com</p><br>
+        <p class="textos">Teléfono: 612 34 56 78.</p><br>
+    </div>
+    <div class="informacion">
+        <h4>CONTACTO</h4>
+        <hr>
+        <a href="../html/aviso-legal.html" class="enlace-footer"><p class="textos">Aviso legal</p></a><br>
+        <a href="../html/politica-privacidad.html" class="enlace-footer"><p class="textos">Política de privacidad</p></a><br>
+        <a href="../html/politica-cookies.html" class="enlace-footer"><p class="textos">Política de cookies</p></a><br>
+        <a href="../html/envios.html" class="enlace-footer"><p class="textos">Envíos</p></a><br>
+        <a href="../html/devoluciones-reembolsos.html" class="enlace-footer"><p class="textos">Devoluciones y reembolsos</p></a><br>
+    </div>
+    <div class="redes-sociales">
+        <h4>REDES SOCIALES</h4>
+        <hr><br>
+        <a href="https://www.facebook.com/" class="enlace-footer"><img src="../img/facebook.png" alt="facebook" class="icono-footer"></a>
+        <a href="https://www.instagram.com/?hl=es" class="enlace-footer"><img src="../img/instagram.jpg" alt="instagram" class="icono-footer"></a>
+        <a href="https://x.com/?lang=es" class="enlace-footer"><img src="../img/twitter.png" alt="twitter" class="icono-footer"></a>
+    </div>
+    <div class="sobre-nosotros">
+        <h4>SOBRE NOSOTROS</h4>
+        <hr>
+        <a href="../html/blog.html" class="enlace-footer"><p class="textos">Blog</p></a><br>
+        <a href="../html/contacto.html" class="enlace-footer"><p class="textos">Contacte con nosotros</p></a><br>
+        <a href="../html/eleccion.html" class="enlace-footer"><p class="textos">Herbolario - ¿Por qué elegirnos?</p></a><br>
+        <a href="../html/sobre-nosotros.html" class="enlace-footer"><p class="textos">Sobre nosotros - Herbolario Online</p></a>
+    </div>
+</footer>
+</div>
+    
+</body>
+<script src="../js/index.js"></script>
+<script src="../js/buscador.js"></script>
+<script src="../js/estrellas.js"></script>
+</html>

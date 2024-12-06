@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="shortcut icon" type="image/x-icon" href="../img/logo.ico">
+    <link rel="stylesheet" href="../css/productos-paginas.css">
+    <title>Nutreetive: Envios</title>
+</head>
+<body>
+    <!-- Contenedor principal -->
+    <div class="contenedor-principal">
+        <!-- Cabecera -->
+        <header class="cabecera">
+            <div class="logo">
+                <a href="../html/index.html"><img src="../img/logo.png" alt="Logo"></a>
+            </div>
+            <div class="envio-gratis">¡Envío gratis a partir de 50€!</div>
+            <div class="busqueda">
+                <input type="text" placeholder="Buscar producto..." id="producto">
+                <button onclick="buscarProducto()">Buscar</button>
+            </div>
+            <div class="acciones">
+                <a href="../html/login.html" class="enlace-cabecera"><i class="fas fa-user"></i>Iniciar Sesión</a>
+                <a href="../html/registrarse.html" class="enlace-cabecera"><i class="fas fa-user-plus"></i>Crear cuenta</a>
+                <a href="../html/carrito.html" class="enlace-cabecera"><i class="fas fa-shopping-cart"></i></a>
+                <span id="precioTotal" class="contador-carrito">0 €</span>
+            </div>
+        </header>
+         <!-- Menú de navegación -->
+         <nav class="menu-navegacion">
+            <ul>
+              <li class="menu-desplegable">
+                <a href="#">PRODUCTOS</a>
+                <ul class="submenu">
+                  <li><a href="../html/alimentacion.html">ALIMENTACIÓN</a></li>
+                  <li><a href="../html/complementos.html">NUTRICIÓN DEPORTIVA</a></li>
+                  <li><a href="../html/depurativos.html">HERBOLARIO</a></li>
+                  <li><a href="../html/cabello.html">HIGIENE</a></li>
+                  <li><a href="../html/energeticos.html">ENERGÉTICOS</a></li>
+                </ul>
+              </li>
+              <li><a href="../html/ofertas.html">OFERTAS</a></li>
+              <li><a href="../html/sobre-nosotros.html">SOBRE NOSOTROS</a></li>
+              <li><a href="../html/blog.html">BLOG</a></li>
+              <li><a href="../html/contacto.html">CONTACTO</a></li>
+            </ul>
+          </nav>
+ <!-- Sección Política de Envíos -->
+<section class="infor-nosotros">
+  <h2>Política de Envíos</h2>
+
+  <p>En <strong>Nutreetive</strong>, nos comprometemos a ofrecerte el mejor servicio de entrega para que recibas tus productos de manera rápida y segura. A continuación, te detallamos nuestra política de envíos, para que sepas qué esperar al realizar tu compra con nosotros.</p>
+
+  <p><strong>1. Ámbito de los envíos</strong></p>
+  <p>Realizamos envíos a nivel nacional e internacional. Dependiendo de la ubicación de entrega, los plazos de envío pueden variar. Asegúrate de ingresar la dirección correcta para evitar posibles retrasos o problemas con la entrega.</p>
+
+  <p><strong>2. Tipos de envío</strong></p>
+  <p>Ofrecemos diferentes métodos de envío según tu ubicación y las opciones disponibles. Algunas de nuestras opciones incluyen:</p>
+  <ul>
+    <li><strong>Envío estándar:</strong> Un servicio de entrega económico con un tiempo estimado de entrega de entre 3 a 7 días laborables para envíos nacionales. Los tiempos pueden variar para destinos internacionales.</li>
+    <li><strong>Envío exprés:</strong> Entrega más rápida, con tiempos de entre 1 a 3 días laborables para envíos dentro del país. Para envíos internacionales, el tiempo de entrega puede variar dependiendo del destino.</li>
+    <li><strong>Recogida en tienda:</strong> Si te encuentras cerca de nuestra ubicación, puedes optar por recoger tu pedido en nuestra tienda física, sin coste adicional.</li>
+  </ul>
+
+  <p><strong>3. Costos de envío</strong></p>
+  <p>Los costos de envío se calculan en función del peso del pedido, el destino y el método de envío seleccionado. Durante el proceso de compra, podrás ver el costo de envío exacto antes de finalizar tu pedido. Además, ofrecemos envíos gratuitos en compras superiores a un monto específico, que será visible en la página de pago.</p>
+
+  <p><strong>4. Plazos de envío</strong></p>
+  <p>El plazo de envío depende de la opción seleccionada y la ubicación de entrega. A continuación, te mostramos un estimado de los plazos de entrega para cada método de envío:</p>
+  <ul>
+    <li><strong>Envío estándar:</strong> 3-7 días laborables para pedidos nacionales.</li>
+    <li><strong>Envío exprés:</strong> 1-3 días laborables para pedidos nacionales.</li>
+    <li><strong>Envíos internacionales:</strong> Entre 7-14 días laborables, dependiendo del destino y las condiciones del transportista.</li>
+  </ul>
+
+  <p><strong>5. Seguimiento del pedido</strong></p>
+  <p>Una vez que tu pedido sea enviado, recibirás un correo electrónico con un número de seguimiento y el enlace para rastrear tu envío. Podrás verificar el estado de tu pedido en cualquier momento durante el proceso de entrega.</p>
+
+  <p><strong>6. Retrasos en el envío</strong></p>
+  <p>Aunque trabajamos con los mejores transportistas, a veces pueden ocurrir retrasos debido a factores fuera de nuestro control, como condiciones climáticas extremas, problemas logísticos o días festivos. Si experimentas un retraso significativo, por favor contáctanos y haremos todo lo posible para resolver el problema.</p>
+
+  <p><strong>7. Problemas con la entrega</strong></p>
+  <p>Si tu pedido llega dañado o con productos faltantes, por favor contáctanos dentro de los 7 días posteriores a la entrega. Nos comprometemos a solucionar cualquier problema relacionado con tu pedido de manera rápida y eficiente.</p>
+
+  <p><strong>8. Direcciones incorrectas o incompletas</strong></p>
+  <p>Es importante que proporciones una dirección completa y correcta para asegurar una entrega exitosa. Si cometiste un error al ingresar tu dirección, contáctanos lo antes posible. Si el pedido ya ha sido enviado, no nos hacemos responsables de los retrasos o cargos adicionales que pueda generar la corrección de la dirección.</p>
+
+  <p><strong>9. Cambios en la dirección de envío</strong></p>
+  <p>Si necesitas cambiar la dirección de envío después de realizar el pedido, contáctanos de inmediato. Sin embargo, si el pedido ya ha sido enviado, no podremos realizar cambios en la dirección y deberás hacer los arreglos con la empresa de transporte.</p>
+
+  <p><strong>10. Envíos internacionales</strong></p>
+  <p>Los envíos internacionales pueden estar sujetos a impuestos, aranceles y tarifas adicionales, que son responsabilidad del comprador. Te recomendamos que te pongas en contacto con las autoridades locales para obtener más información sobre las tarifas aplicables en tu país.</p>
+
+  <p><strong>11. Contacto</strong></p>
+  <p>Si tienes alguna duda o necesitas asistencia con respecto a tu envío, no dudes en ponerte en contacto con nosotros. Nuestro equipo estará encantado de ayudarte en todo lo que necesites.</p>
+
+  <ul>
+    <li>Correo electrónico: <strong>Nutreetive@gmail.com</strong></li>
+    <li>Teléfono: <strong>+34 612 34 56 78</strong></li>
+  </ul>
+
+  <p>Gracias por confiar en <strong>Nutreetive</strong>. Nos esforzamos por ofrecerte una experiencia de compra satisfactoria y un servicio de entrega eficiente.</p>
+</section>  
+       <!-- Pie de página -->
+        <footer class="pie">
+            <div class="informacion-adicional">
+                <h4>NUTREETIVE</h4>
+                <hr>
+                <br>
+                    <p class="textos">Fray Paulino s/n 33600 Mieres</p><br>
+                    <p class="textos">Email: Nutreetive@gmail.com</p><br>
+                    <p class="textos">Teléfono: 612 34 56 78.</p><br>
+            </div>
+        <div class="informacion">
+                <h4>CONTACTO</h4>
+                <hr>
+                    <a href="../html/aviso-legal.html" class="enlace-footer"><p class="textos">Aviso legal</p></a><br>
+                    <a href="../html/politica-privacidad.html" class="enlace-footer"><p class="textos">Política de privacidad</p></a><br>
+                    <a href="../html/politica-cookies.html" class="enlace-footer"><p class="textos">Política de cookies</p></a><br>
+                    <a href="../html/envios.html" class="enlace-footer"><p class="textos">Envíos</p></a><br>
+                    <a href="../html/devoluciones-reembolsos.html" class="enlace-footer"><p class="textos">Devoluciones y reembolsos</p></a><br>
+        </div>
+        <div class="redes-sociales">
+            <h4>REDES SOCIALES</h4>
+            <hr><br>
+                <a href="https://www.facebook.com/" class="enlace-footer"><img src="../img/facebook.png" alt="facebook" class="icono-footer"></a>
+                <a href="https://www.instagram.com/?hl=es" class="enlace-footer"><img src="../img/instagram.jpg" alt="instagram" class="icono-footer"></a>
+                <a href="https://x.com/?lang=es" class="enlace-footer"><img src="../img/twitter.png" alt="twitter" class="icono-footer"></a>
+        </div>
+        <div class="sobre-nosotros">
+            <h4>SOBRE NOSOTROS</h4>
+            <hr>
+                <a href="../html/blog.html" class="enlace-footer"><p class="textos">Blog</p></a><br>
+                <a href="../html/contacto.html" class="enlace-footer"><p class="textos">Contacte con nosotros</p></a><br>
+                <a href="../html/eleccion.html" class="enlace-footer"><p class="textos">Herbolario - ¿Por qué elegirnos?</p></a><br>
+                <a href="../html/sobre-nosotros.html" class="enlace-footer"><p class="textos">Sobre nosotros - Herbolario Online</p></a>
+        </div>
+    </footer>
+    </div>
+</body>
+<script src="../js/index.js"></script>
+<script src="../js/buscador.js"></script>
+</html>

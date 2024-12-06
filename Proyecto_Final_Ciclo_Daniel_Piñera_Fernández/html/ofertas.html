@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="../img/logo.ico">
+    <link rel="stylesheet" href="../css/estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Nutreetive- Ofertas</title>
+</head>
+<body>
+    <!-- Contenedor principal -->
+    <div class="contenedor-principal">
+        <!-- Cabecera -->
+        <header class="cabecera">
+            <div class="logo">
+                <a href="../html/index.html"><img src="../img/logo.png" alt="Logo"></a>
+            </div>
+            <div class="envio-gratis">¡Envío gratis a partir de 50€!</div>
+            <div class="busqueda">
+                <input type="text" placeholder="Buscar producto..." id="producto">
+                <button onclick="buscarProducto()">Buscar</button>
+            </div>
+            <div class="acciones">
+                <a href="../html/login.html" class="enlace-cabecera"><i class="fas fa-user"></i>Iniciar Sesión</a>
+                <a href="../html/registrarse.html" class="enlace-cabecera"><i class="fas fa-user-plus"></i>Crear cuenta</a>
+                <a href="../html/carrito.html" class="enlace-cabecera"><i class="fas fa-shopping-cart"></i></a>
+                <span id="precioTotal" class="contador-carrito">0 €</span>
+            </div>
+        </header>
+        <!-- Menú de navegación -->
+        <nav class="menu-navegacion">
+            <ul>
+              <li class="menu-desplegable">
+                <a href="#">PRODUCTOS</a>
+                <ul class="submenu">
+                  <li><a href="../html/alimentacion.html">ALIMENTACIÓN</a></li>
+                  <li><a href="../html/complementos.html">NUTRICIÓN DEPORTIVA</a></li>
+                  <li><a href="../html/depurativos.html">HERBOLARIO</a></li>
+                  <li><a href="../html/cabello.html">HIGIENE</a></li>
+                  <li><a href="../html/energeticos.html">ENERGÉTICOS</a></li>
+                </ul>
+              </li>
+              <li><a href="../html/ofertas.html">OFERTAS</a></li>
+              <li><a href="../html/sobre-nosotros.html">SOBRE NOSOTROS</a></li>
+              <li><a href="../html/blog.html">BLOG</a></li>
+              <li><a href="../html/contacto.html">CONTACTO</a></li>
+            </ul>
+          </nav>
+          <!--Imagenes entrada -->
+          <div class="imagen-oferta">
+            <a href="../html/ofertas.html"><img src="../img/ofertas.jpg" alt="ofertas"></a>
+        </div>        
+    <!-- Sección de productos -->
+    <section class="productos-destacados-container">
+        <h2 class="titulo-destacados"><i class="fas fa-percent" style="color: red;"></i></i> OFERTAS</h2><br>
+        <p class="producto-descripcion">Descubre cómo nuestros productos de alimentación de alta calidad pueden transformar tu bienestar. Con ingredientes naturales y cuidadosamente seleccionados, cada producto está diseñado para ofrecerte energía, vitalidad y equilibrio. </p>
+    <div class="productos-destacados">
+        <!-- Producto 1 -->
+        <div class="producto">
+            <a href="../productos/salsa-queso.html"><img src="../img/cheddar.jpg" alt="Producto 3" class="producto-img"></a>
+            <h3 class="producto-titulo">SALSA DE QUESO CHEDDAR</h3><br>
+            <p class="texto-ofertas">Deliciosa salsa de Cheddar elaborada con auténtico queso</p>
+            <span class="producto-precio-tachado">5.49 €</span>
+            <span class="producto-precio">2.45 €</span><br><br>
+            <button class="btn-agregar" onclick="agregarAlCarrito(2.45, 'SALSA QUESO CHEDDAR', '../img/cheddar.jpg')">AÑADIR</button>
+        </div>
+        <!-- Producto 2 -->
+        <div class="producto">
+            <a href="../productos/crema-cacao.html"><img src="../img/cacao.jpg" alt="Producto 4" class="producto-img"></a>
+            <h3 class="producto-titulo">CREMA DE CACAO Y AVELLANAS</h3><br>
+            <p class="texto-ofertas">Excelente receta a base de cacahuetes tostados</p>
+            <span class="producto-precio-tachado">8.90 €</span>
+            <span class="producto-precio">4.44 €</span><br><br>
+            <button class="btn-agregar" onclick="agregarAlCarrito(4.44, 'CREMA HIPERPROTEICA DE CACAO Y AVELLANAS BAJA EN AZÚCA', '../img/cacao.jpg')">AÑADIR</button>
+        </div>
+        <!-- Producto 3 -->
+        <div class="producto">
+            <a href="../productos/aswaghanda.html"><img src="../img/ashwagandha.jpg" alt="Producto 2" class="producto-img"></a>
+            <h3 class="producto-titulo">ASHWAGANDHA + MAGNESIO COMPLEX</h3><br>
+            <p class="texto-ofertas">Complejo de extracto de Ashwagandha y Magnesio</p>
+            <span class="producto-precio-tachado">24.90 €</span>
+            <span class="producto-precio">12.45 €</span><br><br>
+            <button class="btn-agregar" onclick="agregarAlCarrito(12.45, 'ASHWAGANDHA + MAGNESIO COMPLEX', '../img/ashwagandha.jpg')">AÑADIR</button>
+        </div>
+        <!-- Producto 4 -->
+        <div class="producto">
+            <a href="../productos/crema-veneno.html"><img src="../img/producto4.jpg" alt="Producto 1" class="producto-img"></a>
+            <h3 class="producto-titulo">CREMA DE 'VENENO DE ABEJA'</h3><br>
+            <p class="producto-descripcion">Crema de veneno de abeja. <br> Con apitoxina-like. <br> Con extracto de garra del diablo y capsaicina. <br> Textura no grasa. <br> Efecto frío.</p><br>
+            <span class="producto-precio-tachado">14.90 €</span>
+            <span class="producto-precio-destacado">11.54 €</span><br>
+            <button class="btn-agregar" onclick="agregarAlCarrito(11.54, 'CREMA DE VENENO DE ABEJA', '../img/producto4.jpg')">AÑADIR</button>
+        </div>
+        <!-- Producto 5 -->
+        <div class="producto">
+            <a href="../productos/keto-cafe.html"><img src="../img/producto2.jpg" alt="Producto 2" class="producto-img"></a>
+            <h3 class="producto-titulo">KETO CAFÉ INSTANTÁNEO</h3><br>
+            <p class="producto-descripcion">¡Keto Café Instantáneo es tu nuevo bulletproof coffee! <br> Con Café Instantáneo y Aceite de MCT en polvo.</p><br>
+            <span class="producto-precio-tachado">8.90 €</span>
+            <span class="producto-precio-destacado">6.11 €</span><br>
+            <button class="btn-agregar" onclick="agregarAlCarrito(6.11, 'KETO CAFÉ INSTANTÁNEO', '../img/producto2.jpg')">AÑADIR</button>
+        </div>
+        <!-- Producto 6 -->
+        <div class="producto">
+            <a href="../productos/glucomanano.html"><img src="../img/producto3.jpg" alt="Producto 3" class="producto-img"></a>
+            <h3 class="producto-titulo">GLUCOMANANO 900mg</h3><br>
+            <p class="producto-descripcion">900mg de Glucomanano natural en cápsulas vegetales. <br> Extracto de bulbo de Konjac.<br> Sin aditivos ni añadidos de ninguna clase</p><br>
+            <span class="producto-precio-tachado">9.90 €</span>
+            <span class="producto-precio-destacado">6.31 €</span><br>
+            <button class="btn-agregar" onclick="agregarAlCarrito(6.31, 'GLUCOMANANO 900mg', '../img/producto3.jpg')">AÑADIR</button>
+        </div>
+        <!-- Producto 7 -->
+        <div class="producto">
+            <a href="../productos/brain-care.html"><img src="../img/producto1.jpg" alt="Producto 4" class="producto-img"></a>
+            <h3 class="producto-titulo">BRAIN CARE </h3><br>
+            <p class="producto-descripcion">Fórmula para el cuidado del cerebro. <br> Con Citicolina, Fosfatidilserina de girasol, y una mezcla única y exclusiva de extractos herbales</p><br>
+            <span class="producto-precio-tachado">35.20 €</span>
+            <span class="producto-precio-destacado">32.52 €</span><br>
+            <button class="btn-agregar" onclick="agregarAlCarrito(32.52, 'BRAIN CARE ', '../img/producto1.jpg')">AÑADIR</button>
+        </div>
+        <!-- Producto 8 -->
+        <div class="producto">
+            <a href="../productos/duo-stiks.html"><img src="../img/producto5.jpg" alt="Producto 5" class="producto-img"></a>
+            <h3 class="producto-titulo">DUO STICKS BARQUILLOS RELLENOS</h3><br>
+            <p class="producto-descripcion">Deliciosos barquillos rellenos con cacahuete y cacao o coco. <br> Elaborados sin aceite de palma, muy natural.</p><br>
+            <span class="producto-precio-tachado">2.20 €</span>
+            <span class="producto-precio-destacado">0.95 €</span><br>
+            <button class="btn-agregar" onclick="agregarAlCarrito(0.95, 'DUO STICKS BARQUILLOS RELLENOS', '../img/producto5.jpg')">AÑADIR</button>
+        </div>
+         <!-- Producto 9 -->
+         <div class="producto">
+            <a href="../productos/keto-matcha.html"><img src="../img/producto6.jpg" alt="Producto 6" class="producto-img"></a>
+            <h3 class="producto-titulo">KETO MATCHA LATTE (SIN LECHE)</h3><br>
+            <p class="producto-descripcion">Té Verde Matcha Latte. <br> Sin leche. <br> 15% Polifenoles. <br> Con MCT de coco.<br> Alto en fibra.<br> Endulzado con Stevia.<br> Especial dieta keto.<br> Apto para veganos.</p><br>
+            <span class="producto-precio-tachado">8.20 €</span>
+            <span class="producto-precio-destacado">€6.11</span><br>
+            <button class="btn-agregar" onclick="agregarAlCarrito(6.11, 'KETO MATCHA LATTE SIN LECHE', '../img/producto6.jpg')">AÑADIR</button>
+        </div>         <!-- Producto 10 -->
+         <div class="producto">
+            <a href="../productos/evomeal.html"><img src="../img/producto7.jpg" alt="Producto 7" class="producto-img"></a>
+            <h3 class="producto-titulo">EVOMEAL 2.0 (SUSTITUTO DE COMIDA)</h3><br>
+            <p class="producto-descripcion">Sustitutivo de comidas.<br> Con proteína de suero de leche de alta calidad.<br> Con harina de arroz pregelatinizada.<br> Y con ácidos grasos esenciales de aceites de semillas en polvo.</p><br>
+            <span class="producto-precio-tachado">13.50 €</span>
+            <span class="producto-precio-destacado">11.14 €</span><br>
+            <button class="btn-agregar" onclick="agregarAlCarrito(11.14, 'EVOMEAL 2.0 SUSTITUTO DE COMIDA', '../img/producto7.jpg')">AÑADIR</button>
+        </div>
+         <!-- Producto 11 -->
+         <div class="producto">
+            <a href="../productos/nutry-bowl.html"><img src="../img/producto8.jpg" alt="Producto 8" class="producto-img"></a>
+            <h3 class="producto-titulo">NUTRY BOWL</h3><br>
+            <p class="producto-descripcion">Recetas preparadas para añadir agua caliente y disfrutar. Plato deshidratado listo para consumir en el propio bowl</p><br>
+            <span class="producto-precio-tachado">3.60 €</span>
+            <span class="producto-precio-destacado">1.99 €</span><br>
+            <button class="btn-agregar" onclick="agregarAlCarrito(1.99, 'NUTRY BOWL', '../img/producto8.jpg')">AÑADIR</button>
+        </div>
+         <!-- Producto 12 -->
+         <div class="producto">
+            <a href="../productos/salsa-queso.html"><img src="../img/cheddar.jpg" alt="Producto 3" class="producto-img"></a>
+            <h3 class="producto-titulo">SALSA DE QUESO CHEDDAR</h3><br>
+            <p class="producto-descripcion">Deliciosa salsa de Cheddar elaborada con auténtico queso</p><br>
+            <span class="producto-precio-tachado">3.50 €</span>
+            <span class="producto-precio">2.45 €</span><br><br>
+            <button class="btn-agregar" onclick="agregarAlCarrito(2.45, 'SALSA DE QUESO CHEDDAR', '../img/cheddar.jpg')">AÑADIR</button>
+        </div>
+</section>
+<!-- Sección de Ofertas Generales -->
+<div class="cajon-informacion oferta-general">
+    <h2 class="titulo-bienvenida">¡OFERTAS IMPERDIBLES: DESCUBRE NUESTROS PRODUCTOS CON DESCUENTOS ESPECIALES!</h2><br>
+    <p class="textos">Aprovecha las mejores ofertas en productos de alta calidad. Desde almohadas ergonómicas hasta fundas personalizadas, tenemos descuentos especiales para que puedas mejorar tu bienestar sin gastar de más. <br> ¡Es el momento perfecto para renovar tu descanso y disfrutar de productos exclusivos a precios inigualables!</p>
+    <p class="textos">En nuestra tienda online, siempre encontrarás algo en oferta, desde productos nuevos hasta artículos en temporada. ¡Haz tu compra ahora y aprovecha descuentos de hasta el 50% en productos seleccionados!</p>
+    <p class="textos">Además, nuestras promociones especiales incluyen envío gratis en compras superiores a X euros. No dejes pasar la oportunidad de mejorar tu descanso y bienestar a precios reducidos.</p>
+</div>
+
+<!-- Sección de Opiniones sobre Ofertas -->
+<div class="opiniones oferta-opiniones">
+    <h2 class="titulo-opiniones">OPINIONES DE USUARIOS SOBRE NUESTRAS OFERTAS</h2><br>
+    <div class="contenedor-opiniones">
+        <div class="opinion">
+            <h2>MARÍA</h2><br>
+            <p class="textos">No podía creer los descuentos que encontré en esta tienda. <br> Compré una almohada viscoelástica con un descuento increíble y la calidad es excelente. ¡Estoy encantada y volveré a comprar!</p>
+            <div class="estrellas" data-valor="5">
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+            </div>
+        </div>
+        <div class="opinion">
+            <h2>ANDRÉS</h2><br>
+            <p class="textos">Las ofertas de esta tienda son impresionantes. <br> Compré una almohada ergonómica a un precio de rebaja y ahora mi descanso ha mejorado mucho. ¡Totalmente recomendable!</p>
+            <div class="estrellas" data-valor="4">
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9734;</span>
+            </div>
+        </div>
+        <div class="opinion">
+            <h2>ELENA</h2><br>
+            <p class="textos">Aproveché una oferta de almohadas y no puedo estar más satisfecha. <br> La calidad es fantástica y, además, el precio fue excelente. ¡Definitivamente seguiré comprando en esta tienda!</p>
+            <div class="estrellas" data-valor="5">
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+            </div>
+        </div>
+        <div class="opinion">
+            <h2>FERNANDO</h2><br>
+            <p class="textos">Las ofertas de esta tienda son increíbles. <br> Encontré descuentos especiales en productos que necesitaba, y la compra fue muy rápida y fácil. ¡Estoy muy satisfecho con mi experiencia!</p>
+            <div class="estrellas" data-valor="4">
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9734;</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Pie de página -->
+<footer class="pie">
+    <div class="informacion-adicional">
+        <h4>NUTREETIVE</h4>
+        <hr>
+        <br>
+        <p class="textos">Fray Paulino s/n 33600 Mieres</p><br>
+        <p class="textos">Email: Nutreetive@gmail.com</p><br>
+        <p class="textos">Teléfono: 612 34 56 78.</p><br>
+    </div>
+    <div class="informacion">
+        <h4>CONTACTO</h4>
+        <hr>
+        <a href="../html/aviso-legal.html" class="enlace-footer"><p class="textos">Aviso legal</p></a><br>
+        <a href="../html/politica-privacidad.html" class="enlace-footer"><p class="textos">Política de privacidad</p></a><br>
+        <a href="../html/politica-cookies.html" class="enlace-footer"><p class="textos">Política de cookies</p></a><br>
+        <a href="../html/envios.html" class="enlace-footer"><p class="textos">Envíos</p></a><br>
+        <a href="../html/devoluciones-reembolsos.html" class="enlace-footer"><p class="textos">Devoluciones y reembolsos</p></a><br>
+    </div>
+    <div class="redes-sociales">
+        <h4>REDES SOCIALES</h4>
+        <hr><br>
+        <a href="https://www.facebook.com/" class="enlace-footer"><img src="../img/facebook.png" alt="facebook" class="icono-footer"></a>
+        <a href="https://www.instagram.com/?hl=es" class="enlace-footer"><img src="../img/instagram.jpg" alt="instagram" class="icono-footer"></a>
+        <a href="https://x.com/?lang=es" class="enlace-footer"><img src="../img/twitter.png" alt="twitter" class="icono-footer"></a>
+    </div>
+    <div class="sobre-nosotros">
+        <h4>SOBRE NOSOTROS</h4>
+        <hr>
+        <a href="../html/blog.html" class="enlace-footer"><p class="textos">Blog</p></a><br>
+        <a href="../html/contacto.html" class="enlace-footer"><p class="textos">Contacte con nosotros</p></a><br>
+        <a href="../html/eleccion.html" class="enlace-footer"><p class="textos">Herbolario - ¿Por qué elegirnos?</p></a><br>
+        <a href="../html/sobre-nosotros.html" class="enlace-footer"><p class="textos">Sobre nosotros - Herbolario Online</p></a>
+    </div>
+</footer>
+</div>
+    
+</body>
+<script src="../js/index.js"></script>
+<script src="../js/buscador.js"></script>
+<script src="../js/estrellas.js"></script>
+</html>

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="../img/logo.ico">
+    <link rel="stylesheet" href="../css/estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Nutreetive- Complementos</title>
+</head>
+<body>
+    <!-- Contenedor principal -->
+    <div class="contenedor-principal">
+        <!-- Cabecera -->
+        <header class="cabecera">
+            <div class="logo">
+                <a href="../html/index.html"><img src="../img/logo.png" alt="Logo"></a>
+            </div>
+            <div class="envio-gratis">¡Envío gratis a partir de 50€!</div>
+            <div class="busqueda">
+                <input type="text" placeholder="Buscar producto..." id="producto">
+                <button onclick="buscarProducto()">Buscar</button>
+            </div>
+            <div class="acciones">
+                <a href="../html/login.html" class="enlace-cabecera"><i class="fas fa-user"></i>Iniciar Sesión</a>
+                <a href="../html/registrarse.html" class="enlace-cabecera"><i class="fas fa-user-plus"></i>Crear cuenta</a>
+                <a href="../html/carrito.html" class="enlace-cabecera"><i class="fas fa-shopping-cart"></i></a>
+                <span id="precioTotal" class="contador-carrito">0 €</span>
+            </div>
+        </header>
+        <!-- Menú de navegación -->
+        <nav class="menu-navegacion">
+            <ul>
+              <li class="menu-desplegable">
+                <a href="../html/productos.html">PRODUCTOS</a>
+                <ul class="submenu">
+                  <li><a href="../html/alimentacion.html">ALIMENTACIÓN</a></li>
+                  <li><a href="../html/complementos.html">NUTRICIÓN DEPORTIVA</a></li>
+                  <li><a href="../html/depurativos.html">HERBOLARIO</a></li>
+                  <li><a href="../html/cabello.html">HIGIENE</a></li>
+                  <li><a href="../html/energeticos.html">ENERGÉTICOS</a></li>
+                </ul>
+              </li>
+              <li><a href="../html/ofertas.html">OFERTAS</a></li>
+              <li><a href="../html/sobre-nosotros.html">SOBRE NOSOTROS</a></li>
+              <li><a href="../html/blog.html">BLOG</a></li>
+              <li><a href="../html/contacto.html">CONTACTO</a></li>
+            </ul>
+          </nav>
+          <!--Imagenes entrada -->
+          <div class="imagen-oferta">
+            <a href="../html/complementos.html"><img src="../img/complementos.jpg" alt="suplementos"></a>
+        </div>        
+    <!-- Sección de productos -->
+    <section class="productos-destacados-container">
+        <h2 class="titulo-destacados"><i class="fas fa-pills" style="color:blue;"></i></i> SUPLEMENTACIÓN DEPORTIVA</h2><br>
+        <p class="producto-descripcion">En nuestra sección de Suplementación Deportiva encontrarás una variedad de productos pensados para mejorar tu rendimiento, aumentar tu resistencia y facilitar una recuperación rápida y efectiva. Cada suplemento ha sido formulado con ingredientes de alta calidad para darte el impulso que necesitas en cada entrenamiento, sea cual sea tu nivel.</p>
+    <div class="productos-destacados">
+        <!-- Producto 1 -->
+        <div class="producto">
+            <a href="../productos/brain-care.html"><img src="../img/producto1.jpg" alt="Producto 1" class="producto-img"></a>
+            <h3 class="producto-titulo">BRAIN CARE </h3><br>
+            <p class="producto-descripcion">Fórmula para el cuidado del cerebro. <br> Con Citicolina, Fosfatidilserina de girasol, y una mezcla única y exclusiva de extractos herbales</p><br>
+            <span class="producto-precio-destacado">32.52 €</span><br>
+            <button class="btn-agregar" onclick="agregarAlCarrito(32.52, 'BRAIN CARE ', '../img/producto1.jpg')">AÑADIR</button>
+        </div>
+        <!-- Producto 2 -->
+        <div class="producto">
+            <a href="../productos/omega3.html"><img src="../img/omega3.jpg" alt="omega 3" class="producto-img"></a>
+            <h3 class="producto-titulo">OMEGA-3 VEGANO ACEITE DE ALGAS 1000mg</h3><br>
+            <p class="producto-descripcion">Omega-3 Vegano. Procede de Aceite de Algas del género Schizochytrium.</p><br>
+            <span class="producto-precio-destacado">19.45 €</span><br>
+            <button class="btn-agregar" onclick="agregarAlCarrito(19.45, 'OMEGA-3 VEGANO ACEITE DE ALGAS 1000mg', '../img/omega3.jpg')">AÑADIR</button>
+        </div>
+        <!-- Producto 3 -->
+        <div class="producto">
+            <a href="../productos/glucomanano.html"><img src="../img/producto3.jpg" alt="Producto 3" class="producto-img"></a>
+            <h3 class="producto-titulo">GLUCOMANANO 900mg</h3><br>
+            <p class="producto-descripcion">900mg de Glucomanano natural en cápsulas vegetales. <br> Extracto de bulbo de Konjac.<br> Sin aditivos ni añadidos de ninguna clase</p><br>
+            <span class="producto-precio-destacado">6.31 €</span><br>
+            <button class="btn-agregar" onclick="agregarAlCarrito(6.31, 'GLUCOMANANO 900mg', '../img/producto3.jpg')">AÑADIR</button>
+        </div>
+        <!-- Producto 4 -->
+        <div class="producto">
+            <a href="../productos/triphala.html"><img src="../img/triphala.jpg" alt="swanson" class="producto-img"></a>
+            <h3 class="producto-titulo">TRIPHALA 500mg</h3><br>
+            <p class="producto-descripcion">Triphala procedente de frutos de Emblica officinalis, Terminalia chebula y Terminalia bellerica. 500mg en cómodas cápsulas. 100 cápsulas por envase.</p><br>
+            <span class="producto-precio-destacado">8.49 €</span><br>
+            <button class="btn-agregar" onclick="agregarAlCarrito(11.54, 'TRIPHALA 500mg', '../img/triphala.jpg')">AÑADIR</button>
+        </div>
+        <!-- Producto 5 -->
+        <div class="producto">
+            <a href="../productos/husk.html"><img src="../img/husk.jpg" alt="husk" class="producto-img"></a>
+            <h3 class="producto-titulo">PSYLLIUM HUSK 700mg</h3><br>
+            <p class="producto-descripcion">Plántago y polvo de pectina de manzana. Alto contenido en fibra.</p><br>
+            <span class="producto-precio-destacado">12.99 €</span><br>
+            <button class="btn-agregar" onclick="agregarAlCarrito(12.99, 'PSYLLIUM HUSK 700mg', '../img/husk.jpg')">AÑADIR</button>
+        </div>
+        <!-- Producto 6 -->
+        <div class="producto">
+            <a href="../productos/colageno.html"><img src="../img/colageno.jpg" alt="colageno" class="producto-img"></a>
+            <h3 class="producto-titulo">COLÁGENO HIDROLIZADO + MAGNESIO 2.0 EN POLVO</h3><br>
+            <p class="producto-descripcion">Colágeno con Magnesio y Vitamina C. Materia prima de péptidos de colágeno hidrolizado.</p><br>
+            <span class="producto-precio-destacado">11.54 €</span><br>
+            <button class="btn-agregar" onclick="agregarAlCarrito(11.54, 'COLÁGENO HIDROLIZADO + MAGNESIO 2.0 EN POLVO', '../img/colageno.jpg')">AÑADIR</button>
+        </div>
+        <!-- Producto 7 -->
+        <div class="producto">
+            <a href="../productos/respibiotic.html"><img src="../img/respibiotic.jpg" alt="respibiotic" class="producto-img"></a>
+            <h3 class="producto-titulo">RESPI BIOTICS (PROBIÓTICOS) 25B UFC</h3><br>
+            <p class="producto-descripcion">¡Fermentos, Inulina, FOS y vitamina A en un mismo producto! 25 mil millones de Unidades Formadoras de Colonias (UFC).</p><br>
+            <span class="producto-precio-destacado">16.76 €</span><br>
+            <button class="btn-agregar" onclick="agregarAlCarrito(16.76, 'RESPI BIOTICS PROBIÓTICOS 25B UFC', '../img/respibiotic.jpg')">AÑADIR</button>
+        </div>
+        <!-- Producto 8 -->
+        <div class="producto">
+            <a href="../productos/multivitaminico.html"><img src="../img/multivitaminico.jpg" alt="multivitaminas" class="producto-img"></a>
+            <h3 class="producto-titulo">MULTIVITAMÍNICO PREMIUM</h3><br>
+            <p class="producto-descripcion">Multivitamínico Premium. Contiene el espectro completo de las vitaminas. Con minerales (con hierro y yodo).</p><br>
+            <span class="producto-precio-destacado">16.50 €</span><br>
+            <button class="btn-agregar" onclick="agregarAlCarrito(16.50, 'MULTIVITAMÍNICO PREMIUM', '../img/multivitaminico.jpg')">AÑADIR</button>
+        </div>
+         <!-- Producto 9 -->
+         <div class="producto">
+            <a href="../productos/dong-quai.html"><img src="../img/dong-quai.jpg" alt="dong-quai" class="producto-img"></a>
+            <h3 class="producto-titulo">Full Spectrum® DONG QUAI 530mg</h3><br>
+            <p class="producto-descripcion">Full Spectrum® Dong Quai en cápsulas. Aporta 530mg por dosis diaria. ¡Calidad Swanson!</p><br>
+            <span class="producto-precio-destacado">7.49 €</span><br>
+            <button class="btn-agregar" onclick="agregarAlCarrito(7.49, 'Full Spectrum® DONG QUAI 530mg', '../img/dong-quai.jpg')">AÑADIR</button>
+        </div>        <!-- Producto 10 -->
+         <div class="producto">
+            <a href="../productos/vitaminab.html"><img src="../img/vitaminab.jpg" alt="vitamina b" class="producto-img"></a>
+            <h3 class="producto-titulo">VITAMINA B COMPLEX</h3><br>
+            <p class="producto-descripcion">Vitamina B complex de Naturitas es un complemento alimenticio a base de vitaminas, plantas, colina e inositol. Sin gluten y sin lactosa.</p><br>
+            <span class="producto-precio-destacado">15.95 €</span><br>
+            <button class="btn-agregar" onclick="agregarAlCarrito(15.95, 'VITAMINA B COMPLEX', '../img/vitaminab.jpg')">AÑADIR</button>
+        </div>
+         <!-- Producto 11 -->
+         <div class="producto">
+            <a href="../productos/evokalyn.html"><img src="../img/evokalyn.jpg" alt="evokalin" class="producto-img"></a>
+            <h3 class="producto-titulo">EVOKALYN</h3><br>
+            <p class="producto-descripcion">Monohidrato de Creatina Kre-Alkalyn® en cápsulas. Creatina pH 12 corregido. Con Vitamina B6. Apta para veganos.</p><br>
+            <span class="producto-precio-destacado">5.45 €</span><br>
+            <button class="btn-agregar" onclick="agregarAlCarrito(5.45, 'EVOKALYN', '../img/evokalyn.jpg')">AÑADIR</button>
+        </div>
+         <!-- Producto 12 -->
+         <div class="producto">
+            <a href="../productos/coenzima.html"><img src="../img/coenzima.jpg" alt="coenzima" class="producto-img"></a>
+            <h3 class="producto-titulo">COENZIMA Q10</h3><br>
+            <p class="producto-descripcion">Es un complemento alimenticio a base de ubiquinona. Ayuda a mejorar la producción de energía y el rendimiento.</p><br>
+            <span class="producto-precio">19.85 €</span><br><br>
+            <button class="btn-agregar" onclick="agregarAlCarrito(19.85, 'COENZIMA Q10', '../img/coenzima.jpg')">AÑADIR</button>
+        </div>
+    </div>
+</section>
+<!-- Sección de información -->
+<div class="cajon-informacion">
+    <h2 class="titulo-bienvenida">SUPLEMENTOS DEPORTIVOS: IMPULSA TU RENDIMIENTO Y RECUPERACIÓN</h2><br>
+    <p class="textos">En nuestra sección de Suplementos Deportivos, te ofrecemos una selección de productos diseñados para maximizar tu rendimiento y acelerar tu recuperación. <br> Desde proteínas de alta calidad hasta aminoácidos esenciales, aquí encontrarás todo lo que necesitas para mejorar tu rendimiento físico y mantener tu cuerpo en su mejor estado.</p>
+    <p class="textos">Nuestros suplementos son elaborados con ingredientes premium y sin aditivos innecesarios. Son ideales para atletas de todos los niveles, desde los más exigentes hasta aquellos que buscan mejorar su forma física. Además, tenemos opciones aptas para dietas veganas, sin gluten y sin lactosa, para que todos puedan disfrutar de los beneficios.</p>   
+    <p class="textos">Incorpora estos suplementos a tu rutina diaria y observa cómo tu energía, fuerza y recuperación mejoran notablemente.</p>
+</div>
+
+<!-- Sección de Opiniones de Usuarios -->
+<div class="opiniones">
+    <h2 class="titulo-opiniones">OPINIONES DE USUARIOS</h2><br>
+    <div class="contenedor-opiniones">
+        <div class="opinion">
+            <h2>JULIÁN</h2><br>
+            <p class="textos">"He probado muchas proteínas, pero esta marca me ha sorprendido. El sabor es excelente y lo mejor es la digestibilidad. Después de entrenar, me siento con más energía y noto menos fatiga muscular. ¡Lo recomiendo totalmente!"</p>
+            <div class="estrellas" data-valor="5">
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+            </div>
+        </div>
+        <div class="opinion">
+            <h2>VÍCTOR</h2><br>
+            <p class="textos">"Los aminoácidos de esta tienda me han ayudado mucho con mi recuperación post-entrenamiento. Ya no siento tanto dolor muscular al día siguiente, y puedo seguir entrenando con más frecuencia. ¡Gran producto!"</p>
+            <div class="estrellas" data-valor="4">
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9734;</span>
+            </div>
+        </div>
+        <div class="opinion">
+            <h2>SANDRA</h2><br>
+            <p class="textos">"Empecé a usar la creatina de esta tienda y he notado un incremento en mi fuerza y resistencia. Es muy fácil de disolver y no me causa ningún tipo de malestar. ¡Sigo mejorando día tras día!"</p>
+            <div class="estrellas" data-valor="5">
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+            </div>
+        </div>
+        <div class="opinion">
+            <h2>JORGE</h2><br>
+            <p class="textos">"Llevo un par de meses tomando los suplementos de esta tienda y la diferencia es notable. Me siento con más energía durante mis entrenamientos y la recuperación es mucho más rápida. Muy satisfecho con la calidad y el servicio." </p>
+            <div class="estrellas" data-valor="4">
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9734;</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Pie de página -->
+<footer class="pie">
+    <div class="informacion-adicional">
+        <h4>NUTREETIVE</h4>
+        <hr>
+        <br>
+        <p class="textos">Fray Paulino s/n 33600 Mieres</p><br>
+        <p class="textos">Email: Nutreetive@gmail.com</p><br>
+        <p class="textos">Teléfono: 612 34 56 78.</p><br>
+    </div>
+    <div class="informacion">
+        <h4>CONTACTO</h4>
+        <hr>
+        <a href="../html/aviso-legal.html" class="enlace-footer"><p class="textos">Aviso legal</p></a><br>
+        <a href="../html/politica-privacidad.html" class="enlace-footer"><p class="textos">Política de privacidad</p></a><br>
+        <a href="../html/politica-cookies.html" class="enlace-footer"><p class="textos">Política de cookies</p></a><br>
+        <a href="../html/envios.html" class="enlace-footer"><p class="textos">Envíos</p></a><br>
+        <a href="../html/devoluciones-reembolsos.html" class="enlace-footer"><p class="textos">Devoluciones y reembolsos</p></a><br>
+    </div>
+    <div class="redes-sociales">
+        <h4>REDES SOCIALES</h4>
+        <hr><br>
+        <a href="https://www.facebook.com/" class="enlace-footer"><img src="../img/facebook.png" alt="facebook" class="icono-footer"></a>
+        <a href="https://www.instagram.com/?hl=es" class="enlace-footer"><img src="../img/instagram.jpg" alt="instagram" class="icono-footer"></a>
+        <a href="https://x.com/?lang=es" class="enlace-footer"><img src="../img/twitter.png" alt="twitter" class="icono-footer"></a>
+    </div>
+    <div class="sobre-nosotros">
+        <h4>SOBRE NOSOTROS</h4>
+        <hr>
+        <a href="../html/blog.html" class="enlace-footer"><p class="textos">Blog</p></a><br>
+        <a href="../html/contacto.html" class="enlace-footer"><p class="textos">Contacte con nosotros</p></a><br>
+        <a href="../html/eleccion.html" class="enlace-footer"><p class="textos">Herbolario - ¿Por qué elegirnos?</p></a><br>
+        <a href="../html/sobre-nosotros.html" class="enlace-footer"><p class="textos">Sobre nosotros - Herbolario Online</p></a>
+    </div>
+</footer>
+</div>
+    
+</body>
+<script src="../js/index.js"></script>
+<script src="../js/buscador.js"></script>
+<script src="../js/estrellas.js"></script>
+</html>

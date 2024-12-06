@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="../img/logo.ico">
+    <link rel="stylesheet" href="../css/productos-paginas.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Nutreetive- Tienda Online</title>
+</head>
+<body>
+    <!-- Contenedor principal -->
+    <div class="contenedor-principal">
+        <!-- Cabecera -->
+        <header class="cabecera">
+            <div class="logo">
+                <a href="../html/index.html"><img src="../img/logo.png" alt="Logo"></a>
+            </div>
+            <div class="envio-gratis">¡Envío gratis a partir de 50€!</div>
+            <div class="busqueda">
+                <input type="text" placeholder="Buscar producto..." id="producto">
+                <button onclick="buscarProducto()">Buscar</button>
+            </div>
+            <div class="acciones">
+                <a href="../html/login.html" class="enlace-cabecera"><i class="fas fa-user"></i>Iniciar Sesión</a>
+                <a href="../html/registrarse.html" class="enlace-cabecera"><i class="fas fa-user-plus"></i>Crear cuenta</a>
+                <a href="../html/carrito.html" class="enlace-cabecera"><i class="fas fa-shopping-cart"></i></a>
+                <span id="precioTotal" class="contador-carrito">0 €</span>
+            </div>
+        </header>
+        <!-- Menú de navegación -->
+        <nav class="menu-navegacion">
+            <ul>
+              <li class="menu-desplegable">
+                <a href="#">PRODUCTOS</a>
+                <ul class="submenu">
+                  <li><a href="../html/alimentacion.html">ALIMENTACIÓN</a></li>
+                  <li><a href="../html/complementos.html">NUTRICIÓN DEPORTIVA</a></li>
+                  <li><a href="../html/depurativos.html">HERBOLARIO</a></li>
+                  <li><a href="../html/cabello.html">HIGIENE</a></li>
+                  <li><a href="../html/energeticos.html">ENERGÉTICOS</a></li>
+                </ul>
+              </li>
+              <li><a href="../html/ofertas.html">OFERTAS</a></li>
+              <li><a href="../html/sobre-nosotros.html">SOBRE NOSOTROS</a></li>
+              <li><a href="../html/blog.html">BLOG</a></li>
+              <li><a href="../html/contacto.html">CONTACTO</a></li>
+            </ul>
+          </nav>
+<!-- Sección de producto -->
+<div class="producto">
+    <div class="imagen">
+        <img src="../img/mango.jpg" alt="Crema Corporal de Mango" />
+    </div>
+    <div class="informacion-producto">
+        <h2 class="titulo-producto">CREMA CORPORAL DE MANGO</h2>
+        <p class="descripcion-producto">La Crema Corporal de Mango está formulada con extracto natural de mango y manteca de karité, brindando hidratación profunda y restaurando la suavidad de la piel. Su fragancia tropical te transportará a un paraíso exótico, mientras cuida y nutre tu piel.</p>
+        <p class="precio">Precio: 8.99 €</p><br>
+        <p class="fecha">Fecha: 26 de noviembre de 2024</p><br>
+        <p class="creador">Proveedor: SANTE</p><br>
+        <button class="btn-carrito" onclick="agregarAlCarrito(8.99, 'CREMA CORPORAL DE MANGO', '../img/mango.jpg')">AÑADIR AL CARRITO</button>
+    </div>
+</div>
+
+<!-- Sección de elegir descripción -->
+<div class="tabs-container">
+    <div class="tabs">
+        <button class="tab-button active" onclick="mostrarContenido('opcion1')">Beneficios</button>
+        <button class="tab-button" onclick="mostrarContenido('opcion2')">Detalles del Producto</button>
+    </div>
+    <div id="contenido-opcion1" class="contenido-tab active">
+        <h3>Beneficios de la Crema Corporal de Mango</h3><br>
+        <p>Esta crema corporal ofrece una experiencia completa de hidratación y frescura:</p><br>
+        <ul>
+            <li><strong>Hidratación intensa</strong>: Nutre profundamente la piel, dejando una sensación suave y sedosa.</li><br>
+            <li><strong>Fragancia tropical</strong>: El aroma dulce y refrescante de mango revitaliza tus sentidos.</li><br>
+            <li><strong>Fórmula ligera</strong>: Se absorbe rápidamente, sin dejar residuos grasos.</li><br>
+            <li><strong>Ingredientes naturales</strong>: Enriquecida con extractos de mango y manteca de karité.</li><br>
+            <li><strong>Repara la piel seca</strong>: Restaura la elasticidad y protege contra la sequedad.</li><br>
+        </ul>
+    </div>
+
+    <div id="contenido-opcion2" class="contenido-tab">
+        <h3>Detalles del Producto</h3><br>
+        <p>La Crema Corporal de Mango viene en un envase práctico de 250 ml, ideal para el uso diario. Su fórmula está compuesta por extractos naturales de mango y manteca de karité, garantizando una hidratación duradera y un cuidado efectivo para todo tipo de piel. Apta para su uso en todo el cuerpo, especialmente en zonas resecas como codos y rodillas.</p><br>
+    </div>
+</div>
+
+<!-- Sección de Opiniones de Usuarios -->
+<div class="opiniones">
+    <h2 class="titulo-opiniones">OPINIONES DE USUARIOS SOBRE LA CREMA CORPORAL DE MANGO</h2><br>
+    <div class="contenedor-opiniones">
+        <div class="opinion">
+            <h2>ANA</h2><br>
+            <p class="textos">"El aroma es increíblemente refrescante y mi piel se siente súper hidratada. Es mi crema favorita." </p>
+            <div class="estrellas" data-valor="5">
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+            </div>
+        </div>
+        <div class="opinion">
+            <h2>LUIS</h2><br>
+            <p class="textos">"Perfecta para después de la ducha. Se absorbe rápido y el aroma a mango dura horas. ¡Me encanta!" </p>
+            <div class="estrellas" data-valor="5">
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+            </div>
+        </div>
+        <div class="opinion">
+            <h2>MARTA</h2><br>
+            <p class="textos">"Ideal para piel seca. He notado un cambio notable en la suavidad de mi piel." </p>
+            <div class="estrellas" data-valor="4">
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9734;</span>
+            </div>
+        </div>
+        <div class="opinion">
+            <h2>CARLOS</h2><br>
+            <p class="textos">"La textura y el olor son perfectos. Me encanta cómo deja la piel, la recomiendo totalmente." </p>
+            <div class="estrellas" data-valor="5">
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+            </div>
+        </div>
+    </div>
+</div>
+        <!-- Pie de página -->
+        <footer class="pie">
+            <div class="informacion-adicional">
+                <h4>NUTREETIVE</h4>
+                <hr>
+                <br>
+                <p>Fray Paulino s/n 33600 Mieres</p><br>
+                <p>Email: Nutreetive@gmail.com</p><br>
+                <p>Teléfono: 612 34 56 78.</p><br>
+            </div>
+            <div class="informacion">
+                <h4>CONTACTO</h4>
+                <hr>
+                <a href="../html/aviso-legal.html" class="enlace-footer"><p>Aviso legal</p></a><br>
+                <a href="../html/politica-privacidad.html" class="enlace-footer"><p>Política de privacidad</p></a><br>
+                <a href="../html/politica-cookies.html" class="enlace-footer"><p>Política de cookies</p></a><br>
+                <a href="../html/envios.html" class="enlace-footer"><p>Envíos</p></a><br>
+                <a href="../html/devoluciones-reembolsos.html" class="enlace-footer"><p>Devoluciones y reembolsos</p></a><br>
+            </div>
+            <div class="redes-sociales">
+                <h4>REDES SOCIALES</h4>
+                <hr><br>
+                <a href="https://www.facebook.com/" class="enlace-footer"><img src="../img/facebook.png" alt="facebook" class="icono-footer"></a>
+                <a href="https://www.instagram.com/?hl=es" class="enlace-footer"><img src="../img/instagram.jpg" alt="instagram" class="icono-footer"></a>
+                <a href="https://x.com/?lang=es" class="enlace-footer"><img src="../img/twitter.png" alt="twitter" class="icono-footer"></a>
+            </div>
+            <div class="sobre-nosotros">
+                <h4>SOBRE NOSOTROS</h4>
+                <hr>
+                <a href="../html/blog.html" class="enlace-footer"><p>Blog</p></a><br>
+                <a href="../html/contacto.html" class="enlace-footer"><p>Contacte con nosotros</p></a><br>
+                <a href="../html/eleccion.html" class="enlace-footer"><p>Herbolario - ¿Por qué elegirnos?</p></a><br>
+                <a href="../html/sobre-nosotros.html" class="enlace-footer"><p>Sobre nosotros - Herbolario Online</p></a>
+            </div>
+        </footer>
+    </div>
+</body>
+<script src="../js/index.js"></script>
+<script src="../js/buscador.js"></script>
+<script src="../js/estrellas.js"></script>
+</html>

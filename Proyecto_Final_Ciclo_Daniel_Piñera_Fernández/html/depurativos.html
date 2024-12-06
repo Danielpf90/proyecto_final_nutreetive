@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="../img/logo.ico">
+    <link rel="stylesheet" href="../css/estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Nutreetive- Herbolario</title>
+</head>
+<body>
+    <!-- Contenedor principal -->
+    <div class="contenedor-principal">
+        <!-- Cabecera -->
+        <header class="cabecera">
+            <div class="logo">
+                <a href="../html/index.html"><img src="../img/logo.png" alt="Logo"></a>
+            </div>
+            <div class="envio-gratis">¡Envío gratis a partir de 50€!</div>
+            <div class="busqueda">
+                <input type="text" placeholder="Buscar producto..." id="producto">
+                <button onclick="buscarProducto()">Buscar</button>
+            </div>
+            <div class="acciones">
+                <a href="../html/login.html" class="enlace-cabecera"><i class="fas fa-user"></i>Iniciar Sesión</a>
+                <a href="../html/registrarse.html" class="enlace-cabecera"><i class="fas fa-user-plus"></i>Crear cuenta</a>
+                <a href="../html/carrito.html" class="enlace-cabecera"><i class="fas fa-shopping-cart"></i></a>
+                <span id="precioTotal" class="contador-carrito">0 €</span>
+            </div>
+        </header>
+        <!-- Menú de navegación -->
+        <nav class="menu-navegacion">
+            <ul>
+              <li class="menu-desplegable">
+                <a href="../html/productos.html">PRODUCTOS</a>
+                <ul class="submenu">
+                  <li><a href="../html/alimentacion.html">ALIMENTACIÓN</a></li>
+                  <li><a href="../html/complementos.html">NUTRICIÓN DEPORTIVA</a></li>
+                  <li><a href="../html/depurativos.html">HERBOLARIO</a></li>
+                  <li><a href="../html/cabello.html">HIGIENE</a></li>
+                  <li><a href="../html/energeticos.html">ENERGÉTICOS</a></li>
+                </ul>
+              </li>
+              <li><a href="../html/ofertas.html">OFERTAS</a></li>
+              <li><a href="../html/sobre-nosotros.html">SOBRE NOSOTROS</a></li>
+              <li><a href="../html/blog.html">BLOG</a></li>
+              <li><a href="../html/contacto.html">CONTACTO</a></li>
+            </ul>
+          </nav>
+          <!--Imagenes entrada -->
+          <div class="imagen-oferta">
+            <a href="../html/depurativos.html"><img src="../img/herbolario.jpg" alt="herbolario"></a>
+        </div>        
+    <!-- Sección de productos -->
+    <section class="productos-destacados-container">
+        <h2 class="titulo-destacados"><i class="fas fa-leaf" style="color:aqua"></i></i> HERBOLARIO</h2><br>
+        <p class="producto-descripcion">Sumérgete en nuestra selección de tés e infusiones, cuidadosamente elaborados para brindar bienestar y equilibrio a tu día. Descubre sabores únicos y propiedades relajantes, energizantes o digestivas, perfectos para cada momento. Ya sea que busques iniciar tu día con vitalidad, disfrutar de una pausa reconfortante o terminar la noche con serenidad, nuestras infusiones te ofrecen una experiencia natural y placentera. ¡Explora el mundo del té y transforma tu rutina con cada sorbo!</p>
+    <div class="productos-destacados">
+        <!-- Producto 1 -->
+    <div class="producto">
+        <a href="../productos/te-rojo.html"><img src="../img/te-rojo.jpg" alt="te-rojo" class="producto-img"></a>
+        <h3 class="producto-titulo">TÉ ROJO PU-ERH</h3><br>
+        <p class="producto-descripcion">Descubre los beneficios del Té Rojo Pu-erh, conocido como el "té de los emperadores". Apoya la digestión y contribuye a mantener un metabolismo activo.</p><br>
+        <span class="producto-precio-destacado">15.39 €</span><br>
+        <button class="btn-agregar" onclick="agregarAlCarrito(15.39, 'TÉ ROJO PU-ERH', '../img/te-rojo.jpg')">AÑADIR</button>
+    </div>
+    <!-- Producto 2 -->
+    <div class="producto">
+        <a href="../productos/alcachofa.html"><img src="../img/alcachofa.jpg" alt="alcachofa" class="producto-img"></a>
+        <h3 class="producto-titulo">EXTRACTO DE ALCACHOFA</h3><br>
+        <p class="producto-descripcion">El extracto de alcachofa es un aliado natural para favorecer la salud digestiva y hepática. Ideal para desintoxicar el organismo.</p><br>
+        <span class="producto-precio-destacado"">8.49 €</span><br><br>
+        <button class="btn-agregar" onclick="agregarAlCarrito(8.49, 'EXTRACTO DE ALCACHOFA', '../img/alcachofa.jpg')">AÑADIR</button>
+    </div>
+    <!-- Producto 3 -->
+    <div class="producto">
+        <a href="../productos/adelgazante.html"><img src="../img/adelgazante.jpg" alt="adelgazante" class="producto-img"></a>
+        <h3 class="producto-titulo">SUPLEMENTO TERMOGÉNICO</h3><br>
+        <p class="producto-descripcion">Fórmula avanzada para potenciar la quema de grasa. Ideal para acompañar tus entrenamientos y etapas de definición.</p><br>
+        <span class="producto-precio-destacado">4.90 €</span><br>
+        <button class="btn-agregar" onclick="agregarAlCarrito(4.90, 'SUPLEMENTO TERMOGÉNICO', '../img/adelgazante.jpg')">AÑADIR</button>
+    </div>
+    <!-- Producto 4 -->
+    <div class="producto">
+        <a href="../productos/antiansiedad.html"><img src="../img/antiansiedad.jpg" alt="antiansiedad" class="producto-img"></a>
+        <h3 class="producto-titulo">ANTIANSIEDAD NATURAL</h3><br>
+        <p class="producto-descripcion">Una mezcla de ingredientes naturales para reducir la tensión y mejorar la concentración. Ideal para momentos de estrés.</p><br>
+        <span class="producto-precio-destacado">11.25 €</span><br>
+        <button class="btn-agregar" onclick="agregarAlCarrito(11.25, 'ANTIANSIEDAD NATURAL', '../img/antiansiedad.jpg')">AÑADIR</button>
+    </div>
+    <!-- Producto 5 -->
+    <div class="producto">
+        <a href="../productos/aztecas.html"><img src="../img/aztecas.jpg" alt="aztecas" class="producto-img"></a>
+        <h3 class="producto-titulo">SUPLEMENTO AZTECA</h3><br>
+        <p class="producto-descripcion">Inspirado en la antigua sabiduría azteca. Una mezcla energética para potenciar tu día a día.</p><br>
+        <span class="producto-precio-destacado">12.04 €</span><br>
+        <button class="btn-agregar" onclick="agregarAlCarrito(12.04, 'SUPLEMENTO AZTECA', '../img/aztecas.jpg')">AÑADIR</button>
+    </div>
+        <!-- Producto 6 -->
+    <div class="producto">
+        <a href="../productos/caballo.html"><img src="../img/caballo.jpg" alt="caballo" class="producto-img"></a>
+        <h3 class="producto-titulo">INFUSIÓN DE CASTAÑO DE INDIAS</h3><br>
+        <p class="producto-descripcion">Infusión natural de castaño de indias. Con propiedades relajantes y digestivas.</p><br>
+        <span class="producto-precio-destacado">13.70 €</span><br>
+        <button class="btn-agregar" onclick="agregarAlCarrito(13.70, 'INFUSIÓN DE CASTAÑO DE INDIAS', '../img/caballo.jpg')">AÑADIR</button>
+    </div>
+        <!-- Producto 7 -->
+    <div class="producto">
+        <a href="../productos/caramelo.html"><img src="../img/caramelo.jpg" alt="caramelo" class="producto-img"></a>
+        <h3 class="producto-titulo">CARAMELITOS NATURALES</h3><br>
+        <p class="producto-descripcion">Caramelos hechos con pasta de manzana y endulzados con ingredientes naturales. Deliciosos y nutritivos.</p><br>
+        <span class="producto-precio-destacado">1.23 €</span><br>
+        <button class="btn-agregar" onclick="agregarAlCarrito(1.23, 'CARAMELITOS NATURALES', '../img/caramelo.jpg')">AÑADIR</button>
+    </div>
+    <!-- Producto 8 -->
+    <div class="producto">
+        <a href="../productos/dormesan.html"><img src="../img/dormesan.jpg" alt="dormesan" class="producto-img"></a>
+        <h3 class="producto-titulo">INFUSIÓN PARA EL EMBARAZO</h3><br>
+        <p class="producto-descripcion">Mezcla de hierbas y vitaminas diseñada para el bienestar durante el embarazo. Con beta-caroteno y minerales esenciales.</p><br>
+        <span class="producto-precio-destacado">7.65 €</span><br>
+        <button class="btn-agregar" onclick="agregarAlCarrito(7.65, 'INFUSIÓN PARA EL EMBARAZO', '../img/dormesan.jpg')">AÑADIR</button>
+    </div>
+    <!-- Producto 9 -->
+    <div class="producto">
+        <a href="../productos/hinojo.html"><img src="../img/hinojo.png" alt="hinojo" class="producto-img"></a>
+        <h3 class="producto-titulo">INFUSIÓN DE HINOJO</h3><br>
+        <p class="producto-descripcion">Infusión natural de hinojo. Ideal para favorecer la digestión y disfrutar de un sabor aromático.</p><br>
+        <span class="producto-precio-destacado">3.25 €</span><br>
+        <button class="btn-agregar" onclick="agregarAlCarrito(3.25, 'INFUSIÓN DE HINOJO', '../img/hinojo.png')">AÑADIR</button>
+    </div>
+    <!-- Producto 10 -->
+    <div class="producto">
+        <a href="../productos/ingles.html"><img src="../img/te-ingles.png" alt="ingles" class="producto-img"></a>
+        <h3 class="producto-titulo">TÉ INGLÉS CLÁSICO</h3><br>
+        <p class="producto-descripcion">Una mezcla de té negro tradicional con un sabor intenso y reconfortante. Perfecto para cualquier momento del día.</p><br>
+        <span class="producto-precio-destacado">1.38 €</span><br>
+        <button class="btn-agregar" onclick="agregarAlCarrito(1.38, 'TÉ INGLÉS CLÁSICO', '../img/te-ingles.png')">AÑADIR</button>
+    </div>
+    <!-- Producto 11 -->
+    <div class="producto">
+        <a href="../productos/irlandes.html"><img src="../img/irlandes.jpg" alt="irlandes" class="producto-img"></a>
+        <h3 class="producto-titulo">TÉ IRLANDÉS CON ALMENDRAS</h3><br>
+        <p class="producto-descripcion">Té negro irlandés combinado con el toque único de almendras tostadas. Una delicia para los sentidos.</p><br>
+        <span class="producto-precio-destacado">1.59 €</span><br>
+        <button class="btn-agregar" onclick="agregarAlCarrito(1.59, 'TÉ IRLANDÉS CON ALMENDRAS', '../img/irlandes.jpg')">AÑADIR</button>
+    </div>
+    <!-- Producto 12 -->
+    <div class="producto">
+        <a href="../productos/energreens.html"><img src="../img/energreens.jpg" alt="energreens" class="producto-img"></a>
+        <h3 class="producto-titulo">ENERGREENS</h3><br>
+        <p class="producto-descripcion">Fórmula de extractos herbales de HSN. Té verde + Ginseng + Guaraná + Yerba mate + Theobroma cacao. Con cafeína natural, vitaminas y minerales. Apto para veganos.</p><br>
+        <span class="producto-precio">10.95 €</span><br><br>
+        <button class="btn-agregar" onclick="agregarAlCarrito(10.95, 'ENERGREENS', '../img/energreens.jpg')">AÑADIR</button>
+    </div> 
+    </div>     
+</section>
+<!-- Sección de información -->
+<div class="cajon-informacion">
+    <h2 class="titulo-bienvenida">TÉS E INFUSIONES: UNA EXPERIENCIA NATURAL Y REVITALIZANTE</h2><br>
+    <p class="textos">Descubre nuestra selección de tés e infusiones naturales, diseñados para brindarte momentos de relajación y bienestar. <br> Desde sabores cítricos refrescantes hasta mezclas herbales calmantes, cada producto está elaborado con ingredientes de alta calidad.</p>
+    <p class="textos">Nuestros tés e infusiones están libres de aditivos artificiales, ideales para quienes valoran lo natural. Contamos con opciones aptas para vegetarianos y veganos, ofreciendo soluciones para cada preferencia y estilo de vida.</p>   
+    <p class="textos">Incorpora a tu día a día estas deliciosas infusiones que apoyan tu bienestar físico y mental, ayudándote a relajarte o a llenarte de energía, según lo necesites.</p>
+</div>
+
+<!-- Sección de Opiniones de Usuarios -->
+<div class="opiniones">
+    <h2 class="titulo-opiniones">OPINIONES DE USUARIOS</h2><br>
+    <div class="contenedor-opiniones">
+        <div class="opinion">
+            <h2>MARÍA</h2><br>
+            <p class="textos">Estoy encantada con la variedad de infusiones que ofrecen. <br> Mi favorita es la de manzanilla, perfecta para relajarme después de un día largo. <br> Además, se nota la calidad de los ingredientes naturales. ¡La recomiendo totalmente!</p>
+            <div class="estrellas" data-valor="5">
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+            </div>
+        </div>
+        <div class="opinion">
+            <h2>JAVIER</h2><br>
+            <p class="textos">El té verde Lung Ching ha sido una grata sorpresa. <br> Su sabor es increíblemente suave y perfecto para tomarlo por las mañanas. <br> Estoy feliz de haber encontrado una tienda con tanta variedad y calidad.</p>
+            <div class="estrellas" data-valor="5">
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+            </div>
+        </div>
+        <div class="opinion">
+            <h2>LAURA</h2><br>
+            <p class="textos">Compré la infusión de piña tropical y me encanta el toque dulce y refrescante que tiene. <br> Es perfecta para las tardes, especialmente si la sirves fría. <br> Muy buena opción para quienes buscan algo diferente y saludable.</p>
+            <div class="estrellas" data-valor="4">
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9734;</span>
+            </div>
+        </div>
+        <div class="opinion">
+            <h2>CARLOS</h2><br>
+            <p class="textos">El té negro Yunnan se ha vuelto parte de mi rutina diaria. <br> Su sabor intenso es justo lo que necesito para empezar el día con energía. <br> Estoy muy satisfecho con la calidad y el servicio de esta tienda.</p>
+            <div class="estrellas" data-valor="5">
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Pie de página -->
+<footer class="pie">
+    <div class="informacion-adicional">
+        <h4>NUTREETIVE</h4>
+        <hr>
+        <br>
+        <p class="textos">Fray Paulino s/n 33600 Mieres</p><br>
+        <p class="textos">Email: Nutreetive@gmail.com</p><br>
+        <p class="textos">Teléfono: 612 34 56 78.</p><br>
+    </div>
+    <div class="informacion">
+        <h4>CONTACTO</h4>
+        <hr>
+        <a href="../html/aviso-legal.html" class="enlace-footer"><p class="textos">Aviso legal</p></a><br>
+        <a href="../html/politica-privacidad.html" class="enlace-footer"><p class="textos">Política de privacidad</p></a><br>
+        <a href="../html/politica-cookies.html" class="enlace-footer"><p class="textos">Política de cookies</p></a><br>
+        <a href="../html/envios.html" class="enlace-footer"><p class="textos">Envíos</p></a><br>
+        <a href="../html/devoluciones-reembolsos.html" class="enlace-footer"><p class="textos">Devoluciones y reembolsos</p></a><br>
+    </div>
+    <div class="redes-sociales">
+        <h4>REDES SOCIALES</h4>
+        <hr><br>
+        <a href="https://www.facebook.com/" class="enlace-footer"><img src="../img/facebook.png" alt="facebook" class="icono-footer"></a>
+        <a href="https://www.instagram.com/?hl=es" class="enlace-footer"><img src="../img/instagram.jpg" alt="instagram" class="icono-footer"></a>
+        <a href="https://x.com/?lang=es" class="enlace-footer"><img src="../img/twitter.png" alt="twitter" class="icono-footer"></a>
+    </div>
+    <div class="sobre-nosotros">
+        <h4>SOBRE NOSOTROS</h4>
+        <hr>
+        <a href="../html/blog.html" class="enlace-footer"><p class="textos">Blog</p></a><br>
+        <a href="../html/contacto.html" class="enlace-footer"><p class="textos">Contacte con nosotros</p></a><br>
+        <a href="../html/eleccion.html" class="enlace-footer"><p class="textos">Herbolario - ¿Por qué elegirnos?</p></a><br>
+        <a href="../html/sobre-nosotros.html" class="enlace-footer"><p class="textos">Sobre nosotros - Herbolario Online</p></a>
+    </div>
+</footer>
+</div>
+    
+</body>
+<script src="../js/index.js"></script>
+<script src="../js/buscador.js"></script>
+<script src="../js/estrellas.js"></script>
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="../img/logo.ico">
+    <link rel="stylesheet" href="../css/productos-paginas.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Nutreetive- Tienda Online</title>
+</head>
+<body>
+    <!-- Contenedor principal -->
+    <div class="contenedor-principal">
+        <!-- Cabecera -->
+        <header class="cabecera">
+            <div class="logo">
+                <a href="../html/index.html"><img src="../img/logo.png" alt="Logo"></a>
+            </div>
+            <div class="envio-gratis">¡Envío gratis a partir de 50€!</div>
+            <div class="busqueda">
+                <input type="text" placeholder="Buscar producto..." id="producto">
+                <button onclick="buscarProducto()">Buscar</button>
+            </div>
+            <div class="acciones">
+                <a href="../html/login.html" class="enlace-cabecera"><i class="fas fa-user"></i>Iniciar Sesión</a>
+                <a href="../html/registrarse.html" class="enlace-cabecera"><i class="fas fa-user-plus"></i>Crear cuenta</a>
+                <a href="../html/carrito.html" class="enlace-cabecera"><i class="fas fa-shopping-cart"></i></a>
+                <span id="precioTotal" class="contador-carrito">0 €</span>
+            </div>
+        </header>
+        <!-- Menú de navegación -->
+        <nav class="menu-navegacion">
+            <ul>
+              <li class="menu-desplegable">
+                <a href="#">PRODUCTOS</a>
+                <ul class="submenu">
+                  <li><a href="../html/alimentacion.html">ALIMENTACIÓN</a></li>
+                  <li><a href="../html/complementos.html">NUTRICIÓN DEPORTIVA</a></li>
+                  <li><a href="../html/depurativos.html">HERBOLARIO</a></li>
+                  <li><a href="../html/cabello.html">HIGIENE</a></li>
+                  <li><a href="../html/energeticos.html">ENERGÉTICOS</a></li>
+                </ul>
+              </li>
+              <li><a href="../html/ofertas.html">OFERTAS</a></li>
+              <li><a href="../html/sobre-nosotros.html">SOBRE NOSOTROS</a></li>
+              <li><a href="../html/blog.html">BLOG</a></li>
+              <li><a href="../html/contacto.html">CONTACTO</a></li>
+            </ul>
+          </nav>
+<!-- Sección de producto -->
+<div class="producto">
+    <div class="imagen">
+        <img src="../img/blanqueador.jpg" alt="Crema Blanqueadora de Piel" />
+    </div>
+    <div class="informacion-producto">
+        <h2 class="titulo-producto">CREMA BLANQUEADORA DE PIEL</h2>
+        <p class="descripcion-producto">Nuestra Crema Blanqueadora de Piel está especialmente formulada con ingredientes naturales para reducir manchas oscuras, unificar el tono de la piel y restaurar su luminosidad. Su textura ligera es adecuada para todo tipo de piel, dejando una sensación suave e hidratada tras cada aplicación.</p>
+        <p class="precio">Precio: 11.25 €</p><br>
+        <p class="fecha">Fecha: 26 de noviembre de 2024</p><br>
+        <p class="creador">Proveedor: ESI</p><br>
+        <button class="btn-carrito" onclick="agregarAlCarrito(11.25, 'CREMA BLANQUEADORA DE PIEL', '../img/blanqueador.jpg')">AÑADIR AL CARRITO</button>
+    </div>
+</div>
+
+<!-- Sección de elegir descripción -->
+<div class="tabs-container">
+    <div class="tabs">
+        <button class="tab-button active" onclick="mostrarContenido('opcion1')">Beneficios</button>
+        <button class="tab-button" onclick="mostrarContenido('opcion2')">Detalles del Producto</button>
+    </div>
+    <div id="contenido-opcion1" class="contenido-tab active">
+        <h3>Beneficios de la Crema Blanqueadora de Piel</h3><br>
+        <p>Esta crema ofrece una serie de beneficios para mejorar la apariencia de la piel:</p><br>
+        <ul>
+            <li><strong>Reducción de manchas</strong>: Ayuda a disminuir la apariencia de manchas oscuras y áreas descoloridas.</li><br>
+            <li><strong>Tono uniforme</strong>: Unifica el tono de la piel para una apariencia más luminosa y radiante.</li><br>
+            <li><strong>Hidratación profunda</strong>: Proporciona hidratación duradera, dejando la piel suave y flexible.</li><br>
+            <li><strong>Fórmula segura</strong>: Contiene ingredientes naturales y libres de químicos agresivos, apto para pieles sensibles.</li><br>
+        </ul>
+    </div>
+
+    <div id="contenido-opcion2" class="contenido-tab">
+        <h3>Detalles del Producto</h3><br>
+        <p>La Crema Blanqueadora de Piel está formulada con extractos de regaliz, vitamina C y ácido hialurónico, que trabajan juntos para aclarar y mejorar la textura de la piel. Apta para todo tipo de piel, se puede usar de día y de noche para obtener mejores resultados. No contiene parabenos ni fragancias artificiales, y ha sido dermatológicamente probada.</p><br>
+    </div>
+</div>
+
+<!-- Sección de Opiniones de Usuarios -->
+<div class="opiniones">
+    <h2 class="titulo-opiniones">OPINIONES DE USUARIOS SOBRE LA CREMA BLANQUEADORA DE PIEL</h2><br>
+    <div class="contenedor-opiniones">
+        <div class="opinion">
+            <h2>JUAN</h2><br>
+            <p class="textos">"La mejor crema que he probado. Mis manchas se han reducido significativamente y mi piel se ve más luminosa." </p>
+            <div class="estrellas" data-valor="5">
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+            </div>
+        </div>
+        <div class="opinion">
+            <h2>MARÍA</h2><br>
+            <p class="textos">"He notado que mi piel está mucho más pareja y suave. Es perfecta para el uso diario." </p>
+            <div class="estrellas" data-valor="5">
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+            </div>
+        </div>
+        <div class="opinion">
+            <h2>ANDREA</h2><br>
+            <p class="textos">"Mi piel es sensible y esta crema me ha funcionado de maravilla. La recomiendo si buscas algo suave y efectivo." </p>
+            <div class="estrellas" data-valor="4">
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9734;</span>
+            </div>
+        </div>
+        <div class="opinion">
+            <h2>LUIS</h2><br>
+            <p class="textos">"He usado esta crema por un mes y los resultados son muy buenos. Mi piel se ve mucho más clara y uniforme." </p>
+            <div class="estrellas" data-valor="5">
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+            </div>
+        </div>
+    </div>
+</div>
+        <!-- Pie de página -->
+        <footer class="pie">
+            <div class="informacion-adicional">
+                <h4>NUTREETIVE</h4>
+                <hr>
+                <br>
+                <p>Fray Paulino s/n 33600 Mieres</p><br>
+                <p>Email: Nutreetive@gmail.com</p><br>
+                <p>Teléfono: 612 34 56 78.</p><br>
+            </div>
+            <div class="informacion">
+                <h4>CONTACTO</h4>
+                <hr>
+                <a href="../html/aviso-legal.html" class="enlace-footer"><p>Aviso legal</p></a><br>
+                <a href="../html/politica-privacidad.html" class="enlace-footer"><p>Política de privacidad</p></a><br>
+                <a href="../html/politica-cookies.html" class="enlace-footer"><p>Política de cookies</p></a><br>
+                <a href="../html/envios.html" class="enlace-footer"><p>Envíos</p></a><br>
+                <a href="../html/devoluciones-reembolsos.html" class="enlace-footer"><p>Devoluciones y reembolsos</p></a><br>
+            </div>
+            <div class="redes-sociales">
+                <h4>REDES SOCIALES</h4>
+                <hr><br>
+                <a href="https://www.facebook.com/" class="enlace-footer"><img src="../img/facebook.png" alt="facebook" class="icono-footer"></a>
+                <a href="https://www.instagram.com/?hl=es" class="enlace-footer"><img src="../img/instagram.jpg" alt="instagram" class="icono-footer"></a>
+                <a href="https://x.com/?lang=es" class="enlace-footer"><img src="../img/twitter.png" alt="twitter" class="icono-footer"></a>
+            </div>
+            <div class="sobre-nosotros">
+                <h4>SOBRE NOSOTROS</h4>
+                <hr>
+                <a href="../html/blog.html" class="enlace-footer"><p>Blog</p></a><br>
+                <a href="../html/contacto.html" class="enlace-footer"><p>Contacte con nosotros</p></a><br>
+                <a href="../html/eleccion.html" class="enlace-footer"><p>Herbolario - ¿Por qué elegirnos?</p></a><br>
+                <a href="../html/sobre-nosotros.html" class="enlace-footer"><p>Sobre nosotros - Herbolario Online</p></a>
+            </div>
+        </footer>
+    </div>
+</body>
+<script src="../js/index.js"></script>
+<script src="../js/buscador.js"></script>
+<script src="../js/estrellas.js"></script>
+</html>

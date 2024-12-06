@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="../img/logo.ico">
+    <link rel="stylesheet" href="../css/estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Nutreetive- Energizantes</title>
+</head>
+<body>
+    <!-- Contenedor principal -->
+    <div class="contenedor-principal">
+        <!-- Cabecera -->
+        <header class="cabecera">
+            <div class="logo">
+                <a href="../html/index.html"><img src="../img/logo.png" alt="Logo"></a>
+            </div>
+            <div class="envio-gratis">¡Envío gratis a partir de 50€!</div>
+            <div class="busqueda">
+                <input type="text" placeholder="Buscar producto..." id="producto">
+                <button onclick="buscarProducto()">Buscar</button>
+            </div>
+            <div class="acciones">
+                <a href="../html/login.html" class="enlace-cabecera"><i class="fas fa-user"></i>Iniciar Sesión</a>
+                <a href="../html/registrarse.html" class="enlace-cabecera"><i class="fas fa-user-plus"></i>Crear cuenta</a>
+                <a href="../html/carrito.html" class="enlace-cabecera"><i class="fas fa-shopping-cart"></i></a>
+                <span id="precioTotal" class="contador-carrito">0 €</span>
+            </div>
+        </header>
+        <!-- Menú de navegación -->
+        <nav class="menu-navegacion">
+            <ul>
+              <li class="menu-desplegable">
+                <a href="../html/productos.html">PRODUCTOS</a>
+                <ul class="submenu">
+                  <li><a href="../html/alimentacion.html">ALIMENTACIÓN</a></li>
+                  <li><a href="../html/complementos.html">NUTRICIÓN DEPORTIVA</a></li>
+                  <li><a href="../html/depurativos.html">HERBOLARIO</a></li>
+                  <li><a href="../html/cabello.html">HIGIENE</a></li>
+                  <li><a href="../html/energeticos.html">ENERGÉTICOS</a></li>
+                </ul>
+              </li>
+              <li><a href="../html/ofertas.html">OFERTAS</a></li>
+              <li><a href="../html/sobre-nosotros.html">SOBRE NOSOTROS</a></li>
+              <li><a href="../html/blog.html">BLOG</a></li>
+              <li><a href="../html/contacto.html">CONTACTO</a></li>
+            </ul>
+          </nav>
+          <!--Imagenes entrada -->
+          <div class="imagen-oferta">
+            <a href="../html/energeticos.html"><img src="../img/energia.jpg" alt="energeticos"></a>
+        </div>        
+    <!-- Sección de productos -->
+    <section class="productos-destacados-container">
+        <h2 class="titulo-destacados"><i class="fas fa-running" style="color:darkmagenta;"></i></i> ENERGÉTICOS</h2><br>
+        <p class="producto-descripcion">En nuestra tienda, te ofrecemos una selección de suplementos energizantes naturales diseñados para darte el impulso que necesitas sin comprometer tu bienestar. Ya sea que busques aumentar tu resistencia, mejorar tu enfoque o simplemente mantener altos niveles de energía durante todo el día, aquí encontrarás productos de alta calidad y sin aditivos. Atrévete a potenciar cada uno de tus días, alcanzando tus metas con vitalidad, y disfruta de una energía renovada de forma sana y equilibrada. ¡Empieza hoy a transformar tu rendimiento</p>
+    <div class="productos-destacados">
+        <!-- Producto 1 -->
+        <div class="producto">
+            <a href="../productos/keto-cafe.html"><img src="../img/producto2.jpg" alt="Producto 2" class="producto-img"></a>
+            <h3 class="producto-titulo">KETO CAFÉ INSTANTÁNEO</h3><br>
+            <p class="producto-descripcion">¡Keto Café Instantáneo es tu nuevo bulletproof coffee! <br> Con Café Instantáneo y Aceite de MCT en polvo.</p><br>
+            <span class="producto-precio-destacado">6.11 €</span><br>
+            <button class="btn-agregar" onclick="agregarAlCarrito(6.11, 'KETO CAFÉ INSTANTÁNEO', '../img/producto2.jpg')">AÑADIR</button>
+        </div>
+        <!-- Producto 2 -->
+        <div class="producto">
+            <a href="../productos/hydrogel.html"><img src="../img/hydrogel.jpg" alt="Producto 1" class="producto-img"></a>
+            <h3 class="producto-titulo">EVOENERGY HYDROGEL CON CAFEÍNA</h3><br>
+            <p class="texto-ofertas">70ml de gel con consistencia fluida (Hydro)</p>
+            <span class="producto-precio">1.74 €</span><br><br>
+            <button class="btn-agregar" onclick="agregarAlCarrito(3.15, 'COPOS DE AVENA FINOS INTEGRALES SUAVES BIO', '../img/hydrogel.jpg')">AÑADIR</button>
+        </div>
+        <!-- Producto 3 -->
+        <div class="producto">
+            <a href="../productos/evoburn.html"><img src="../img/evoburn.jpg" alt="evoburn" class="producto-img"></a>
+            <h3 class="producto-titulo">EVOBURN</h3><br>
+            <p class="producto-descripcion">Descubre Evoburn: La fórmula termogénica * más emblemática de HSN. Con estimulantes: Aporta +200mg por dosis diaria.</p><br>
+            <span class="producto-precio-destacado">4.90 €</span><br>
+            <button class="btn-agregar" onclick="agregarAlCarrito(4.90, 'EVOBURN', '../img/evoburn.jpg')">AÑADIR</button>
+        </div>
+        <!-- Producto 4 -->
+        <div class="producto">
+            <a href="../productos/evolytes.html"><img src="../img/evolytes.jpg" alt="evolytes" class="producto-img"></a>
+            <h3 class="producto-titulo">EVOLYTES PLUS + (SALES DE ELECTROLITOS) + CAFEÍNA</h3><br>
+            <p class="producto-descripcion">Electrolitos en cápsulas. Con cafeína anhidra natural. Especial deportes de resistencia. Apto para veganos.</p><br>
+            <span class="producto-precio-destacado">11.25 €</span><br>
+            <button class="btn-agregar" onclick="agregarAlCarrito(11.25, 'EVOLYTES PLUS + SALES DE ELECTROLITOS + CAFEÍNA', '../img/evolytes.jp')">AÑADIR</button>
+        </div>
+        <!-- Producto 5 -->
+        <div class="producto">
+            <a href="../productos/evoripped.html"><img src="../img/evoripped.jpg" alt="evoripped" class="producto-img"></a>
+            <h3 class="producto-titulo">EVORIPPED</h3><br>
+            <p class="producto-descripcion">Alto poder estimulante para obtener mayor punch. Ideal para personas experimentadas y últimas fases de etapas de definición con resultados extremos.</p><br>
+            <span class="producto-precio-destacado">2.55 €</span><br>
+            <button class="btn-agregar" onclick="agregarAlCarrito(2.55, 'EVORIPPED', '../img/evoripped.jpg')">AÑADIR</button>
+        </div>
+        <!-- Producto 6 -->
+        <div class="producto">
+            <a href="../productos/cafe-proteico.html"><img src="../img/cafe-proteico.jpg" alt="cafe-proteico" class="producto-img"></a>
+            <h3 class="producto-titulo">CAFÉ PROTEICO</h3><br>
+            <p class="producto-descripcion">Café Instantáneo Alto en Proteínas. Bajo en azúcar. Con calcio. Proteína de vacas alimentadas con pasto. 150mg de cafeína por toma.</p><br>
+            <span class="producto-precio-destacado">13.70 €</span><br>
+            <button class="btn-agregar" onclick="agregarAlCarrito(13.70, 'CAFÉ PROTEICO', '../img/cafe-proteico.jpg')">AÑADIR</button>
+        </div>
+        <!-- Producto 7 -->
+        <div class="producto">
+            <a href="../productos/evogumy.html"><img src="../img/evogumy.jpg" alt="evogumi" class="producto-img"></a>
+            <h3 class="producto-titulo">EVOGUMMY RECOVERY GUMMY BAR</h3><br>
+            <p class="producto-descripcion">Barritas energéticas a base de pasta de manzana. Con L-glutamina y L-carnitina L-tartrato. 30 gramos. Fácil de transportar. Apertura cómoda. <br>Con Harina de Avena y Huevos de Gallinas no enjauladas. Apta para vegetarianos.</p><br>
+            <span class="producto-precio-destacado">1.23 €</span><br>
+            <button class="btn-agregar" onclick="agregarAlCarrito(1.23, 'EVOGUMMY RECOVERY GUMMY BAR', '../img/evogumy.jpg')">AÑADIR</button>
+        </div>
+        <!-- Producto 8 -->
+        <div class="producto">
+            <a href="../productos/prenatal.html"><img src="../img/prenatal.jpg" alt="nutribowl" class="producto-img"></a>
+            <h3 class="producto-titulo">PRENATAL CARE</h3><br>
+            <p class="producto-descripcion">Vitaminas y minerales para el embarazo. Con formas de alta calidad. Vitamina A en forma de Beta-Caroteno.</p><br>
+            <span class="producto-precio-destacado">7.65 €</span><br>
+            <button class="btn-agregar" onclick="agregarAlCarrito(7.65, 'PRENATAL CARE ', '../img/prenatal.jpg')">AÑADIR</button>
+        </div>
+         <!-- Producto 9 -->
+         <div class="producto">
+            <a href="../productos/flapjack.html"><img src="../img/flapjack.jpg" alt="flapjack" class="producto-img"></a>
+            <h3 class="producto-titulo">ENERGY BAR FLAPJACK</h3><br>
+            <p class="producto-descripcion">Barritas energéticas aptas para vegetarianos estilo Flapjack a base de copos de avena; con fruta natural y frutos secos. ¡El snack más sabroso para tus sesiones intensas!</p><br>
+            <span class="producto-precio-destacado">3.25 €</span><br>
+            <button class="btn-agregar" onclick="agregarAlCarrito(3.25, 'ENERGY BAR FLAPJACK', '../img/flapjack.jpg')">AÑADIR</button>
+        </div>         <!-- Producto 10 -->
+         <div class="producto">
+            <a href="../productos/paleo.html"><img src="../img/paleo.jpg" alt="aceite sesamo" class="producto-img"></a>
+            <h3 class="producto-titulo">ENERGY PALEO BAR</h3><br>
+            <p class="producto-descripcion">Barrita energética Paleo. A base de pasta de dátiles. Con frutos secos y fruta. Apta para veganos.</p><br>
+            <span class="producto-precio-destacado">1.38 €</span><br>
+            <button class="btn-agregar" onclick="agregarAlCarrito(1.38, 'ENERGY PALEO BAR', '../img/paleo.jpg')">AÑADIR</button>
+        </div>
+         <!-- Producto 11 -->
+         <div class="producto">
+            <a href="../productos/almond.html"><img src="../img/almond.jpg" alt="pan proteico" class="producto-img"></a>
+            <h3 class="producto-titulo">ALMOND ENERGY BAR</h3><br>
+            <p class="producto-descripcion">Deliciosa barrita natural a base de almendra tostada salada. Con ingredientes de calidad: Frutos secos, miel, arroz inflado, Ghee… ¡Sin aditivos!</p><br>
+            <span class="producto-precio-destacado">1.59 €</span><br>
+            <button class="btn-agregar" onclick="agregarAlCarrito(1.59, 'ALMOND ENERGY BAR', '../img/almond.jpg')">AÑADIR</button>
+        </div>
+         <!-- Producto 12 -->
+         <div class="producto">
+            <a href="../productos/energreens.html"><img src="../img/energreens.jpg" alt="energreens" class="producto-img"></a>
+            <h3 class="producto-titulo">ENERGREENS</h3><br>
+            <p class="producto-descripcion">Fórmula de extractos herbales de HSN. Té verde + Ginseng + Guaraná + Yerba mate + Theobroma cacao. Con cafeína natural, vitaminas y minerales. Apto para veganos.</p><br>
+            <span class="producto-precio">10.95 €</span><br><br>
+            <button class="btn-agregar" onclick="agregarAlCarrito(10.95, 'ENERGREENS', '../energreens.jpg')">AÑADIR</button>
+        </div>
+    </div>
+</section>
+<!-- Sección de Energizantes Naturales -->
+<div class="cajon-informacion">
+    <h2 class="titulo-bienvenida">ENERGÍA NATURAL: POTENCIA TU DÍA CON SUPLEMENTOS ENERGIZANTES</h2><br>
+    <p class="textos">En nuestra sección de Energizantes, encontrarás productos naturales que aumentan tu vitalidad de manera saludable. <br> Desde extractos de plantas adaptógenas hasta fórmulas a base de cafeína natural, aquí tienes opciones que te ayudan a enfrentar el día con energía renovada.</p>
+    <p class="textos">Nuestros energizantes están formulados sin aditivos artificiales, ideales para quienes buscan un impulso natural. Contamos con productos aptos para vegetarianos y veganos, porque creemos en opciones que se adaptan a cada estilo de vida y necesidad.</p>   
+    <p class="textos">Añade a tu rutina productos que apoyan tu rendimiento físico y mental, ayudándote a mantenerte activo y concentrado durante todo el día.</p>
+</div>
+
+<!-- Sección de Opiniones de Usuarios -->
+<div class="opiniones">
+    <h2 class="titulo-opiniones">OPINIONES DE USUARIOS</h2><br>
+    <div class="contenedor-opiniones">
+        <div class="opinion">
+            <h2>CARLA</h2><br>
+            <p class="textos">Llevo un tiempo usando los energizantes naturales de esta tienda, y los resultados son increíbles. <br> Me siento más activa y con energía durante todo el día, sin los efectos de la cafeína sintética. <br> Definitivamente seguiré usándolos para mantenerme al máximo en mi rutina diaria.</p>
+            <div class="estrellas" data-valor="5">
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+            </div>
+        </div>
+        <div class="opinion">
+            <h2>RAÚL</h2><br>
+            <p class="textos">Soy deportista, y estos energizantes me han ayudado muchísimo en mis entrenamientos. <br> Me proporcionan el impulso que necesito sin afectar mi descanso. <br> Además, la calidad es excelente, con ingredientes naturales que marcan la diferencia. ¡Muy recomendados!</p>
+            <div class="estrellas" data-valor="5">
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+            </div>
+        </div>
+        <div class="opinion">
+            <h2>LUCÍA</h2><br>
+            <p class="textos">Con estos energizantes naturales puedo mantenerme concentrada durante mis estudios. <br> Lo mejor es que no tienen aditivos químicos y se sienten muy suaves en el sistema. <br> Para cualquiera que busque alternativas saludables, ¡estos productos son una excelente opción!</p>
+            <div class="estrellas" data-valor="4">
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9734;</span>
+            </div>
+        </div>
+        <div class="opinion">
+            <h2>MIGUEL</h2><br>
+            <p class="textos">El energizante de esta tienda es perfecto para empezar el día. <br> Me ayuda a sentirme activo y enfocado sin la pesadez que me causaban otros productos. <br> Muy recomendado para quienes buscan un impulso natural y efectivo.</p>
+            <div class="estrellas" data-valor="5">
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Pie de página -->
+<footer class="pie">
+    <div class="informacion-adicional">
+        <h4>NUTREETIVE</h4>
+        <hr>
+        <br>
+        <p class="textos">Fray Paulino s/n 33600 Mieres</p><br>
+        <p class="textos">Email: Nutreetive@gmail.com</p><br>
+        <p class="textos">Teléfono: 612 34 56 78.</p><br>
+    </div>
+    <div class="informacion">
+        <h4>CONTACTO</h4>
+        <hr>
+        <a href="../html/aviso-legal.html" class="enlace-footer"><p class="textos">Aviso legal</p></a><br>
+        <a href="../html/politica-privacidad.html" class="enlace-footer"><p class="textos">Política de privacidad</p></a><br>
+        <a href="../html/politica-cookies.html" class="enlace-footer"><p class="textos">Política de cookies</p></a><br>
+        <a href="../html/envios.html" class="enlace-footer"><p class="textos">Envíos</p></a><br>
+        <a href="../html/devoluciones-reembolsos.html" class="enlace-footer"><p class="textos">Devoluciones y reembolsos</p></a><br>
+    </div>
+    <div class="redes-sociales">
+        <h4>REDES SOCIALES</h4>
+        <hr><br>
+        <a href="https://www.facebook.com/" class="enlace-footer"><img src="../img/facebook.png" alt="facebook" class="icono-footer"></a>
+        <a href="https://www.instagram.com/?hl=es" class="enlace-footer"><img src="../img/instagram.jpg" alt="instagram" class="icono-footer"></a>
+        <a href="https://x.com/?lang=es" class="enlace-footer"><img src="../img/twitter.png" alt="twitter" class="icono-footer"></a>
+    </div>
+    <div class="sobre-nosotros">
+        <h4>SOBRE NOSOTROS</h4>
+        <hr>
+        <a href="../html/blog.html" class="enlace-footer"><p class="textos">Blog</p></a><br>
+        <a href="../html/contacto.html" class="enlace-footer"><p class="textos">Contacte con nosotros</p></a><br>
+        <a href="../html/eleccion.html" class="enlace-footer"><p class="textos">Herbolario - ¿Por qué elegirnos?</p></a><br>
+        <a href="../html/sobre-nosotros.html" class="enlace-footer"><p class="textos">Sobre nosotros - Herbolario Online</p></a>
+    </div>
+</footer>
+</div>
+    
+</body>
+<script src="../js/index.js"></script>
+<script src="../js/buscador.js"></script>
+<script src="../js/estrellas.js"></script>
+</html>

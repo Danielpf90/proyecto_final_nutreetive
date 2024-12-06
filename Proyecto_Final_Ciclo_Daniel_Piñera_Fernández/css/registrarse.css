@@ -1,0 +1,140 @@
+/* Estilos globales: Resetea márgenes, rellenos y establece un box-sizing consistente */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Para que padding y bordes no afecten el tamaño total de los elementos */
+}
+
+/* Estilo general del cuerpo de la página */
+body {
+    font-family: Arial, sans-serif; /* Utiliza la fuente Arial por defecto */
+    background-color: #f4f4f4; /* Fondo gris claro */
+    display: flex; /* Usa Flexbox para alinear el contenido */
+    justify-content: center; /* Centra el formulario horizontalmente */
+    align-items: center; /* Centra el formulario verticalmente */
+    min-height: 100vh; /* Asegura que el contenido ocupe toda la altura de la ventana */
+}
+
+/* Estilo del título */
+h2 {
+    text-align: center; /* Centra el texto del título */
+    color: #2c6b2f; /* Color verde oscuro */
+    margin-bottom: 20px; /* Espaciado inferior del título */
+}
+
+/* Estilo del formulario */
+form {
+    background-color: #fff; /* Fondo blanco */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil alrededor del formulario */
+    width: 100%; /* El formulario ocupa el 100% del ancho disponible */
+    max-width: 400px; /* El formulario no puede ser más ancho de 400px */
+    text-align: left; /* Alinea el contenido del formulario a la izquierda */
+}
+
+/* Estilo para las etiquetas de los campos */
+label {
+    font-size: 14px; /* Tamaño de fuente más pequeño */
+    color: #333; /* Color gris oscuro */
+    margin-bottom: 5px; /* Espaciado inferior de las etiquetas */
+    display: inline-block; /* Hace que las etiquetas se comporten como bloques de línea */
+}
+
+/* Estilo de los campos de entrada (email y contraseña) */
+input[type="email"],
+input[type="password"] {
+    width: 100%; /* Los campos ocupan el 100% del ancho disponible */
+    padding: 10px; /* Espaciado interno de los campos */
+    margin: 10px 0; /* Espaciado vertical de los campos */
+    border: 1px solid #ccc; /* Borde gris claro */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 16px; /* Tamaño de la fuente dentro de los campos */
+    color: #333; /* Color del texto dentro de los campos */
+}
+
+/* Estilos cuando los campos de entrada están enfocados (cuando el usuario hace clic en ellos) */
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border-color: greenyellow; /* Cambia el borde a un color verde amarillento al enfocarse */
+    outline: none; /* Elimina el contorno por defecto al enfocar */
+}
+
+/* Estilo del botón de envío */
+button[type="submit"] {
+    background-color: green; /* Color de fondo verde */
+    color: white; /* Color del texto blanco */
+    border: none; /* Sin borde */
+    padding: 12px 20px; /* Espaciado interno del botón */
+    font-size: 16px; /* Tamaño de la fuente dentro del botón */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    width: 100%; /* El botón ocupa todo el ancho disponible */
+    margin-top: 10px; /* Espaciado superior */
+}
+
+/* Estilo cuando el botón de envío está en estado hover (al pasar el ratón) */
+button[type="submit"]:hover {
+    background-color: greenyellow; /* Cambia el color de fondo a verde amarillento cuando se pasa el ratón */
+}
+
+/* Estilo para el párrafo con el enlace */
+p {
+    text-align: center; /* Centra el texto del párrafo */
+    margin-top: 15px; /* Espaciado superior */
+    font-size: 14px; /* Tamaño de fuente más pequeño */
+}
+
+/* Estilo del enlace dentro del párrafo */
+p a {
+    color: green; /* Color verde para el enlace */
+    text-decoration: none; /* Elimina el subrayado del enlace */
+}
+
+/* Estilo del enlace cuando se pasa el ratón por encima */
+p a:hover {
+    text-decoration: underline; /* Subraya el enlace cuando se pasa el ratón */
+}
+
+/* Media Queries para adaptar el diseño a pantallas más pequeñas */
+
+/* Estilos para pantallas de hasta 600px de ancho (dispositivos pequeños) */
+@media (max-width: 600px) {
+    h2 {
+        font-size: 24px; /* Disminuye el tamaño del título */
+    }
+
+    form {
+        padding: 15px; /* Reduce el espaciado interno del formulario */
+        width: 90%; /* El formulario ocupa el 90% del ancho de la pantalla */
+        max-width: 350px; /* El formulario se ajusta a un máximo de 350px de ancho */
+    }
+
+    button[type="submit"] {
+        padding: 10px; /* Disminuye el espaciado interno del botón */
+        font-size: 14px; /* Disminuye el tamaño de la fuente dentro del botón */
+    }
+}
+
+/* Estilos para pantallas de hasta 400px de ancho (dispositivos muy pequeños) */
+@media (max-width: 400px) {
+    form {
+        padding: 10px; /* Reduce aún más el espaciado interno del formulario */
+        width: 90%; /* El formulario ocupa el 90% del ancho disponible */
+        max-width: 320px; /* El formulario no puede ser más ancho de 320px */
+    }
+
+    h2 {
+        font-size: 20px; /* Disminuye aún más el tamaño del título */
+    }
+
+    input[type="email"],
+    input[type="password"] {
+        font-size: 14px; /* Disminuye el tamaño de la fuente dentro de los campos */
+    }
+
+    button[type="submit"] {
+        padding: 10px 15px; /* Ajusta el espaciado interno del botón */
+        font-size: 14px; /* Ajusta el tamaño de la fuente dentro del botón */
+    }
+}

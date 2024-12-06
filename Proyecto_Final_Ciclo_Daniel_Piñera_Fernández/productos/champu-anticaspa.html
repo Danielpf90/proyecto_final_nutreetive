@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="../img/logo.ico">
+    <link rel="stylesheet" href="../css/productos-paginas.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Nutreetive- Tienda Online</title>
+</head>
+<body>
+    <!-- Contenedor principal -->
+    <div class="contenedor-principal">
+        <!-- Cabecera -->
+        <header class="cabecera">
+            <div class="logo">
+                <a href="../html/index.html"><img src="../img/logo.png" alt="Logo"></a>
+            </div>
+            <div class="envio-gratis">¡Envío gratis a partir de 50€!</div>
+            <div class="busqueda">
+                <input type="text" placeholder="Buscar producto..." id="producto">
+                <button onclick="buscarProducto()">Buscar</button>
+            </div>
+            <div class="acciones">
+                <a href="../html/login.html" class="enlace-cabecera"><i class="fas fa-user"></i>Iniciar Sesión</a>
+                <a href="../html/registrarse.html" class="enlace-cabecera"><i class="fas fa-user-plus"></i>Crear cuenta</a>
+                <a href="../html/carrito.html" class="enlace-cabecera"><i class="fas fa-shopping-cart"></i></a>
+                <span id="precioTotal" class="contador-carrito">0 €</span>
+            </div>
+        </header>
+        <!-- Menú de navegación -->
+        <nav class="menu-navegacion">
+            <ul>
+              <li class="menu-desplegable">
+                <a href="#">PRODUCTOS</a>
+                <ul class="submenu">
+                  <li><a href="../html/alimentacion.html">ALIMENTACIÓN</a></li>
+                  <li><a href="../html/complementos.html">NUTRICIÓN DEPORTIVA</a></li>
+                  <li><a href="../html/depurativos.html">HERBOLARIO</a></li>
+                  <li><a href="../html/cabello.html">HIGIENE</a></li>
+                  <li><a href="../html/energeticos.html">ENERGÉTICOS</a></li>
+                </ul>
+              </li>
+              <li><a href="../html/ofertas.html">OFERTAS</a></li>
+              <li><a href="../html/sobre-nosotros.html">SOBRE NOSOTROS</a></li>
+              <li><a href="../html/blog.html">BLOG</a></li>
+              <li><a href="../html/contacto.html">CONTACTO</a></li>
+            </ul>
+          </nav>
+<!-- Sección de producto -->
+<div class="producto">
+    <div class="imagen">
+        <img src="../img/anticaspa.jpg" alt="Champú Anticaspa" />
+    </div>
+    <div class="informacion-producto">
+        <h2 class="titulo-producto">CHAMPÚ ANTICASPA</h2>
+        <p class="descripcion-producto">Nuestro Champú Anticaspa está formulado con ingredientes naturales y activos que combaten la caspa y el picor, manteniendo tu cuero cabelludo limpio y equilibrado. Ideal para todo tipo de cabello, este champú ayuda a eliminar las escamas y previene la aparición de caspa, dejándote un cabello suave, saludable y con un aroma fresco.</p>
+        <p class="precio">Precio: 1.74 €</p><br>
+        <p class="fecha">Fecha: 26 de noviembre de 2024</p><br>
+        <p class="creador">Proveedor: NETTLE</p><br>
+        <button class="btn-carrito" onclick="agregarAlCarrito(1.74, 'CHAMPÚ ANTICASPA', '../img/anticaspa.jpg')">AÑADIR AL CARRITO</button>
+    </div>
+</div>
+
+<!-- Sección de elegir descripción -->
+<div class="tabs-container">
+    <div class="tabs">
+        <button class="tab-button active" onclick="mostrarContenido('opcion1')">Beneficios</button>
+        <button class="tab-button" onclick="mostrarContenido('opcion2')">Detalles del Producto</button>
+    </div>
+    <div id="contenido-opcion1" class="contenido-tab active">
+        <h3>Beneficios del Champú Anticaspa</h3><br>
+        <p>Este champú ofrece una serie de beneficios para quienes sufren de caspa y desean mantener su cuero cabelludo saludable:</p><br>
+        <ul>
+            <li><strong>Elimina la caspa</strong>: Combate las escamas y reduce el picor, dejando el cuero cabelludo limpio y libre de impurezas.</li><br>
+            <li><strong>Previene la formación de caspa</strong>: Regula la producción de sebo y previene futuros brotes de caspa.</li><br>
+            <li><strong>Hidrata el cuero cabelludo</strong>: Gracias a sus ingredientes hidratantes, mantiene el cuero cabelludo suave y equilibrado.</li><br>
+            <li><strong>Cabello suave y saludable</strong>: Deja el cabello suave, manejable y con un aroma fresco, sin resecarlo.</li><br>
+        </ul>
+    </div>
+
+    <div id="contenido-opcion2" class="contenido-tab">
+        <h3>Detalles del Producto</h3><br>
+        <p>Este champú anticaspa está formulado con ingredientes naturales como el zinc piritiona, que combate eficazmente las causas de la caspa. Además, su fórmula suave es apta para todo tipo de cabello, incluido el cabello sensible. Puedes usarlo regularmente para mantener tu cuero cabelludo limpio y libre de caspa, y disfrutar de un cabello más saludable.</p><br>
+    </div>
+</div>
+
+<!-- Sección de Opiniones de Usuarios -->
+<div class="opiniones">
+    <h2 class="titulo-opiniones">OPINIONES DE USUARIOS SOBRE EL CHAMPÚ ANTICASPA</h2><br>
+    <div class="contenedor-opiniones">
+        <div class="opinion">
+            <h2>JUAN</h2><br>
+            <p class="textos">"Este champú ha sido un cambio total para mi cabello. Adiós a la caspa y al picor. Mi cuero cabelludo se siente mucho más limpio." </p>
+            <div class="estrellas" data-valor="5">
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+            </div>
+        </div>
+        <div class="opinion">
+            <h2>MARÍA</h2><br>
+            <p class="textos">"Lo uso desde hace un mes y la caspa ha desaparecido por completo. Además, mi cabello se siente muy suave y saludable." </p>
+            <div class="estrellas" data-valor="5">
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+            </div>
+        </div>
+        <div class="opinion">
+            <h2>ANDREA</h2><br>
+            <p class="textos">"Me encantó este champú, no solo ha reducido la caspa, sino que también ha dejado mi cabello mucho más brillante y suave." </p>
+            <div class="estrellas" data-valor="4">
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9734;</span>
+            </div>
+        </div>
+        <div class="opinion">
+            <h2>LUIS</h2><br>
+            <p class="textos">"Perfecto para mi cuero cabelludo sensible. Ayuda a controlar la caspa sin irritar mi piel." </p>
+            <div class="estrellas" data-valor="5">
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+            </div>
+        </div>
+    </div>
+</div>
+        <!-- Pie de página -->
+        <footer class="pie">
+            <div class="informacion-adicional">
+                <h4>NUTREETIVE</h4>
+                <hr>
+                <br>
+                <p>Fray Paulino s/n 33600 Mieres</p><br>
+                <p>Email: Nutreetive@gmail.com</p><br>
+                <p>Teléfono: 612 34 56 78.</p><br>
+            </div>
+            <div class="informacion">
+                <h4>CONTACTO</h4>
+                <hr>
+                <a href="../html/aviso-legal.html" class="enlace-footer"><p>Aviso legal</p></a><br>
+                <a href="../html/politica-privacidad.html" class="enlace-footer"><p>Política de privacidad</p></a><br>
+                <a href="../html/politica-cookies.html" class="enlace-footer"><p>Política de cookies</p></a><br>
+                <a href="../html/envios.html" class="enlace-footer"><p>Envíos</p></a><br>
+                <a href="../html/devoluciones-reembolsos.html" class="enlace-footer"><p>Devoluciones y reembolsos</p></a><br>
+            </div>
+            <div class="redes-sociales">
+                <h4>REDES SOCIALES</h4>
+                <hr><br>
+                <a href="https://www.facebook.com/" class="enlace-footer"><img src="../img/facebook.png" alt="facebook" class="icono-footer"></a>
+                <a href="https://www.instagram.com/?hl=es" class="enlace-footer"><img src="../img/instagram.jpg" alt="instagram" class="icono-footer"></a>
+                <a href="https://x.com/?lang=es" class="enlace-footer"><img src="../img/twitter.png" alt="twitter" class="icono-footer"></a>
+            </div>
+            <div class="sobre-nosotros">
+                <h4>SOBRE NOSOTROS</h4>
+                <hr>
+                <a href="../html/blog.html" class="enlace-footer"><p>Blog</p></a><br>
+                <a href="../html/contacto.html" class="enlace-footer"><p>Contacte con nosotros</p></a><br>
+                <a href="../html/eleccion.html" class="enlace-footer"><p>Herbolario - ¿Por qué elegirnos?</p></a><br>
+                <a href="../html/sobre-nosotros.html" class="enlace-footer"><p>Sobre nosotros - Herbolario Online</p></a>
+            </div>
+        </footer>
+    </div>
+</body>
+<script src="../js/index.js"></script>
+<script src="../js/buscador.js"></script>
+<script src="../js/estrellas.js"></script>
+</html>

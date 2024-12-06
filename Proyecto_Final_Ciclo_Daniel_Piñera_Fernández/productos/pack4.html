@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="../img/logo.ico">
+    <link rel="stylesheet" href="../css/productos-paginas.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Nutreetive- Tienda Online</title>
+</head>
+<body>
+    <!-- Contenedor principal -->
+    <div class="contenedor-principal">
+        <!-- Cabecera -->
+        <header class="cabecera">
+            <div class="logo">
+                <a href="../html/index.html"><img src="../img/logo.png" alt="Logo"></a>
+            </div>
+            <div class="envio-gratis">¡Envío gratis a partir de 50€!</div>
+            <div class="busqueda">
+                <input type="text" placeholder="Buscar producto..." id="producto">
+                <button onclick="buscarProducto()">Buscar</button>
+            </div>
+            <div class="acciones">
+                <a href="../html/login.html" class="enlace-cabecera"><i class="fas fa-user"></i>Iniciar Sesión</a>
+                <a href="../html/registrarse.html" class="enlace-cabecera"><i class="fas fa-user-plus"></i>Crear cuenta</a>
+                <a href="../html/carrito.html" class="enlace-cabecera"><i class="fas fa-shopping-cart"></i></a>
+                <span id="precioTotal" class="contador-carrito">0 €</span>
+            </div>
+        </header>
+        <!-- Menú de navegación -->
+        <nav class="menu-navegacion">
+            <ul>
+              <li class="menu-desplegable">
+                <a href="#">PRODUCTOS</a>
+                <ul class="submenu">
+                  <li><a href="../html/alimentacion.html">ALIMENTACIÓN</a></li>
+                  <li><a href="../html/complementos.html">NUTRICIÓN DEPORTIVA</a></li>
+                  <li><a href="../html/depurativos.html">HERBOLARIO</a></li>
+                  <li><a href="../html/cabello.html">HIGIENE</a></li>
+                  <li><a href="../html/energeticos.html">ENERGÉTICOS</a></li>
+                </ul>
+              </li>
+              <li><a href="../html/ofertas.html">OFERTAS</a></li>
+              <li><a href="../html/sobre-nosotros.html">SOBRE NOSOTROS</a></li>
+              <li><a href="../html/blog.html">BLOG</a></li>
+              <li><a href="../html/contacto.html">CONTACTO</a></li>
+            </ul>
+          </nav>
+<!-- Sección de producto -->
+<div class="producto">
+    <div class="imagen">
+        <img src="../img/pack4.jpg" alt="Pack Chocolate" />
+    </div>
+    <div class="informacion-producto">
+        <h2 class="titulo-producto">PACK CHOCOLATE</h2>
+        <p class="descripcion-producto">El Pack Chocolate es la combinación perfecta para los amantes del dulce. Incluye una selección de productos de chocolate de alta calidad, ideales para disfrutar en cualquier momento del día. Desde tabletas de chocolate hasta cremas untables, este pack está diseñado para satisfacer tus antojos de manera deliciosa.</p>
+        <p class="precio">Precio: 24.90 €</p><br>
+        <p class="fecha">Fecha: 21 de noviembre de 2024</p><br>
+        <p class="creador">Proveedor: HSN</p><br>
+        <button class="btn-carrito" onclick="agregarAlCarrito(24.90, 'PACK CHOCOLATE', '../img/pack4.jpg')">AÑADIR</button>
+    </div>
+</div>
+
+<!-- Sección de elegir descripción -->
+<div class="tabs-container">
+    <div class="tabs">
+        <button class="tab-button active" onclick="mostrarContenido('opcion1')">Beneficios</button>
+        <button class="tab-button" onclick="mostrarContenido('opcion2')">Detalles del Producto</button>
+    </div>
+    <div id="contenido-opcion1" class="contenido-tab active">
+        <h3>Beneficios del Pack Chocolate</h3><br>
+        <p>El Pack Chocolate ofrece una experiencia única para los amantes del chocolate. Con una variedad de productos cuidadosamente seleccionados, puedes disfrutar de todos los beneficios de los ingredientes del cacao:</p><br>
+        <ul>
+            <li><strong>Antioxidantes</strong>: El chocolate negro, rico en cacao, es una excelente fuente de antioxidantes, lo que ayuda a combatir el envejecimiento prematuro y protege al cuerpo de los radicales libres.</li><br>
+            <li><strong>Mejora del ánimo</strong>: El cacao contiene compuestos que ayudan a mejorar el estado de ánimo, gracias a su capacidad de liberar endorfinas y serotonina.</li><br>
+            <li><strong>Fuente de energía</strong>: El chocolate proporciona una dosis rápida de energía, gracias a su contenido en azúcares naturales y teobromina.</li><br>
+            <li><strong>Beneficios cardiovasculares</strong>: El consumo moderado de chocolate negro puede contribuir a mejorar la salud cardiovascular, gracias a su contenido en flavonoides que mejoran la circulación sanguínea.</li><br>
+        </ul>
+    </div>
+
+    <div id="contenido-opcion2" class="contenido-tab">
+        <h3>Detalles del Producto</h3><br>
+        <p>El Pack Chocolate contiene una variedad de productos elaborados con los mejores ingredientes, seleccionados para ofrecerte la mejor experiencia de sabor y calidad. Algunos de los productos incluidos son:</p><br>
+        <ul>
+            <li><strong>Tabletas de chocolate negro</strong>: Con un alto porcentaje de cacao, perfectas para los amantes del chocolate intenso.</li><br>
+            <li><strong>Cremas untables de chocolate</strong>: Deliciosas y cremosas, ideales para acompañar tostadas, postres o para disfrutar directamente con una cuchara.</li><br>
+            <li><strong>Chocolate con leche y trozos de nueces o almendras</strong>: Una opción más suave y crujiente para quienes prefieren una mezcla entre chocolate y frutos secos.</li><br>
+        </ul>
+        <p>Cada producto está hecho con chocolate de alta calidad y, en algunos casos, ingredientes adicionales como nueces o almendras, para un sabor aún más delicioso.</p><br>
+        <p>Este pack es ideal para regalar o disfrutar en casa, siendo la opción perfecta para aquellos que no pueden resistirse al sabor del buen chocolate. Todos los productos son de calidad premium y están elaborados sin conservantes artificiales.</p>
+    </div>
+</div>
+
+<!-- Sección de Opiniones de Usuarios -->
+<div class="opiniones">
+    <h2 class="titulo-opiniones">OPINIONES DE USUARIOS SOBRE EL PACK CHOCOLATE</h2><br>
+    <div class="contenedor-opiniones">
+        <div class="opinion">
+            <h2>PEPE</h2><br>
+            <p class="textos">"¡Este pack es un sueño! El chocolate es delicioso, y la crema untable es mi favorita. ¡No puedo dejar de comerla!" </p>
+            <div class="estrellas" data-valor="5">
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+            </div>
+        </div>
+        <div class="opinion">
+            <h2>LORENZO</h2><br>
+            <p class="textos">"El chocolate negro es excelente, y las combinaciones con nueces y almendras hacen que sea aún más sabroso. Lo recomiendo totalmente."</p>
+            <div class="estrellas" data-valor="5">
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+            </div>
+        </div>
+        <div class="opinion">
+            <h2>MARÍA</h2><br>
+            <p class="textos">"Este pack de chocolate es perfecto para los amantes del dulce. La crema de chocolate está deliciosa y el chocolate con leche es muy suave."</p>
+            <div class="estrellas" data-valor="5">
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+            </div>
+        </div>
+        <div class="opinion">
+            <h2>LUIS</h2><br>
+            <p class="textos">"Este pack de chocolate ha sido un verdadero hallazgo. Todo tiene un sabor increíble y es de calidad premium. ¡No puedo esperar a comprar más!" </p>
+            <div class="estrellas" data-valor="5">
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+            </div>
+        </div>
+    </div>
+</div>
+        <!-- Pie de página -->
+        <footer class="pie">
+            <div class="informacion-adicional">
+                <h4>NUTREETIVE</h4>
+                <hr>
+                <br>
+                <p>Fray Paulino s/n 33600 Mieres</p><br>
+                <p>Email: Nutreetive@gmail.com</p><br>
+                <p>Teléfono: 612 34 56 78.</p><br>
+            </div>
+            <div class="informacion">
+                <h4>CONTACTO</h4>
+                <hr>
+                <a href="../html/aviso-legal.html" class="enlace-footer"><p>Aviso legal</p></a><br>
+                <a href="../html/politica-privacidad.html" class="enlace-footer"><p>Política de privacidad</p></a><br>
+                <a href="../html/politica-cookies.html" class="enlace-footer"><p>Política de cookies</p></a><br>
+                <a href="../html/envios.html" class="enlace-footer"><p>Envíos</p></a><br>
+                <a href="../html/devoluciones-reembolsos.html" class="enlace-footer"><p>Devoluciones y reembolsos</p></a><br>
+            </div>
+            <div class="redes-sociales">
+                <h4>REDES SOCIALES</h4>
+                <hr><br>
+                <a href="https://www.facebook.com/" class="enlace-footer"><img src="../img/facebook.png" alt="facebook" class="icono-footer"></a>
+                <a href="https://www.instagram.com/?hl=es" class="enlace-footer"><img src="../img/instagram.jpg" alt="instagram" class="icono-footer"></a>
+                <a href="https://x.com/?lang=es" class="enlace-footer"><img src="../img/twitter.png" alt="twitter" class="icono-footer"></a>
+            </div>
+            <div class="sobre-nosotros">
+                <h4>SOBRE NOSOTROS</h4>
+                <hr>
+                <a href="../html/blog.html" class="enlace-footer"><p>Blog</p></a><br>
+                <a href="../html/contacto.html" class="enlace-footer"><p>Contacte con nosotros</p></a><br>
+                <a href="../html/eleccion.html" class="enlace-footer"><p>Herbolario - ¿Por qué elegirnos?</p></a><br>
+                <a href="../html/sobre-nosotros.html" class="enlace-footer"><p>Sobre nosotros - Herbolario Online</p></a>
+            </div>
+        </footer>
+    </div>
+</body>
+<script src="../js/index.js"></script>
+<script src="../js/buscador.js"></script>
+<script src="../js/estrellas.js"></script>
+</html>

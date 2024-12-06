@@ -1,0 +1,585 @@
+/* Reinicia márgenes y padding para todos los elementos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Asegura que los bordes y el padding no afecten el tamaño del elemento */
+}
+
+/* Estilo para el body de la página */
+body {
+    background-color: white; /* Fondo blanco */
+    margin: 0;
+    padding: 0;
+    width: 100%; /* El body ocupa el 100% del ancho */
+    overflow-x: hidden; /* Elimina el desplazamiento horizontal */
+    display: flex; /* Usamos Flexbox para estructurar el contenido */
+    flex-direction: column; /* Los elementos dentro del body están en columna */
+    min-height: 100vh; /* El body debe ocupar al menos el 100% de la altura de la ventana */
+}
+
+/* Estilo para los textos */
+.textos {
+    font-size: 15px; /* Tamaño de fuente */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; /* Fuentes */
+    margin-top: 5px;
+    text-align: center; /* Alinea el texto al centro */
+}
+
+/* Estilo para el contenedor principal */
+.contenedor-principal {
+    flex: 1; /* El contenedor principal se expande para llenar el espacio */
+    display: flex;
+    flex-direction: column; /* Coloca los elementos en columna */
+    overflow: hidden; /* Oculta cualquier contenido que sobrepase el contenedor */
+}
+
+/* Estilo para el logo dentro de un contenedor */
+.logo img {
+    width: 200px; /* Establece el ancho del logo */
+    margin-left: 50px; /* Espacio a la izquierda */
+}
+
+/* Cabecera de la página */
+.cabecera {
+    display: flex; /* Usa Flexbox para alinear los elementos */
+    justify-content: space-between; /* Espacio entre los elementos */
+    align-items: center; /* Centra verticalmente los elementos */
+    background-color: #000000; /* Fondo negro */
+    padding: 10px; /* Relleno de 10px */
+}
+
+/* Estilo para el texto de "envío gratis" */
+.envio-gratis {
+    text-align: center; /* Centra el texto */
+    color: white; /* Color blanco */
+    font-size: 20px; /* Tamaño de fuente */
+}
+
+/* Estilo para la barra de búsqueda */
+.busqueda {
+    display: flex; /* Usa Flexbox para alinear los elementos */
+    align-items: center; /* Centra verticalmente los elementos */
+    font-size: 20px; /* Tamaño de fuente */
+}
+
+/* Estilo para el input de búsqueda */
+.busqueda input {
+    width: 400px; /* Ancho del campo de texto */
+    padding: 10px; /* Relleno interno */
+    border: 1px solid #ccc; /* Borde gris claro */
+    border-radius: 4px 0 0 4px; /* Bordes redondeados, solo a la izquierda */
+}
+
+/* Estilo para el botón de búsqueda */
+.busqueda button {
+    padding: 10px 15px; /* Relleno interno */
+    margin-left: 10px; /* Margen a la izquierda */
+    background-color: #8A9A5B; /* Color de fondo verde claro */
+    color: white; /* Color del texto blanco */
+    border: none; /* Sin borde */
+    border-radius: 4px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor a mano */
+}
+
+/* Efecto hover para el botón de búsqueda */
+.busqueda button:hover {
+    background-color: #7A8A4B; /* Cambia el color de fondo al pasar el cursor */
+}
+
+/* Estilo para las acciones de la cabecera */
+.acciones {
+    display: flex; /* Usa Flexbox */
+    align-items: center; /* Centra los elementos verticalmente */
+}
+
+/* Enlaces en la cabecera */
+.enlace-cabecera, .enlace-footer {
+    text-decoration: none; /* Quita el subrayado */
+    color: white; /* Color blanco */
+}
+
+/* Estilo para los enlaces dentro de las acciones */
+.acciones .enlace-cabecera {
+    margin-left: 15px; /* Espacio a la izquierda */
+    display: flex;
+    align-items: center; /* Centra verticalmente los elementos */
+}
+
+/* Estilo para los íconos dentro de los enlaces de la cabecera */
+.acciones .enlace-cabecera i {
+    margin-right: 5px; /* Espacio a la derecha del ícono */
+    font-size: 20px; /* Tamaño del ícono */
+}
+
+/* Estilo para el contador de carrito */
+.contador-carrito {
+    position: relative;
+    top: -8px;
+    left: -5px;
+    background-color: red; /* Fondo rojo */
+    color: white; /* Color del texto blanco */
+    border-radius: 50%; /* Forma circular */
+    padding: 5px 8px;
+    font-size: 14px; /* Tamaño de fuente */
+    font-weight: bold; /* Negrita */
+}
+
+/* Estilo para el contenedor principal de contenido */
+.contenido {
+    display: flex;
+    flex-direction: column; /* Coloca los elementos en columna */
+}
+
+/* Estilo para el menú de navegación */
+.menu-navegacion {
+    background-color: #39da24a4; /* Color de fondo verde claro */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; /* Fuente */
+    position: relative; /* Posición relativa para controlar el submenu */
+    z-index: 100; /* Establece la prioridad del menú */
+    margin-bottom: 20px; /* Espacio inferior */
+}
+
+/* Estilo para los elementos de lista en el menú */
+.menu-navegacion ul {
+    list-style: none; /* Quita los puntos de lista */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Flexbox para los elementos en línea */
+    justify-content: center; /* Alinea los elementos al centro */
+}
+
+/* Estilo para los enlaces dentro del menú */
+.menu-navegacion a {
+    color: black; /* Color del texto negro */
+    text-decoration: none; /* Quita el subrayado */
+    padding: 10px 20px; /* Espaciado interno */
+    display: block; /* Hace el enlace un bloque */
+}
+
+/* Efecto hover en los enlaces del menú */
+.menu-navegacion a:hover {
+    color: white; /* Cambia el color a blanco */
+}
+
+/* Estilo para los menús desplegables */
+.menu-desplegable .submenu {
+    display: none; /* Oculta el submenu */
+    position: absolute;
+    background-color: #39da24a4; /* Fondo verde claro */
+    top: 100%; /* Lo coloca justo debajo del menú */
+    width: auto;
+    opacity: 0; /* Hace el submenu invisible */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilo para los elementos del submenu */
+.menu-desplegable .submenu li {
+    flex-basis: 30%; /* Cada item ocupa el 30% del ancho */
+    text-align: center; /* Centra el texto */
+    padding: 10px;
+}
+
+/* Muestra el submenu cuando se hace hover */
+.menu-desplegable:hover .submenu {
+    display: flex;
+    opacity: 1; /* Muestra el submenu */
+}
+
+/* Estilo para las secciones de información */
+.infor-nosotros, .blog {
+    background-color: white;
+    border: 2px solid green; /* Borde verde */
+    padding: 30px;
+    max-width: 900px; /* Ancho máximo */
+    margin: 50px auto; /* Centra y deja espacio alrededor */
+    border-radius: 8px; /* Bordes redondeados */
+    transition: border-color 0.3s ease; /* Efecto de transición en el borde */
+    font-family: Arial, sans-serif;
+}
+
+/* Título en las secciones de información */
+.infor-nosotros h2, .blog h2 {
+    color: #39da24; /* Color verde */
+    font-size: 2.5rem; /* Tamaño grande */
+    margin-bottom: 20px; /* Espacio inferior */
+    text-align: center; /* Centra el texto */
+    text-transform: uppercase; /* Pone el texto en mayúsculas */
+    letter-spacing: 1px; /* Espacio entre letras */
+}
+
+/* Párrafos dentro de las secciones */
+.infor-nosotros p, .blog p {
+    font-size: 1rem; /* Tamaño de texto */
+    color: #333; /* Color gris oscuro */
+    line-height: 1.8; /* Altura de línea */
+    text-align: justify; /* Justifica el texto */
+    margin-bottom: 20px; /* Espacio inferior */
+    font-family: 'Roboto', sans-serif; /* Fuente */
+}
+
+/* Elementos en listas dentro de las secciones */
+.infor-nosotros ul, .blog ul {
+    padding-left: 20px;
+}
+
+/* Estilo de los íconos en las redes sociales */
+.icono-footer {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 5px; /* Espacio debajo del ícono */
+}
+
+/* Contenedor de opiniones */
+.opiniones {
+    padding: 15px;
+    background-color: #f0f0f0cc; /* Fondo gris claro */
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* Contenedor de las opiniones dentro de la página */
+.contenedor-opiniones {
+    display: flex; /* Flexbox */
+    justify-content: space-between; /* Espacio entre las opiniones */
+    flex-wrap: wrap; /* Permite que las opiniones se ajusten en varias filas */
+}
+
+/* Estilo para cada opinión */
+.opinion {
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    border: green 2px solid;
+    margin: 10px;
+    width: 18%; /* Ancho */
+    text-align: center; /* Centra el texto */
+}
+
+/* Título de las opiniones */
+.titulo-opiniones{
+    font-size: 25px; /* Tamaño grande */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-top: 5px;
+    font-weight: bold; /* Negrita */
+    text-align: center; /* Centra el texto */
+    color: green; /* Color verde */
+}
+
+/* Estilo de las estrellas para la puntuación */
+.estrellas {
+    display: flex;
+    cursor: pointer; /* Cambia el cursor a mano */
+    justify-content: center; /* Centra las estrellas */
+}
+
+/* Estilo para las estrellas individuales */
+.estrellas .estrella {
+    font-size: 24px; /* Tamaño */
+    color: gray; /* Color gris */
+    cursor: pointer; /* Cambio de cursor */
+}
+
+/* Estilo cuando una estrella está seleccionada */
+.estrellas .estrella.active {
+    color: gold; /* Color dorado */
+}
+
+/* Título para las estrellas */
+.estrella-titulo {
+    color: gold; /* Color dorado */
+}
+
+/* Estilo para el pie de página */
+.pie {
+    display: flex;
+    justify-content: space-between; /* Espacio entre los elementos */
+    background-color: black; /* Fondo negro */
+    color: white; /* Color blanco */
+    padding: 20px; /* Relleno interno */
+}
+
+/* Estilo para cada división dentro del pie */
+.pie div {
+    width: 23%; /* Ancho de cada división */
+}
+
+/* Línea horizontal */
+hr {
+    border: none;
+    height: 2px;
+    background-color: white;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+/* Estilo para la información adicional */
+.informacion-adicional,
+.informacion,
+.redes-sociales,
+.sobre-nosotros {
+    text-align: center; /* Centra el texto */
+}
+
+/* Estilo para los productos */
+.producto {
+    display: flex;
+    justify-content: space-between; /* Espacio entre los elementos */
+    background-color: #f4f4f4; /* Fondo gris claro */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra */
+    margin: 20px 0; /* Espacio superior e inferior */
+    padding: 20px; /* Relleno interno */
+    font-family: 'Arial', sans-serif;
+    border: 2px solid #ccc; /* Borde gris claro */
+}
+
+/* Estilo para la imagen del producto */
+.imagen img {
+    max-width: 600px; /* Ancho máximo */
+    max-height: 600px; /* Altura máxima */
+    object-fit: cover; /* Ajusta la imagen para cubrir el espacio */
+    border-radius: 8px; /* Bordes redondeados */
+    border: 1px solid greenyellow; /* Borde amarillo */
+}
+
+/* Estilo para la información del producto */
+.informacion-producto {
+    max-width: 60%; /* Ancho máximo */
+    padding-left: 20px; /* Espacio a la izquierda */
+}
+
+/* Estilo para el título del producto */
+.titulo-producto {
+    font-size: 1.6em; /* Tamaño de fuente */
+    color: #2c6b2f; /* Color verde oscuro */
+    margin-bottom: 10px; /* Espacio inferior */
+    font-weight: bold; /* Negrita */
+}
+
+/* Estilo para la descripción del producto */
+.descripcion-producto {
+    font-size: 1.1em; /* Tamaño de fuente */
+    color: #555; /* Color gris */
+    margin-bottom: 15px; /* Espacio inferior */
+    line-height: 1.6; /* Altura de línea */
+}
+
+/* Estilo para el precio del producto */
+.precio {
+    font-size: 1.3em; /* Tamaño de fuente */
+    color: #28a745; /* Color verde */
+    margin-bottom: 15px; /* Espacio inferior */
+    font-weight: bold; /* Negrita */
+}
+
+/* Estilo para la fecha y creador del producto */
+.fecha, .creador {
+    font-size: 0.9em; /* Tamaño pequeño */
+    color: #888; /* Gris claro */
+}
+
+/* Estilo para el botón de añadir al carrito */
+.btn-carrito {
+    background-color: #28a745; /* Color verde */
+    color: white; /* Color blanco */
+    padding: 12px 24px; /* Relleno interno */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cursor de mano */
+    font-size: 1.1em; /* Tamaño de fuente */
+}
+
+/* Efecto hover para el botón de añadir al carrito */
+.btn-carrito:hover {
+    background-color: #218838; /* Cambio de color en hover */
+}
+/* Estilo para el contenedor de las pestañas */
+.tabs-container {
+    font-family: 'Arial', sans-serif; /* Fuente para las pestañas */
+    color: #333; /* Color del texto */
+    margin: 30px 0; /* Márgenes superior e inferior */
+}
+
+/* Estilo para las pestañas (botones de cambio) */
+.tabs {
+    display: flex; /* Usa Flexbox para organizar los elementos en fila */
+    justify-content: flex-start; /* Alinea las pestañas al inicio */
+    margin-bottom: 20px; /* Espacio inferior */
+}
+
+/* Estilo para cada botón de pestaña */
+.tab-button {
+    background-color: #f8f8f8; /* Fondo gris claro */
+    border: 2px solid #ccc; /* Borde gris */
+    border-radius: 8px 8px 0 0; /* Bordes redondeados en la parte superior */
+    padding: 12px 20px; /* Espaciado interno */
+    font-size: 1em; /* Tamaño de fuente */
+    color: #333; /* Color del texto */
+    cursor: pointer; /* Cursor tipo mano al pasar sobre el botón */
+    transition: all 0.3s ease; /* Efecto de transición para el hover */
+    margin-right: 10px; /* Espacio entre botones */
+    outline: none; /* Quita el contorno al hacer clic */
+}
+
+/* Efecto hover para el botón de pestaña */
+.tab-button:hover {
+    background-color: #f1f1f1; /* Cambia el color de fondo cuando se pasa el ratón */
+}
+
+/* Estilo para la pestaña activa */
+.tab-button.active {
+    background-color: #28a745; /* Fondo verde */
+    color: white; /* Color del texto blanco */
+    border-color: #28a745; /* Borde verde */
+}
+
+/* Estilo para el contenido de las pestañas */
+.contenido-tab {
+    display: none; /* Oculta el contenido por defecto */
+    padding: 20px; /* Espaciado interno */
+    border: 2px solid #ccc; /* Borde gris */
+    border-radius: 8px; /* Bordes redondeados */
+    background-color: #f4f4f4; /* Fondo gris claro */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    margin-top: 20px; /* Espacio superior */
+    text-align: justify; /* Justifica el texto */
+}
+
+/* Elimina los puntos de lista dentro de las pestañas */
+.contenido-tab li {
+    list-style-type: none; /* Sin puntos en la lista */
+}
+
+/* Estilo para mostrar la pestaña activa */
+.contenido-tab.active {
+    display: block; /* Muestra el contenido de la pestaña activa */
+}
+
+/* Estilo para los encabezados dentro del contenido */
+h3 {
+    color: #28a745; /* Color verde para los títulos */
+}
+
+/* Media query para pantallas de entre 768px y 1024px */
+@media (max-width: 1024px) and (min-width: 768px) {
+    /* Ajuste de padding en la cabecera */
+    .cabecera {
+        padding: 10px 15px; /* Reduce el padding */
+    }
+
+    /* Ajuste de tamaño de fuente para el mensaje de envío gratis */
+    .envio-gratis {
+        font-size: 18px; 
+    }
+
+    /* Ajuste de tamaño del campo de búsqueda */
+    .busqueda input {
+        width: 80%; /* Campo de búsqueda más estrecho */
+        margin-right: 10px; /* Espacio derecho */
+    }
+
+    /* Ajuste del menú de navegación para pantallas medianas */
+    .menu-navegacion ul {
+        flex-direction: column; /* Apila los elementos en columna */
+        align-items: center; /* Centra los elementos */
+    }
+
+    /* Ajuste del submenu */
+    .menu-desplegable .submenu li {
+        width: 100%; /* Ancho del 100% para los items del submenu */
+    }
+
+    /* Ajuste de las opiniones en pantallas medianas */
+    .opiniones .opinion {
+        width: 100%; /* Ancho del 100% */
+        margin-bottom: 20px; /* Espacio inferior */
+    }
+
+    /* Ajuste del pie de página */
+    .pie div {
+        width: 100%; /* Ocupa el 100% del ancho */
+        text-align: center; /* Centra el texto */
+    }
+
+    /* Ajuste de los productos */
+    .producto {
+        padding: 15px; /* Relleno interno */
+    }
+
+    /* Ajuste de tamaño de las imágenes de los productos */
+    .imagen img {
+        max-width: 200px; /* Ancho máximo de 200px */
+        max-height: 200px; /* Altura máxima de 200px */
+        object-fit: cover; /* Ajusta la imagen para cubrir el espacio */
+    }
+}
+
+/* Media query para pantallas pequeñas (máximo 480px) */
+@media (max-width: 480px) {
+    /* Ajuste de tamaño del campo de búsqueda en pantallas pequeñas */
+    .busqueda input {
+        width: 100%; /* Campo de búsqueda ocupa el 100% */
+    }
+
+    /* Ajuste de los botones de añadir al carrito */
+    .btn-carrito {
+        width: 100%; /* El botón ocupa el 100% */
+    }
+
+    /* Ajuste del tamaño de los productos */
+    .producto {
+        padding: 10px; /* Relleno reducido */
+        width: 100%; /* Ocupa todo el ancho */
+    }
+
+    /* Ajuste de las imágenes de los productos */
+    .imagen img {
+        width: 100%; /* Ancho al 100% */
+        max-width: 100%; /* Ancho máximo al 100% */
+        height: auto; /* Altura automática */
+        object-fit: cover; /* Ajusta la imagen para cubrir el espacio */
+    }
+
+    /* Ajuste de las opiniones */
+    .opiniones .opinion {
+        width: 100%; /* Ancho completo */
+        margin-bottom: 15px; /* Espacio inferior */
+    }
+
+    /* Ajuste del pie de página */
+    .pie div {
+        width: 100%; /* Ocupa el 100% del ancho */
+        text-align: center; /* Centra el texto */
+    }
+
+    /* Ajuste del menú de navegación */
+    .menu-navegacion ul {
+        flex-direction: column; /* Apila los elementos */
+        align-items: center; /* Centra los elementos */
+    }
+
+    /* Ajuste de los enlaces en el menú de navegación */
+    .menu-navegacion a {
+        padding: 15px 10px; /* Relleno interno */
+        width: 100%; /* Ancho completo */
+        text-align: center; /* Centra el texto */
+    }
+
+    /* Ajuste del submenu para pantallas pequeñas */
+    .menu-desplegable .submenu {
+        width: 100%; /* Ancho completo */
+        position: fixed; /* Fija el submenu */
+        padding-left: 0; /* Sin padding a la izquierda */
+        display: none; /* Oculta el submenu por defecto */
+    }
+
+    /* Ajuste de los items del submenu */
+    .menu-desplegable .submenu li {
+        text-align: center; /* Centra los items */
+    }
+}
+
+
+
+

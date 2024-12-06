@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="shortcut icon" type="image/x-icon" href="../img/logo.ico">
+    <link rel="stylesheet" href="../css/contacto.css">
+    <title>Nutreetive: Contáctenos</title>
+</head>
+<body>
+    <!-- Contenedor principal -->
+    <div class="contenedor-principal">
+        <!-- Cabecera -->
+        <header class="cabecera">
+            <div class="logo">
+                <a href="../html/index.html"><img src="../img/logo.png" alt="Logo"></a>
+            </div>
+            <div class="envio-gratis">¡Envío gratis a partir de 50€!</div>
+            <div class="busqueda">
+                <input type="text" placeholder="Buscar producto..." id="producto">
+                <button onclick="buscarProducto()">Buscar</button>
+            </div>
+            <div class="acciones">
+                <a href="../html/login.html" class="enlace-cabecera"><i class="fas fa-user"></i>Iniciar Sesión</a>
+                <a href="../html/registrarse.html" class="enlace-cabecera"><i class="fas fa-user-plus"></i>Crear cuenta</a>
+                <a href="../html/carrito.html" class="enlace-cabecera"><i class="fas fa-shopping-cart"></i></a>
+                <span id="precioTotal" class="contador-carrito">0 €</span>
+            </div>
+        </header>
+         <!-- Menú de navegación -->
+         <nav class="menu-navegacion">
+            <ul>
+              <li class="menu-desplegable">
+                <a href="../html/productos.html">PRODUCTOS</a>
+                <ul class="submenu">
+                  <li><a href="../html/alimentacion.html">ALIMENTACIÓN</a></li>
+                  <li><a href="../html/complementos.html">NUTRICIÓN DEPORTIVA</a></li>
+                  <li><a href="../html/depurativos.html">HERBOLARIO</a></li>
+                  <li><a href="../html/cabello.html">HIGIENE</a></li>
+                  <li><a href="../html/energeticos.html">ENERGÉTICOS</a></li>
+                </ul>
+              </li>
+              <li><a href="../html/ofertas.html">OFERTAS</a></li>
+              <li><a href="../html/sobre-nosotros.html">SOBRE NOSOTROS</a></li>
+              <li><a href="../html/blog.html">BLOG</a></li>
+              <li><a href="../html/contacto.html">CONTACTO</a></li>
+            </ul>
+          </nav>
+        <!-- Formulario de contacto -->
+        <section class="contacto">
+            <h2>¿NECESITAS AYUDA?</h2>
+            <p>Si quieres contactar con nosotros puedes hacerlo a través del siguiente formulario. Lo recibiremos y estaremos encantados de ayudarte en todo lo que esté en nuestra mano.</p><br>
+            <form action="enviar_mensaje.php" method="POST">
+              <div class="campo">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre">
+              </div>
+              <div class="campo">
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" required placeholder="Tu correo electrónico">
+              </div>
+              <div class="campo">
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" required placeholder="Escribe tu mensaje aquí"></textarea>
+              </div>
+              <button type="submit" class="btn-enviar">Enviar</button>
+            </form>
+          </section>    
+       <!-- Pie de página -->
+        <footer class="pie">
+            <div class="informacion-adicional">
+                <h4>NUTREETIVE</h4>
+                <hr>
+                <br>
+                    <p class="textos">Fray Paulino s/n 33600 Mieres</p><br>
+                    <p class="textos">Email: Nutreetive@gmail.com</p><br>
+                    <p class="textos">Teléfono: 612 34 56 78.</p><br>
+            </div>
+        <div class="informacion">
+                <h4>CONTACTO</h4>
+                <hr>
+                    <a href="../html/aviso-legal.html" class="enlace-footer"><p class="textos">Aviso legal</p></a><br>
+                    <a href="../html/politica-privacidad.html" class="enlace-footer"><p class="textos">Política de privacidad</p></a><br>
+                    <a href="../html/politica-cookies.html" class="enlace-footer"><p class="textos">Política de cookies</p></a><br>
+                    <a href="../html/envios.html" class="enlace-footer"><p class="textos">Envíos</p></a><br>
+                    <a href="../html/devoluciones-reembolsos.html" class="enlace-footer"><p class="textos">Devoluciones y reembolsos</p></a><br>
+        </div>
+        <div class="redes-sociales">
+            <h4>REDES SOCIALES</h4>
+            <hr><br>
+                <a href="https://www.facebook.com/" class="enlace-footer"><img src="../img/facebook.png" alt="facebook" class="icono-footer"></a>
+                <a href="https://www.instagram.com/?hl=es" class="enlace-footer"><img src="../img/instagram.jpg" alt="instagram" class="icono-footer"></a>
+                <a href="https://x.com/?lang=es" class="enlace-footer"><img src="../img/twitter.png" alt="twitter" class="icono-footer"></a>
+        </div>
+        <div class="sobre-nosotros">
+            <h4>SOBRE NOSOTROS</h4>
+            <hr>
+                <a href="../html/blog.html" class="enlace-footer"><p class="textos">Blog</p></a><br>
+                <a href="../html/contacto.html" class="enlace-footer"><p class="textos">Contacte con nosotros</p></a><br>
+                <a href="../html/eleccion.html" class="enlace-footer"><p class="textos">Herbolario - ¿Por qué elegirnos?</p></a><br>
+                <a href="../html/sobre-nosotros.html" class="enlace-footer"><p class="textos">Sobre nosotros - Herbolario Online</p></a>
+        </div>
+    </footer>
+    </div>
+</body>
+<script src="../js/index.js"></script>
+<script src="../js/buscador.js"></script>
+</html>

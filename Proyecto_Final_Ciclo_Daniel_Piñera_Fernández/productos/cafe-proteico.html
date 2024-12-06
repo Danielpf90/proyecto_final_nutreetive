@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="../img/logo.ico">
+    <link rel="stylesheet" href="../css/productos-paginas.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Nutreetive- Tienda Online</title>
+</head>
+<body>
+    <!-- Contenedor principal -->
+    <div class="contenedor-principal">
+        <!-- Cabecera -->
+        <header class="cabecera">
+            <div class="logo">
+                <a href="../html/index.html"><img src="../img/logo.png" alt="Logo"></a>
+            </div>
+            <div class="envio-gratis">¡Envío gratis a partir de 50€!</div>
+            <div class="busqueda">
+                <input type="text" placeholder="Buscar producto..." id="producto">
+                <button onclick="buscarProducto()">Buscar</button>
+            </div>
+            <div class="acciones">
+                <a href="../html/login.html" class="enlace-cabecera"><i class="fas fa-user"></i>Iniciar Sesión</a>
+                <a href="../html/registrarse.html" class="enlace-cabecera"><i class="fas fa-user-plus"></i>Crear cuenta</a>
+                <a href="../html/carrito.html" class="enlace-cabecera"><i class="fas fa-shopping-cart"></i></a>
+                <span id="precioTotal" class="contador-carrito">0 €</span>
+            </div>
+        </header>
+        <!-- Menú de navegación -->
+        <nav class="menu-navegacion">
+            <ul>
+              <li class="menu-desplegable">
+                <a href="#">PRODUCTOS</a>
+                <ul class="submenu">
+                  <li><a href="../html/alimentacion.html">ALIMENTACIÓN</a></li>
+                  <li><a href="../html/complementos.html">NUTRICIÓN DEPORTIVA</a></li>
+                  <li><a href="../html/depurativos.html">HERBOLARIO</a></li>
+                  <li><a href="../html/cabello.html">HIGIENE</a></li>
+                  <li><a href="../html/energeticos.html">ENERGÉTICOS</a></li>
+                </ul>
+              </li>
+              <li><a href="../html/ofertas.html">OFERTAS</a></li>
+              <li><a href="../html/sobre-nosotros.html">SOBRE NOSOTROS</a></li>
+              <li><a href="../html/blog.html">BLOG</a></li>
+              <li><a href="../html/contacto.html">CONTACTO</a></li>
+            </ul>
+          </nav>
+<!-- Sección de producto -->
+<div class="producto">
+    <div class="imagen">
+        <img src="../img/cafe-proteico.jpg" alt="Café Proteico" />
+    </div>
+    <div class="informacion-producto">
+        <h2 class="titulo-producto">CAFÉ PROTEICO</h2>
+        <p class="descripcion-producto">El Café Proteico combina el delicioso sabor del café con un alto contenido de proteínas de alta calidad. Ideal para aquellos que buscan aumentar su ingesta de proteínas mientras disfrutan de una bebida energética. Este suplemento es perfecto para el desayuno o antes de un entrenamiento, proporcionando energía y recuperando músculos al mismo tiempo.</p>
+        <p class="precio">Precio: 13.70 €</p><br>
+        <p class="fecha">Fecha: 26 de noviembre de 2024</p><br>
+        <p class="creador">Proveedor: HSN</p><br>
+        <button class="btn-carrito" onclick="agregarAlCarrito(13.70, 'CAFÉ PROTEICO', '../img/cafe-proteico.jpg')">AÑADIR AL CARRITO</button>
+    </div>
+</div>
+
+<!-- Sección de elegir descripción -->
+<div class="tabs-container">
+    <div class="tabs">
+        <button class="tab-button active" onclick="mostrarContenido('opcion1')">Beneficios</button>
+        <button class="tab-button" onclick="mostrarContenido('opcion2')">Detalles del Producto</button>
+    </div>
+    <div id="contenido-opcion1" class="contenido-tab active">
+        <h3>Beneficios del Café Proteico</h3><br>
+        <p>El Café Proteico ofrece una variedad de beneficios para quienes buscan mejorar su rendimiento y salud:</p><br>
+        <ul>
+            <li><strong>Aumento de energía</strong>: El café proporciona un impulso de energía, ideal para iniciar el día o antes de entrenamientos.</li><br>
+            <li><strong>Recuperación muscular</strong>: Contiene proteínas de alta calidad que ayudan a reparar y reconstruir los músculos después del ejercicio.</li><br>
+            <li><strong>Comodidad y sabor</strong>: Disfruta de una bebida deliciosa que también aporta beneficios nutricionales sin perder el sabor del café clásico.</li><br>
+            <li><strong>Control de apetito</strong>: Ayuda a controlar el hambre, lo que facilita la gestión del peso y la dieta.</li><br>
+            <li><strong>Fácil de preparar</strong>: Solo necesitas agua caliente o leche para disfrutar de un delicioso café con proteínas.</li><br>
+        </ul>
+    </div>
+
+    <div id="contenido-opcion2" class="contenido-tab">
+        <h3>Detalles del Producto</h3><br>
+        <p>El Café Proteico está formulado con café de alta calidad combinado con proteínas de suero, lo que lo convierte en una excelente opción para quienes buscan mejorar su salud y rendimiento físico. Es perfecto para disfrutar en la mañana o como un pre-entrenamiento, ya que no solo ofrece un impulso de energía, sino que también ayuda a la reparación muscular.</p><br>
+        <p>El producto es fácil de preparar, solo agrega agua caliente o leche y obtendrás una bebida cremosa y rica en proteínas. Ideal para deportistas, personas activas o cualquiera que busque mejorar su bienestar general.</p><br>
+    </div>
+</div>
+
+<!-- Sección de Opiniones de Usuarios -->
+<div class="opiniones">
+    <h2 class="titulo-opiniones">OPINIONES DE USUARIOS SOBRE CAFÉ PROTEICO</h2><br>
+    <div class="contenedor-opiniones">
+        <div class="opinion">
+            <h2>JUAN</h2><br>
+            <p class="textos">"Me encanta el sabor y cómo me da energía para mis entrenamientos. Además, me ayuda a mantenerme lleno hasta la hora del almuerzo." </p>
+            <div class="estrellas" data-valor="5">
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+            </div>
+        </div>
+        <div class="opinion">
+            <h2>MARÍA</h2><br>
+            <p class="textos">"Es el complemento perfecto para mis mañanas. Me da energía y el sabor es delicioso. ¡Lo recomiendo mucho!" </p>
+            <div class="estrellas" data-valor="5">
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+            </div>
+        </div>
+        <div class="opinion">
+            <h2>ANDREA</h2><br>
+            <p class="textos">"Me ha ayudado a reducir los antojos y me siento con más energía para mis entrenamientos. Es una excelente opción." </p>
+            <div class="estrellas" data-valor="4">
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9734;</span>
+            </div>
+        </div>
+        <div class="opinion">
+            <h2>LUIS</h2><br>
+            <p class="textos">"Un café delicioso que también me ayuda a obtener la proteína que necesito sin tener que hacer un batido." </p>
+            <div class="estrellas" data-valor="5">
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+            </div>
+        </div>
+    </div>
+</div>
+        <!-- Pie de página -->
+        <footer class="pie">
+            <div class="informacion-adicional">
+                <h4>NUTREETIVE</h4>
+                <hr>
+                <br>
+                <p>Fray Paulino s/n 33600 Mieres</p><br>
+                <p>Email: Nutreetive@gmail.com</p><br>
+                <p>Teléfono: 612 34 56 78.</p><br>
+            </div>
+            <div class="informacion">
+                <h4>CONTACTO</h4>
+                <hr>
+                <a href="../html/aviso-legal.html" class="enlace-footer"><p>Aviso legal</p></a><br>
+                <a href="../html/politica-privacidad.html" class="enlace-footer"><p>Política de privacidad</p></a><br>
+                <a href="../html/politica-cookies.html" class="enlace-footer"><p>Política de cookies</p></a><br>
+                <a href="../html/envios.html" class="enlace-footer"><p>Envíos</p></a><br>
+                <a href="../html/devoluciones-reembolsos.html" class="enlace-footer"><p>Devoluciones y reembolsos</p></a><br>
+            </div>
+            <div class="redes-sociales">
+                <h4>REDES SOCIALES</h4>
+                <hr><br>
+                <a href="https://www.facebook.com/" class="enlace-footer"><img src="../img/facebook.png" alt="facebook" class="icono-footer"></a>
+                <a href="https://www.instagram.com/?hl=es" class="enlace-footer"><img src="../img/instagram.jpg" alt="instagram" class="icono-footer"></a>
+                <a href="https://x.com/?lang=es" class="enlace-footer"><img src="../img/twitter.png" alt="twitter" class="icono-footer"></a>
+            </div>
+            <div class="sobre-nosotros">
+                <h4>SOBRE NOSOTROS</h4>
+                <hr>
+                <a href="../html/blog.html" class="enlace-footer"><p>Blog</p></a><br>
+                <a href="../html/contacto.html" class="enlace-footer"><p>Contacte con nosotros</p></a><br>
+                <a href="../html/eleccion.html" class="enlace-footer"><p>Herbolario - ¿Por qué elegirnos?</p></a><br>
+                <a href="../html/sobre-nosotros.html" class="enlace-footer"><p>Sobre nosotros - Herbolario Online</p></a>
+            </div>
+        </footer>
+    </div>
+</body>
+<script src="../js/index.js"></script>
+<script src="../js/buscador.js"></script>
+<script src="../js/estrellas.js"></script>
+</html>

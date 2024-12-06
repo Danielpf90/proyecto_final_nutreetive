@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="../img/logo.ico">
+    <link rel="stylesheet" href="../css/estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Nutreetive- Higiene personal</title>
+</head>
+<body>
+    <!-- Contenedor principal -->
+    <div class="contenedor-principal">
+        <!-- Cabecera -->
+        <header class="cabecera">
+            <div class="logo">
+                <a href="../html/index.html"><img src="../img/logo.png" alt="Logo"></a>
+            </div>
+            <div class="envio-gratis">¡Envío gratis a partir de 50€!</div>
+            <div class="busqueda">
+                <input type="text" placeholder="Buscar producto..." id="producto">
+                <button onclick="buscarProducto()">Buscar</button>
+            </div>
+            <div class="acciones">
+                <a href="../html/login.html" class="enlace-cabecera"><i class="fas fa-user"></i>Iniciar Sesión</a>
+                <a href="../html/registrarse.html" class="enlace-cabecera"><i class="fas fa-user-plus"></i>Crear cuenta</a>
+                <a href="../html/carrito.html" class="enlace-cabecera"><i class="fas fa-shopping-cart"></i></a>
+                <span id="precioTotal" class="contador-carrito">0 €</span>
+            </div>
+        </header>
+        <!-- Menú de navegación -->
+        <nav class="menu-navegacion">
+            <ul>
+              <li class="menu-desplegable">
+                <a href="../html/productos.html">PRODUCTOS</a>
+                <ul class="submenu">
+                  <li><a href="../html/alimentacion.html">ALIMENTACIÓN</a></li>
+                  <li><a href="../html/complementos.html">NUTRICIÓN DEPORTIVA</a></li>
+                  <li><a href="../html/depurativos.html">HERBOLARIO</a></li>
+                  <li><a href="../html/cabello.html">HIGIENE</a></li>
+                  <li><a href="../html/energeticos.html">ENERGÉTICOS</a></li>
+                </ul>
+              </li>
+              <li><a href="../html/ofertas.html">OFERTAS</a></li>
+              <li><a href="../html/sobre-nosotros.html">SOBRE NOSOTROS</a></li>
+              <li><a href="../html/blog.html">BLOG</a></li>
+              <li><a href="../html/contacto.html">CONTACTO</a></li>
+            </ul>
+          </nav>
+          <!--Imagenes entrada -->
+          <div class="imagen-oferta">
+            <a href="../html/cabello.html"><img src="../img/higiene.jpg" alt="higiene"></a>
+        </div>        
+    <!-- Sección de productos -->
+    <section class="productos-destacados-container">
+        <h2 class="titulo-destacados"><i class="fas fa-tooth" style="color:deeppink;"></i></i> Higiene</h2><br>
+        <p class="producto-descripcion">En nuestra tienda, te ofrecemos una exclusiva selección de productos de higiene personal pensados para cuidar de ti de manera natural. Desde jabones suaves hasta soluciones especiales para el cuidado del cabello y la piel, cada producto está formulado con ingredientes de alta calidad, sin aditivos ni químicos dañinos. Nuestra misión es proporcionarte opciones que no solo limpian, sino que también nutren tu cuerpo, manteniendo tu bienestar y frescura durante todo el día. Cuida tu higiene de manera equilibrada y natural, y siente la diferencia en tu rutina diaria. ¡Transforma tu cuidado personal hoy mismo con productos que respetan tu piel!</p>
+    <div class="productos-destacados">
+        <!-- Producto 1 -->
+        <div class="producto">
+            <a href="../productos/gel-aloe-vera.html"><img src="../img/aloe-vera.jpg" alt="aloe-vera" class="producto-img"></a>
+            <h3 class="producto-titulo">GEL DE ALOE VERA HIDRATANTE</h3><br>
+            <p class="producto-descripcion">Gel refrescante y calmante de Aloe Vera. Ideal para la piel después de la exposición al sol o irritaciones.</p><br>
+            <span class="producto-precio-destacado">6.11 €</span><br>
+            <button class="btn-agregar" onclick="agregarAlCarrito(6.11, 'GEL DE ALOE VERA HIDRATANTE', '../img/aloe-vera.jpg')">AÑADIR</button>
+        </div>
+        <!-- Producto 2 -->
+        <div class="producto">
+            <a href="../productos/champu-anticaspa.html"><img src="../img/anticaspa.jpg" alt="anticaspa" class="producto-img"></a>
+            <h3 class="producto-titulo">CHAMPÚ ANTICASPA</h3><br>
+            <p class="producto-descripcion">Champú eficaz para combatir la caspa y la picazón del cuero cabelludo. Fórmula suave y nutritiva.</p>
+            <span class="producto-precio-destacado">1.74 €</span><br><br>
+            <button class="btn-agregar" onclick="agregarAlCarrito(1.74, 'CHAMPÚ ANTICASPA', '../img/anticaspa.jpg')">AÑADIR</button>
+        </div>
+        <!-- Producto 3 -->
+        <div class="producto">
+            <a href="../productos/arbol.html"><img src="../img/arbol-te.jpg" alt="arbol-te" class="producto-img"></a>
+            <h3 class="producto-titulo">GEL DE DUCHA ÁRBOL DE TÉ</h3><br>
+            <p class="producto-descripcion">Gel de ducha con extracto de árbol de té, ideal para combatir bacterias y refrescar la piel.</p><br>
+            <span class="producto-precio-destacado">4.90 €</span><br>
+            <button class="btn-agregar" onclick="agregarAlCarrito(4.90, 'GEL DE DUCHA ÁRBOL DE TÉ', '../img/arbol-te.jpg')">AÑADIR</button>
+        </div>
+        <!-- Producto 4 -->
+        <div class="producto">
+            <a href="../productos/piel.html"><img src="../img/blanqueador.jpg" alt="blanqueador" class="producto-img"></a>
+            <h3 class="producto-titulo">CREMA BLANQUEADORA DE PIEL</h3><br>
+            <p class="producto-descripcion">Crema blanqueadora para la piel con ingredientes naturales. Ideal para mejorar el tono de la piel.</p><br>
+            <span class="producto-precio-destacado">11.25 €</span><br>
+            <button class="btn-agregar" onclick="agregarAlCarrito(11.25, 'CREMA BLANQUEADORA DE PIEL', '../img/blanqueador.jpg')">AÑADIR</button>
+        </div>
+        <!-- Producto 5 -->
+        <div class="producto">
+            <a href="../productos/calendula.html"><img src="../img/calendula.jpg" alt="calendula" class="producto-img"></a>
+            <h3 class="producto-titulo">ACEITE DE CALÉNDULA</h3><br>
+            <p class="producto-descripcion">Aceite calmante de caléndula, perfecto para pieles sensibles y con tendencia a la irritación.</p><br>
+            <span class="producto-precio-destacado">12.04 €</span><br>
+            <button class="btn-agregar" onclick="agregarAlCarrito(12.04, 'ACEITE DE CALÉNDULA', '../img/calendula.jpg')">AÑADIR</button>
+        </div>
+        <!-- Producto 6 -->
+        <div class="producto">
+            <a href="../productos/gel-bano.html"><img src="../img/bomba-baño.jpg" alt="bomba-baño" class="producto-img"></a>
+            <h3 class="producto-titulo">GEL DE BAÑO PROTEÍCO</h3><br>
+            <p class="producto-descripcion">Gel de baño enriquecido con proteínas, ideal para limpiar la piel mientras la hidrata profundamente.</p><br>
+            <span class="producto-precio-destacado">13.70 €</span><br>
+            <button class="btn-agregar" onclick="agregarAlCarrito(13.70, 'GEL DE BAÑO PROTEÍCO', '../img/bomba-baño.jpg')">AÑADIR</button>
+        </div>
+        <!-- Producto 7 -->
+        <div class="producto">
+            <a href="../productos/crema-coco.html"><img src="../img/coco.jpg" alt="coco" class="producto-img"></a>
+            <h3 class="producto-titulo">CREMA CORPORAL DE COCO</h3><br>
+            <p class="producto-descripcion">Crema hidratante corporal con aceite de coco. Hidrata profundamente y deja la piel suave y perfumada.</p><br>
+            <span class="producto-precio-destacado">1.23 €</span><br>
+            <button class="btn-agregar" onclick="agregarAlCarrito(1.23, 'CREMA CORPORAL DE COCO', '../img/coco.jpg')">AÑADIR</button>
+        </div>
+        <!-- Producto 8 -->
+        <div class="producto">
+            <a href="../productos/preventiva.html"><img src="../img/cuidado.jpg" alt="cuidado" class="producto-img"></a>
+            <h3 class="producto-titulo">CREMA PREVENTIVA PARA EL EMBARAZO</h3><br>
+            <p class="producto-descripcion">Crema rica en vitaminas y minerales que ayuda a prevenir estrías durante el embarazo.</p><br>
+            <span class="producto-precio-destacado">7.65 €</span><br>
+            <button class="btn-agregar" onclick="agregarAlCarrito(7.65, 'CREMA PREVENTIVA PARA EL EMBARAZO', '../img/cuidado.jpg')">AÑADIR</button>
+        </div>
+        <!-- Producto 9 -->
+        <div class="producto">
+            <a href="../productos/fresh.html"><img src="../img/fresh.jpg" alt="fresh" class="producto-img"></a>
+            <h3 class="producto-titulo">GEL FRESCO DE ALOE</h3><br>
+            <p class="producto-descripcion">Gel fresco de Aloe Vera para calmar la piel y combatir la irritación.</p><br>
+            <span class="producto-precio-destacado">3.25 €</span><br>
+            <button class="btn-agregar" onclick="agregarAlCarrito(3.25, 'GEL FRESCO DE ALOE', '../img/fresh.jpg')">AÑADIR</button>
+        </div>
+        <!-- Producto 10 -->
+        <div class="producto">
+            <a href="../productos/hidratante.html"><img src="../img/hidratante.jpg" alt="hidratante" class="producto-img"></a>
+            <h3 class="producto-titulo">CREMA HIDRATANTE ANTIPOLUCIÓN</h3><br>
+            <p class="producto-descripcion">Crema facial hidratante que combate los efectos de la contaminación en la piel, dejándola suave y radiante.</p><br>
+            <span class="producto-precio-destacado">1.38 €</span><br>
+            <button class="btn-agregar" onclick="agregarAlCarrito(1.38, 'CREMA HIDRATANTE ANTIPOLUCIÓN', '../img/hidratante.jpg')">AÑADIR</button>
+        </div>
+        <!-- Producto 11 -->
+    <div class="producto">
+        <a href="../productos/lavanda.html"><img src="../img/lavanda.jpg" alt="lavanda" class="producto-img"></a>
+        <h3 class="producto-titulo">JABÓN DE LAVANDA</h3><br>
+        <p class="producto-descripcion">Jabón natural de lavanda para una piel suave y perfumada. Ideal para pieles sensibles. Con propiedades calmantes.</p><br>
+        <span class="producto-precio-destacado">4.50 €</span><br>
+        <button class="btn-agregar" onclick="agregarAlCarrito(4.50, 'JABÓN DE LAVANDA', '../img/lavanda.jpg')">AÑADIR</button>
+    </div>
+    <!-- Producto 12 -->
+    <div class="producto">
+        <a href="../productos/mango.html"><img src="../img/mango.jpg" alt="mango" class="producto-img"></a>
+        <h3 class="producto-titulo">CREMA CORPORAL DE MANGO</h3><br>
+        <p class="producto-descripcion">Crema hidratante para el cuerpo con extracto de mango. Aporta nutrición profunda y deja la piel suave y radiante.</p><br>
+        <span class="producto-precio-destacado">8.99 €</span><br><br>
+        <button class="btn-agregar" onclick="agregarAlCarrito(8.99, 'CREMA CORPORAL DE MANGO', '../img/mango.jpg')">AÑADIR</button>
+    </div>
+    </div>
+</section>
+<!-- Sección de Higiene Personal -->
+<div class="cajon-informacion">
+    <h2 class="titulo-bienvenida">CUIDADO NATURAL: HIGIENE PERSONAL CON PRODUCTOS NATURALES</h2><br>
+    <p class="textos">En nuestra sección de Higiene Personal, encontrarás productos naturales diseñados para cuidar de ti de manera saludable. <br> Desde jabones orgánicos hasta champús y cremas con ingredientes naturales, aquí tienes opciones que respetan tu piel y tu bienestar.</p>
+    <p class="textos">Nuestros productos están libres de químicos agresivos y son aptos para todo tipo de piel, incluso para las más sensibles. Creemos en la importancia de elegir productos que no solo limpian, sino que nutren y protegen tu piel con lo mejor de la naturaleza.</p>   
+    <p class="textos">Incorpora estos productos en tu rutina diaria y experimenta la diferencia en tu bienestar y frescura. ¡Porque cuidar de ti nunca fue tan natural y eficaz!</p>
+</div>
+<!-- Sección de Opiniones de Usuarios -->
+<div class="opiniones">
+    <h2 class="titulo-opiniones">OPINIONES DE USUARIOS</h2><br>
+    <div class="contenedor-opiniones">
+        <div class="opinion">
+            <h2>CARLA</h2><br>
+            <p class="textos">Llevo usando el jabón natural de esta tienda y mi piel nunca se ha sentido tan suave y limpia. <br> Me encanta que esté libre de productos químicos, es perfecto para mi piel sensible. <br> Definitivamente seguiré utilizando estos productos para mi higiene diaria.</p>
+            <div class="estrellas" data-valor="5">
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+            </div>
+        </div>
+        <div class="opinion">
+            <h2>RAÚL</h2><br>
+            <p class="textos">Como deportista, el champú natural de esta tienda ha sido un hallazgo increíble. <br> Me deja el cabello limpio y fresco sin resecarlo, además tiene un aroma natural increíble. <br> Lo recomiendo mucho para quienes buscan productos eficaces y suaves.</p>
+            <div class="estrellas" data-valor="5">
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+            </div>
+        </div>
+        <div class="opinion">
+            <h2>LUCÍA</h2><br>
+            <p class="textos">He probado la crema corporal de esta tienda y mi piel se siente más hidratada que nunca. <br> Me encanta que no tenga parabenos ni aditivos artificiales. <br> Es la mejor opción para quienes buscamos productos naturales para el cuidado de la piel.</p>
+            <div class="estrellas" data-valor="4">
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9734;</span>
+            </div>
+        </div>
+        <div class="opinion">
+            <h2>MIGUEL</h2><br>
+            <p class="textos">Los productos de higiene de esta tienda me han cambiado la rutina. <br> Desde que uso el gel de ducha natural, mi piel se siente más fresca y revitalizada. <br> Los recomiendo mucho para quienes buscan productos efectivos y respetuosos con la piel.</p>
+            <div class="estrellas" data-valor="5">
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Pie de página -->
+<footer class="pie">
+    <div class="informacion-adicional">
+        <h4>NUTREETIVE</h4>
+        <hr>
+        <br>
+        <p class="textos">Fray Paulino s/n 33600 Mieres</p><br>
+        <p class="textos">Email: Nutreetive@gmail.com</p><br>
+        <p class="textos">Teléfono: 612 34 56 78.</p><br>
+    </div>
+    <div class="informacion">
+        <h4>CONTACTO</h4>
+        <hr>
+        <a href="../html/aviso-legal.html" class="enlace-footer"><p class="textos">Aviso legal</p></a><br>
+        <a href="../html/politica-privacidad.html" class="enlace-footer"><p class="textos">Política de privacidad</p></a><br>
+        <a href="../html/politica-cookies.html" class="enlace-footer"><p class="textos">Política de cookies</p></a><br>
+        <a href="../html/envios.html" class="enlace-footer"><p class="textos">Envíos</p></a><br>
+        <a href="../html/devoluciones-reembolsos.html" class="enlace-footer"><p class="textos">Devoluciones y reembolsos</p></a><br>
+    </div>
+    <div class="redes-sociales">
+        <h4>REDES SOCIALES</h4>
+        <hr><br>
+        <a href="https://www.facebook.com/" class="enlace-footer"><img src="../img/facebook.png" alt="facebook" class="icono-footer"></a>
+        <a href="https://www.instagram.com/?hl=es" class="enlace-footer"><img src="../img/instagram.jpg" alt="instagram" class="icono-footer"></a>
+        <a href="https://x.com/?lang=es" class="enlace-footer"><img src="../img/twitter.png" alt="twitter" class="icono-footer"></a>
+    </div>
+    <div class="sobre-nosotros">
+        <h4>SOBRE NOSOTROS</h4>
+        <hr>
+        <a href="../html/blog.html" class="enlace-footer"><p class="textos">Blog</p></a><br>
+        <a href="../html/contacto.html" class="enlace-footer"><p class="textos">Contacte con nosotros</p></a><br>
+        <a href="../html/eleccion.html" class="enlace-footer"><p class="textos">Herbolario - ¿Por qué elegirnos?</p></a><br>
+        <a href="../html/sobre-nosotros.html" class="enlace-footer"><p class="textos">Sobre nosotros - Herbolario Online</p></a>
+    </div>
+</footer>
+</div>
+    
+</body>
+<script src="../js/index.js"></script>
+<script src="../js/buscador.js"></script>
+<script src="../js/estrellas.js"></script>
+</html>

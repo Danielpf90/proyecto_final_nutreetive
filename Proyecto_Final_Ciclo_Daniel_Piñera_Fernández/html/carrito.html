@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutreetive: Tienda Online</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../img/logo.ico">
+    <link rel="stylesheet" href="../css/carrito.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://sandbox.paypal.com/sdk/js?client-id=AQLBts3TmuLqcYPM4wtyOwNq6frjWZiRkdE8VKOc4it_uhH3mxqrlC6ACtLmdbwnKJSM5mQD7wVU7hGN"></script>
+</head>
+<body>
+    <!-- Contenedor principal -->
+    <div class="contenedor-principal">
+        <!-- Cabecera -->
+        <header class="cabecera">
+            <div class="logo">
+            <a href="../html/index.html"><img src="../img/logo.png" alt="Logo"></a>
+            </div>
+            <div class="envio-gratis">¡Envío gratis a partir de 50€!</div>
+            <div class="busqueda">
+                <input type="text" placeholder="Buscar producto..." id="producto">
+                <button onclick="buscarProducto()">Buscar</button>
+            </div>
+            <div class="acciones">
+                <a href="../html/login.html"><i class="fas fa-user"></i>Iniciar Sesión</a>
+                <a href="../html/registrarse.html"><i class="fas fa-user-plus"></i>Crear cuenta</a>
+                <a href="../html/carrito.html"><i class="fas fa-shopping-cart"></i></a>
+                <span id="contador-carrito" class="contador">0</span>
+            </div>
+        </header>
+        <!DOCTYPE html>
+      <!-- Sección del carrito -->   
+      <div class="container">
+        <h1>Tu Carrito de Compras</h1>
+        <div class="contenido" id="carrito">
+            <div id="carritoContainer"></div><br>
+            <div class="summary" id="resumen">
+                <h2>Resumen</h2><br>
+                <p>Total: <span id="precioTotalCarrito">0.00</span> €</p><br>
+                <div class="paypal-container">
+                    <div id="paypal-button-container"></div>
+                </div>
+                <button class="checkout-btn">Borrar Carrito</button>
+            </div>
+        </div>
+    </div>
+        <!-- Pie de página -->
+        <footer class="pie">
+            <div class="informacion-adicional">
+                <h4>Nutreetive</h4>
+                <hr>
+                <p>Fray Paulino s/n 33600 Mieres</p><br>
+                <p>Email: contacto@tienda.com</p><br>
+                <p>Teléfono: 612 34 56 78.</p>
+            </div>
+            <div class="informacion">
+                <h4>Contacto</h4>
+                <hr>
+                <a href="../html/aviso-legal.html"><p>Aviso legal</p></a><br>
+                <a href="../html/politica-privacidad.html"><p>Política de privacidad</p></a><br>
+                <a href="../html/politica-cookies.html"><p>Política de cookies</p></a><br>
+                <a href="../html/envios.html"><p>Envíos</p></a><br>
+                <a href="../html/devoluciones-reembolsos.html"><p>Devoluciones y reembolsos</p></a><br>
+            </div>
+            <div class="redes-sociales">
+                <h4>Redes Sociales</h4>
+                <hr>
+                <img src="../img/facebook.png" alt="facebook" class="icono-footer">
+                <img src="../img/instagram.jpg" alt="instagram" class="icono-footer">
+                <img src="../img/twitter.png" alt="twitter" class="icono-footer">
+            </div>
+            <div class="sobre-nosotros">
+                <h4>Sobre Nosotros</h4>
+                <hr>
+                <a href="../html/blog.html"><p>Blog</p></a><br>
+                <a href="../html/contacto.html"><p>Contacte con nosotros</p></a><br>
+                <a href="../html/eleccion.html"><p>Herbolario - ¿Por qué elegirnos?</p></a><br>
+                <a href="../html/sobre-nosotros.html"><p>Sobre nosotros - Herbolario Online</p></a>
+            </div>
+        </footer>
+    </div>
+</body>
+<script src="../js/carrito.js"></script>
+<script src="../js/buscador.js"></script>
+
+</html>

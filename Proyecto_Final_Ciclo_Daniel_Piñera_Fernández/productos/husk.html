@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="../img/logo.ico">
+    <link rel="stylesheet" href="../css/productos-paginas.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Nutreetive- Tienda Online</title>
+</head>
+<body>
+    <!-- Contenedor principal -->
+    <div class="contenedor-principal">
+        <!-- Cabecera -->
+        <header class="cabecera">
+            <div class="logo">
+                <a href="../html/index.html"><img src="../img/logo.png" alt="Logo"></a>
+            </div>
+            <div class="envio-gratis">¡Envío gratis a partir de 50€!</div>
+            <div class="busqueda">
+                <input type="text" placeholder="Buscar producto..." id="producto">
+                <button onclick="buscarProducto()">Buscar</button>
+            </div>
+            <div class="acciones">
+                <a href="../html/login.html" class="enlace-cabecera"><i class="fas fa-user"></i>Iniciar Sesión</a>
+                <a href="../html/registrarse.html" class="enlace-cabecera"><i class="fas fa-user-plus"></i>Crear cuenta</a>
+                <a href="../html/carrito.html" class="enlace-cabecera"><i class="fas fa-shopping-cart"></i></a>
+                <span id="precioTotal" class="contador-carrito">0 €</span>
+            </div>
+        </header>
+        <!-- Menú de navegación -->
+        <nav class="menu-navegacion">
+            <ul>
+              <li class="menu-desplegable">
+                <a href="#">PRODUCTOS</a>
+                <ul class="submenu">
+                  <li><a href="../html/alimentacion.html">ALIMENTACIÓN</a></li>
+                  <li><a href="../html/complementos.html">NUTRICIÓN DEPORTIVA</a></li>
+                  <li><a href="../html/depurativos.html">HERBOLARIO</a></li>
+                  <li><a href="../html/cabello.html">HIGIENE</a></li>
+                  <li><a href="../html/energeticos.html">ENERGÉTICOS</a></li>
+                </ul>
+              </li>
+              <li><a href="../html/ofertas.html">OFERTAS</a></li>
+              <li><a href="../html/sobre-nosotros.html">SOBRE NOSOTROS</a></li>
+              <li><a href="../html/blog.html">BLOG</a></li>
+              <li><a href="../html/contacto.html">CONTACTO</a></li>
+            </ul>
+          </nav>
+<!-- Sección de producto -->
+<div class="producto">
+    <div class="imagen">
+        <img src="../img/husk.jpg" alt="Husk Plántago y Pectina de Manzana" />
+    </div>
+    <div class="informacion-producto">
+        <h2 class="titulo-producto">PSYLLIUM HUSK 700mg</h2>
+        <p class="descripcion-producto">El Husk es una combinación natural de plántago y polvo de pectina de manzana, conocido por su alto contenido en fibra. Este suplemento es ideal para mejorar la digestión, regular el tránsito intestinal y apoyar la salud digestiva en general. Su alto contenido de fibra lo convierte en un aliado para quienes buscan mejorar su bienestar intestinal y mantener una dieta equilibrada.</p>
+        <p class="precio">Precio: 12.99 €</p><br>
+        <p class="fecha">Fecha: 21 de noviembre de 2024</p><br>
+        <p class="creador">Proveedor: SWANSON</p><br>
+        <button class="btn-carrito" onclick="agregarAlCarrito(12.99, 'PSYLLIUM HUSK 700mg', '../img/husk.jpg')">AÑADIR</button>
+    </div>
+</div>
+
+<!-- Sección de elegir descripción -->
+<div class="tabs-container">
+    <div class="tabs">
+        <button class="tab-button active" onclick="mostrarContenido('opcion1')">Beneficios</button>
+        <button class="tab-button" onclick="mostrarContenido('opcion2')">Detalles del Producto</button>
+    </div>
+    <div id="contenido-opcion1" class="contenido-tab active">
+        <h3>Beneficios del Husk</h3><br>
+        <p>El Husk combina dos ingredientes ricos en fibra, cada uno con grandes beneficios para la salud digestiva:</p><br>
+        <ul>
+            <li><strong>Mejora la digestión:</strong> El plántago es conocido por su capacidad para aliviar el estreñimiento y promover una digestión saludable.</li><br>
+            <li><strong>Apoya la salud intestinal:</strong> La pectina de manzana ayuda a regular el tránsito intestinal y mejora la flora intestinal.</li><br>
+            <li><strong>Reduce el colesterol:</strong> Su fibra soluble contribuye a la reducción de los niveles de colesterol en sangre.</li><br>
+            <li><strong>Controla el apetito:</strong> La fibra ayuda a aumentar la sensación de saciedad, contribuyendo al control del peso.</li><br>
+        </ul>
+    </div>
+
+    <div id="contenido-opcion2" class="contenido-tab">
+        <h3>Detalles del Producto</h3><br>
+        <p>Husk es un suplemento 100% natural compuesto por plántago (psyllium) y polvo de pectina de manzana. Es un producto de alta calidad que no contiene pesticidas ni aditivos químicos, garantizando su pureza y efectividad.</p><br>
+        <p>Este producto es ideal para quienes buscan mejorar su salud digestiva, regular el tránsito intestinal o simplemente añadir una fuente de fibra a su dieta. Es fácil de incorporar en tu rutina diaria, mezclado en agua, batidos o incluso en alimentos como yogur.</p><br>
+        <p>Este suplemento es perfecto para dietas vegetarianas, veganas y libres de gluten, siendo adecuado para cualquier persona que quiera mejorar su bienestar digestivo de manera natural.</p>
+    </div>
+</div>
+
+<!-- Sección de Opiniones de Usuarios -->
+<div class="opiniones">
+    <h2 class="titulo-opiniones">OPINIONES DE USUARIOS SOBRE HUSK</h2><br>
+    <div class="contenedor-opiniones">
+        <div class="opinion">
+            <h2>JUAN</h2><br>
+            <p class="textos">"Me ha ayudado mucho con mi digestión. Lo tomo cada mañana y siento que mi estómago está mucho más tranquilo y regulado." </p>
+            <div class="estrellas" data-valor="5">
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+            </div>
+        </div>
+        <div class="opinion">
+            <h2>LAURA</h2><br>
+            <p class="textos">"Excelente producto. Noté la diferencia en mis digestiones y me ayuda a sentirme más ligera." </p>
+            <div class="estrellas" data-valor="5">
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+            </div>
+        </div>
+        <div class="opinion">
+            <h2>ALBERTO</h2><br>
+            <p class="textos">"Llevo usándolo un mes y he notado una gran mejora en mi digestión. Es un buen complemento para mi dieta." </p>
+            <div class="estrellas" data-valor="5">
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+            </div>
+        </div>
+        <div class="opinion">
+            <h2>MARINA</h2><br>
+            <p class="textos">"Es un producto natural y efectivo. Lo uso para regular mi sistema digestivo y me ha funcionado muy bien." </p>
+            <div class="estrellas" data-valor="5">
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+            </div>
+        </div>
+    </div>
+</div>
+        <!-- Pie de página -->
+        <footer class="pie">
+            <div class="informacion-adicional">
+                <h4>NUTREETIVE</h4>
+                <hr>
+                <br>
+                <p>Fray Paulino s/n 33600 Mieres</p><br>
+                <p>Email: Nutreetive@gmail.com</p><br>
+                <p>Teléfono: 612 34 56 78.</p><br>
+            </div>
+            <div class="informacion">
+                <h4>CONTACTO</h4>
+                <hr>
+                <a href="../html/aviso-legal.html" class="enlace-footer"><p>Aviso legal</p></a><br>
+                <a href="../html/politica-privacidad.html" class="enlace-footer"><p>Política de privacidad</p></a><br>
+                <a href="../html/politica-cookies.html" class="enlace-footer"><p>Política de cookies</p></a><br>
+                <a href="../html/envios.html" class="enlace-footer"><p>Envíos</p></a><br>
+                <a href="../html/devoluciones-reembolsos.html" class="enlace-footer"><p>Devoluciones y reembolsos</p></a><br>
+            </div>
+            <div class="redes-sociales">
+                <h4>REDES SOCIALES</h4>
+                <hr><br>
+                <a href="https://www.facebook.com/" class="enlace-footer"><img src="../img/facebook.png" alt="facebook" class="icono-footer"></a>
+                <a href="https://www.instagram.com/?hl=es" class="enlace-footer"><img src="../img/instagram.jpg" alt="instagram" class="icono-footer"></a>
+                <a href="https://x.com/?lang=es" class="enlace-footer"><img src="../img/twitter.png" alt="twitter" class="icono-footer"></a>
+            </div>
+            <div class="sobre-nosotros">
+                <h4>SOBRE NOSOTROS</h4>
+                <hr>
+                <a href="../html/blog.html" class="enlace-footer"><p>Blog</p></a><br>
+                <a href="../html/contacto.html" class="enlace-footer"><p>Contacte con nosotros</p></a><br>
+                <a href="../html/eleccion.html" class="enlace-footer"><p>Herbolario - ¿Por qué elegirnos?</p></a><br>
+                <a href="../html/sobre-nosotros.html" class="enlace-footer"><p>Sobre nosotros - Herbolario Online</p></a>
+            </div>
+        </footer>
+    </div>
+</body>
+<script src="../js/index.js"></script>
+<script src="../js/buscador.js"></script>
+<script src="../js/estrellas.js"></script>
+</html>

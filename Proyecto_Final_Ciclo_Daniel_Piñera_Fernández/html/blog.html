@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="shortcut icon" type="image/x-icon" href="../img/logo.ico">
+    <link rel="stylesheet" href="../css/productos-paginas.css">
+    <title>Nutreetive: Blog</title>
+</head>
+<body>
+    <!-- Contenedor principal -->
+    <div class="contenedor-principal">
+        <!-- Cabecera -->
+        <header class="cabecera">
+            <div class="logo">
+                <a href="../html/index.html"><img src="../img/logo.png" alt="Logo"></a>
+            </div>
+            <div class="envio-gratis">¡Envío gratis a partir de 50€!</div>
+            <div class="busqueda">
+                <input type="text" placeholder="Buscar producto..." id="producto">
+                <button onclick="buscarProducto()">Buscar</button>
+            </div>
+            <div class="acciones">
+                <a href="../html/login.html" class="enlace-cabecera"><i class="fas fa-user"></i>Iniciar Sesión</a>
+                <a href="../html/registrarse.html" class="enlace-cabecera"><i class="fas fa-user-plus"></i>Crear cuenta</a>
+                <a href="../html/carrito.html" class="enlace-cabecera"><i class="fas fa-shopping-cart"></i></a>
+                <span id="precioTotal" class="contador-carrito">0 €</span>
+            </div>
+        </header>
+         <!-- Menú de navegación -->
+         <nav class="menu-navegacion">
+            <ul>
+              <li class="menu-desplegable">
+                <a href="#">PRODUCTOS</a>
+                <ul class="submenu">
+                  <li><a href="../html/alimentacion.html">ALIMENTACIÓN</a></li>
+                  <li><a href="../html/complementos.html">NUTRICIÓN DEPORTIVA</a></li>
+                  <li><a href="../html/depurativos.html">HERBOLARIO</a></li>
+                  <li><a href="../html/cabello.html">HIGIENE</a></li>
+                  <li><a href="../html/energeticos.html">ENERGÉTICOS</a></li>
+                </ul>
+              </li>
+              <li><a href="../html/ofertas.html">OFERTAS</a></li>
+              <li><a href="../html/sobre-nosotros.html">SOBRE NOSOTROS</a></li>
+              <li><a href="../html/blog.html">BLOG</a></li>
+              <li><a href="../html/contacto.html">CONTACTO</a></li>
+            </ul>
+          </nav>
+          <!-- Sección Blog -->
+          <section class="blog">
+            <h2>Bienvenido a Nuestro Blog</h2>
+          
+            <p>En <strong>Nombre de la Empresa</strong> nos apasiona compartir conocimientos, consejos y novedades sobre salud, bienestar, nutrición, productos naturales y mucho más. A través de este blog, queremos brindarte información útil, basada en evidencia científica, para que tomes decisiones informadas sobre tu bienestar.</p>
+          
+            <p><strong>Explora nuestros artículos más recientes:</strong></p>
+          
+            <div class="blog-posts">
+              <article class="blog-post">
+                <h3><a href="#">Beneficios del Sirope de Dulce de Leche: Más que Solo un Sabor</a></h3>
+                <p>El sirope de dulce de leche no solo es delicioso, sino que también puede ser una opción nutritiva para quienes buscan una alternativa más natural a los azúcares refinados. Descubre cómo este producto puede convertirse en parte de una dieta balanceada.</p>
+                <a href="#">Leer más...</a>
+              </article>
+          
+              <article class="blog-post">
+                <h3><a href="#">Cómo la Nutrición Deportiva Puede Mejorar Tu Rendimiento</a></h3>
+                <p>La nutrición juega un papel clave en el rendimiento físico. Aprende sobre los mejores suplementos y alimentos que pueden ayudarte a mejorar tu resistencia, fuerza y recuperación durante tus entrenamientos.</p>
+                <a href="#">Leer más...</a>
+              </article>
+          
+              <article class="blog-post">
+                <h3><a href="#">Los Beneficios de la Aromaterapia para el Bienestar Mental</a></h3>
+                <p>La aromaterapia es una herramienta poderosa para reducir el estrés y la ansiedad. Descubre los aceites esenciales más efectivos y cómo puedes incorporarlos en tu rutina diaria para mejorar tu bienestar emocional.</p>
+                <a href="#">Leer más...</a>
+              </article>
+          
+              <article class="blog-post">
+                <h3><a href="#">La Importancia de Elegir Productos Naturales para el Cuidado Personal</a></h3>
+                <p>¿Sabías que muchos productos de cuidado personal contienen químicos agresivos para la piel? Aquí te mostramos cómo elegir productos naturales y cuáles son los beneficios para tu piel y salud a largo plazo.</p>
+                <a href="#">Leer más...</a>
+              </article>
+            </div>
+          
+            <p><strong>¿Te gustaría saber más sobre algún tema específico?</strong> ¡Estamos aquí para ayudarte! Si tienes preguntas o deseas leer más sobre un tema en particular, no dudes en dejarnos un comentario o ponerte en contacto con nosotros. Nos encantaría saber de ti y seguir compartiendo más contenido valioso.</p>
+          
+            <p><strong>Únete a nuestra comunidad:</strong> Mantente al día con las últimas noticias, ofertas especiales y nuevos artículos del blog suscribiéndote a nuestro boletín. ¡No te pierdas ninguna actualización!</p>
+          
+            <p><strong>¡Gracias por ser parte de nuestra comunidad!</strong></p>
+          </section>
+          
+       <!-- Pie de página -->
+        <footer class="pie">
+            <div class="informacion-adicional">
+                <h4>NUTREETIVE</h4>
+                <hr>
+                <br>
+                    <p class="textos">Fray Paulino s/n 33600 Mieres</p><br>
+                    <p class="textos">Email: Nutreetive@gmail.com</p><br>
+                    <p class="textos">Teléfono: 612 34 56 78.</p><br>
+            </div>
+        <div class="informacion">
+                <h4>CONTACTO</h4>
+                <hr>
+                    <a href="../html/aviso-legal.html" class="enlace-footer"><p class="textos">Aviso legal</p></a><br>
+                    <a href="../html/politica-privacidad.html" class="enlace-footer"><p class="textos">Política de privacidad</p></a><br>
+                    <a href="../html/politica-cookies.html" class="enlace-footer"><p class="textos">Política de cookies</p></a><br>
+                    <a href="../html/envios.html" class="enlace-footer"><p class="textos">Envíos</p></a><br>
+                    <a href="../html/devoluciones-reembolsos.html" class="enlace-footer"><p class="textos">Devoluciones y reembolsos</p></a><br>
+        </div>
+        <div class="redes-sociales">
+            <h4>REDES SOCIALES</h4>
+            <hr><br>
+                <a href="https://www.facebook.com/" class="enlace-footer"><img src="../img/facebook.png" alt="facebook" class="icono-footer"></a>
+                <a href="https://www.instagram.com/?hl=es" class="enlace-footer"><img src="../img/instagram.jpg" alt="instagram" class="icono-footer"></a>
+                <a href="https://x.com/?lang=es" class="enlace-footer"><img src="../img/twitter.png" alt="twitter" class="icono-footer"></a>
+        </div>
+        <div class="sobre-nosotros">
+            <h4>SOBRE NOSOTROS</h4>
+            <hr>
+                <a href="../html/blog.html" class="enlace-footer"><p class="textos">Blog</p></a><br>
+                <a href="../html/contacto.html" class="enlace-footer"><p class="textos">Contacte con nosotros</p></a><br>
+                <a href="../html/eleccion.html" class="enlace-footer"><p class="textos">Herbolario - ¿Por qué elegirnos?</p></a><br>
+                <a href="../html/sobre-nosotros.html" class="enlace-footer"><p class="textos">Sobre nosotros - Herbolario Online</p></a>
+        </div>
+    </footer>
+    </div>
+</body>
+<script src="../js/index.js"></script>
+<script src="../js/buscador.js"></script>
+</html>

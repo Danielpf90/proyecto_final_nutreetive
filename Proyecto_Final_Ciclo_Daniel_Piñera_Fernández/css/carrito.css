@@ -1,0 +1,467 @@
+* {
+    margin: 0; /* Elimina el margen por defecto */
+    padding: 0; /* Elimina el relleno por defecto */
+    box-sizing: border-box; /* Asegura que el padding y el borde no afecten el tamaño del elemento */
+}
+
+body {
+    font-family: Arial, sans-serif; /* Establece la fuente del texto */
+    background-color: #f4f4f4; /* Establece el color de fondo */
+    margin: 0; /* Elimina el margen por defecto */
+    padding: 0; /* Elimina el relleno por defecto */
+    width: 100%; /* Establece el ancho del cuerpo al 100% */
+    overflow-x: hidden; /* Evita que haya barras de desplazamiento horizontales */
+    display: flex; /* Utiliza Flexbox para el diseño */
+    flex-direction: column; /* Organiza los elementos en una columna */
+    min-height: 100vh; /* Asegura que el body ocupe al menos el 100% de la altura de la ventana */
+    justify-content: space-between; /* Espacia los elementos de manera equitativa */
+}
+
+a {
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    color: white; /* Cambia el color del texto de los enlaces a blanco */
+}
+
+.contenedor-principal {
+    flex: 1; /* Hace que este contenedor ocupe el espacio restante disponible */
+    display: flex; /* Utiliza Flexbox */
+    flex-direction: column; /* Organiza los elementos en una columna */
+    overflow: hidden; /* Evita que el contenido se desborde fuera del contenedor */
+}
+
+/* Cabecera */
+.cabecera {
+    display: flex; /* Utiliza Flexbox */
+    justify-content: space-between; /* Espacia los elementos de manera equitativa */
+    align-items: center; /* Alinea los elementos verticalmente */
+    background-color: #000000; /* Color de fondo de la cabecera */
+    padding: 10px; /* Relleno alrededor de la cabecera */
+}
+
+.logo img {
+    width: 200px; /* Establece el ancho del logo */
+    margin-left: 50px; /* Añade margen izquierdo al logo */
+}
+
+.envio-gratis {
+    text-align: center; /* Centra el texto */
+    color: white; /* Cambia el color del texto a blanco */
+}
+
+.busqueda {
+    display: flex; /* Utiliza Flexbox */
+    align-items: center; /* Alinea los elementos verticalmente */
+}
+
+.busqueda input {
+    width: 400px; /* Establece el ancho del campo de búsqueda */
+    padding: 10px; /* Relleno dentro del campo */
+    border: 1px solid #ccc; /* Añade un borde gris claro */
+    border-radius: 4px 0 0 4px; /* Redondea las esquinas del campo de búsqueda */
+}
+
+.busqueda button {
+    padding: 10px 15px; /* Relleno dentro del botón */
+    margin-left: 10px; /* Añade margen izquierdo al botón */
+    background-color: #8A9A5B; /* Color de fondo del botón */
+    color: white; /* Color del texto del botón */
+    border: none; /* Elimina el borde por defecto */
+    border-radius: 4px; /* Redondea las esquinas del botón */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+}
+
+/* Efecto al pasar el cursor sobre el botón */
+.busqueda button:hover {
+    background-color: #7A8A4B; /* Cambia el color de fondo al pasar el cursor */
+}
+
+.acciones {
+    display: flex; /* Utiliza Flexbox */
+    align-items: center; /* Alinea los elementos verticalmente */
+}
+
+.acciones a {
+    margin-left: 15px; /* Añade margen izquierdo entre los enlaces */
+    color: white; /* Cambia el color del texto a blanco */
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    display: flex; /* Utiliza Flexbox */
+    align-items: center; /* Alinea los elementos verticalmente */
+}
+
+.acciones a i {
+    margin-right: 5px; /* Añade margen derecho entre el icono y el texto */
+    font-size: 20px; /* Establece el tamaño del icono */
+}
+
+/* Estilos del contador */
+.contador {
+    position: relative; /* Posiciona el contador en relación con su contenedor */
+    top: -8px; /* Desplaza el contador hacia arriba */
+    left: -5px; /* Desplaza el contador hacia la izquierda */
+    background-color: red; /* Color de fondo del contador */
+    color: white; /* Color del texto del contador */
+    border-radius: 50%; /* Hace que el contador sea circular */
+    padding: 5px 8px; /* Relleno dentro del contador */
+    font-size: 14px; /* Tamaño de la fuente */
+    font-weight: bold; /* Hace que el texto sea más negrita */
+}
+
+.contenido {
+    display: flex; /* Utiliza Flexbox */
+    flex-direction: column; /* Organiza los elementos en una columna */
+    align-items: center; /* Centra los elementos horizontalmente */
+}
+
+.container {
+    max-width: 800px; /* Limita el ancho máximo del contenedor */
+    width: 100%; /* Hace que el contenedor ocupe el 100% del ancho disponible */
+    margin: 20px auto; /* Centra el contenedor en la pantalla */
+    background-color: #fff; /* Color de fondo del contenedor */
+    padding: 20px; /* Relleno dentro del contenedor */
+    border-radius: 8px; /* Redondea las esquinas del contenedor */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Añade sombra para un efecto de profundidad */
+    border: 2px solid #3ad513; /* Borde de color verde */
+    box-sizing: border-box; /* Asegura que el padding no afecte al tamaño total del contenedor */
+}
+
+h1 {
+    text-align: center; /* Centra el título */
+}
+
+.cart-item {
+    display: flex; /* Utiliza Flexbox */
+    align-items: center; /* Alinea los elementos verticalmente */
+    border-bottom: 1px solid #ddd; /* Añade una línea divisoria */
+    padding: 10px 0; /* Relleno dentro del item */
+    width: 100%; /* Hace que el item ocupe todo el ancho disponible */
+}
+
+.cart-item img {
+    width: 100px; /* Establece el ancho de la imagen */
+    height: auto; /* Mantiene la relación de aspecto de la imagen */
+    margin-right: 20px; /* Añade margen derecho entre la imagen y el texto */
+}
+
+.item-details {
+    flex-grow: 1; /* Hace que este elemento ocupe el espacio restante */
+}
+
+.remove-btn {
+    background-color: #ff4d4d; /* Color de fondo del botón */
+    color: white; /* Color del texto */
+    border: none; /* Elimina el borde por defecto */
+    padding: 10px; /* Relleno dentro del botón */
+    border-radius: 5px; /* Redondea las esquinas del botón */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+}
+
+.remove-btn:hover {
+    background-color: #ff1a1a; /* Cambia el color de fondo al pasar el cursor */
+    width: 50%; /* Establece el ancho del botón al 50% */
+}
+
+.summary {
+    margin-top: 20px; /* Añade margen superior */
+    text-align: center; /* Centra el texto */
+    width: 100%; /* Hace que el contenedor ocupe todo el ancho disponible */
+}
+
+.checkout-btn {
+    background-color: #28a745; /* Color de fondo del botón */
+    color: white; /* Color del texto */
+    border: none; /* Elimina el borde por defecto */
+    padding: 15px 20px; /* Relleno dentro del botón */
+    border-radius: 5px; /* Redondea las esquinas del botón */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    width: 50%; /* Establece el ancho del botón al 50% */
+}
+
+.checkout-btn:hover {
+    background-color: #218838; /* Cambia el color de fondo al pasar el cursor */
+}
+
+.pie {
+    display: flex; /* Utiliza Flexbox */
+    justify-content: space-between; /* Espacia los elementos de manera equitativa */
+    background-color: black; /* Color de fondo del pie de página */
+    color: white; /* Color del texto */
+    padding: 20px; /* Relleno dentro del pie de página */
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en pantallas más pequeñas */
+    align-items: flex-start; /* Alinea los elementos al inicio de la columna */
+}
+
+.pie div {
+    width: 23%; /* Hace que cada sección ocupe el 23% del ancho disponible */
+}
+
+hr {
+    border: none; /* Elimina el borde por defecto */
+    height: 2px; /* Establece el grosor de la línea */
+    background-color: white; /* Color de la línea */
+    margin-top: 5px; /* Añade margen superior */
+    margin-bottom: 5px; /* Añade margen inferior */
+}
+
+.informacion-adicional,
+.informacion,
+.redes-sociales,
+.sobre-nosotros {
+    text-align: center; /* Centra el texto */
+}
+
+.icono-footer {
+    width: 40px; /* Establece el ancho del icono */
+    height: 40px; /* Establece la altura del icono */
+    margin-bottom: 5px; /* Añade margen inferior */
+}
+
+.paypal-container {
+    display: flex; /* Utiliza Flexbox */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+}
+
+#paypal-button-container {
+    width: 50%; /* Establece el ancho al 50% */
+}
+
+/* Media Query para pantallas grandes, mayores a 1440px */
+@media (min-width: 1440px) {
+    body {
+        display: flex; /* Utiliza Flexbox */
+        flex-direction: column; /* Organiza los elementos en una columna */
+        min-height: 100vh; /* Asegura que el body ocupe al menos el 100% de la altura de la ventana */
+        justify-content: flex-start; /* Alinea los elementos al principio */
+        margin: 0; /* Elimina márgenes */
+        padding: 0; /* Elimina rellenos */
+    }
+
+    .contenedor-principal {
+        flex: 1; /* Hace que este contenedor ocupe todo el espacio disponible */
+        display: flex; /* Utiliza Flexbox */
+        flex-direction: column; /* Organiza los elementos en una columna */
+        overflow: hidden; /* Evita el desbordamiento */
+    }
+
+    .cabecera {
+        padding: 20px; /* Añade más relleno en la cabecera */
+    }
+
+    .container {
+        max-width: 1200px; /* Limita el ancho máximo */
+        padding: 30px; /* Proporciona mayor espacio */
+        margin: 20px auto; /* Centra el contenedor */
+    }
+
+    .pie {
+        display: flex; /* Utiliza Flexbox */
+        justify-content: space-between; /* Espacia los elementos de manera equitativa */
+        background-color: black; /* Color de fondo del pie */
+        color: white; /* Color del texto */
+        padding: 20px; /* Relleno dentro del pie */
+        flex-wrap: wrap; /* Ajusta los elementos */
+        align-items: flex-start; /* Alinea los elementos al principio */
+        width: 100%; /* Hace que el pie ocupe todo el ancho disponible */
+        box-sizing: border-box; /* Asegura que los márgenes no afecten el tamaño total */
+        margin-top: 30px; /* Añade margen superior */
+        position: relative; /* Hace que los elementos se ubiquen según su contenedor */
+    }
+
+    .pie div {
+        width: 23%; /* Cada sección ocupa el 23% del espacio disponible */
+    }
+
+    h1 {
+        font-size: 30px; /* Ajusta el tamaño del título */
+    }
+
+    .contenedor-principal {
+        display: flex; /* Utiliza Flexbox */
+        flex-direction: column; /* Organiza los elementos en una columna */
+        justify-content: space-between; /* Hace que el pie de página se quede al final */
+    }
+}
+
+/* Media Query para pantallas medianas (1024px o menos) */
+@media (max-width: 1024px) {
+    /* Ajusta los elementos para que se ajusten bien en pantallas más pequeñas */
+    .contenedor-productos,
+    .contenedor-ofertas,
+    .contenedor-destacados {
+        flex-wrap: wrap; /* Permite que los elementos se ajusten */
+        display: flex; /* Utiliza Flexbox */
+        justify-content: space-between; /* Espacia los elementos */
+        gap: 20px; /* Añade espacio entre los elementos */
+    }
+
+    .producto,
+    .oferta,
+    .producto-destacado {
+        width: 45%; /* Ajusta el tamaño de los elementos */
+        margin-bottom: 20px; /* Añade margen inferior */
+        box-sizing: border-box; /* Evita que el padding afecte al ancho total */
+    }
+
+    .cajon-suscribirse,
+    .opiniones {
+        width: 90%; /* Ajusta el ancho */
+        margin: 0 auto; /* Centra el contenido */
+    }
+
+    .contenedor-principal {
+        display: flex; /* Utiliza Flexbox */
+        flex-direction: column; /* Organiza los elementos en una columna */
+        justify-content: space-between; /* Hace que el pie de página quede al final */
+        min-height: 100vh; /* Asegura que el contenido ocupe toda la altura */
+    }
+
+    .container {
+        padding: 10px; /* Reduce el relleno */
+        margin-bottom: 20px; /* Añade margen inferior */
+    }
+
+    .contenedor-principal {
+        flex: 1; /* Hace que el contenedor ocupe todo el espacio */
+        overflow: hidden; /* Evita el desbordamiento */
+    }
+
+    .cabecera,
+    .pie {
+        width: 100%; /* Hace que la cabecera y el pie ocupen todo el ancho disponible */
+        box-sizing: border-box; /* Asegura que el tamaño total no se vea afectado */
+    }
+}
+
+/* Media Query para pantallas pequeñas (768px o menos) */
+@media (max-width: 768px) {
+    .producto,
+    .oferta,
+    .producto-destacado {
+        width: 100%; /* Hace que los elementos ocupen el 100% del ancho disponible */
+        margin-bottom: 20px; /* Añade margen inferior */
+        flex: 1 1 45%; /* Ajusta el tamaño para pantallas más pequeñas */
+    }
+
+    .pie {
+        flex-direction: column; /* Organiza el pie en columna */
+        align-items: center; /* Centra los elementos */
+        text-align: center; /* Centra el texto */
+    }
+
+    .pie div {
+        width: 100%; /* Hace que cada sección ocupe todo el espacio disponible */
+        margin: 10px 0; /* Añade margen superior e inferior */
+    }
+
+    .opinion {
+        width: 100%; /* Hace que las opiniones ocupen todo el espacio disponible */
+    }
+
+    .cabecera {
+        flex-direction: column; /* Organiza la cabecera en columna */
+        padding: 15px; /* Añade más relleno */
+    }
+
+    .logo img {
+        width: 150px; /* Ajusta el tamaño del logo */
+        margin-left: 0; /* Elimina el margen izquierdo */
+        margin-bottom: 10px; /* Añade margen inferior */
+    }
+
+    .busqueda input {
+        width: 100%; /* Hace que el campo de búsqueda ocupe todo el espacio disponible */
+        margin-bottom: 10px; /* Añade margen inferior */
+    }
+
+    .busqueda button {
+        width: 100%; /* Hace que el botón ocupe todo el espacio disponible */
+    }
+
+    .acciones {
+        justify-content: center; /* Centra los iconos de la cabecera */
+        margin-top: 10px; /* Añade margen superior */
+    }
+}
+
+/* Media Query para pantallas muy pequeñas (480px o menos) */
+@media (max-width: 480px) {
+    .producto,
+    .oferta,
+    .producto-destacado {
+        flex: 1 1 100%; /* Hace que los elementos ocupen todo el ancho disponible */
+    }
+
+    .container {
+        padding: 10px; /* Ajusta el relleno */
+    }
+
+    h1 {
+        font-size: 20px; /* Ajusta el tamaño del título */
+    }
+
+    .cart-item {
+        flex-direction: column; /* Organiza los elementos en columna */
+        align-items: flex-start; /* Alinea los elementos al inicio */
+    }
+
+    .remove-btn {
+        width: 100%; /* Hace que el botón ocupe todo el ancho */
+        margin-top: 10px; /* Añade margen superior */
+    }
+
+    .checkout-btn {
+        width: 100%; /* Hace que el botón ocupe todo el ancho */
+        padding: 10px; /* Ajusta el relleno del botón */
+    }
+
+    .pie {
+        flex-direction: column; /* Organiza el pie en columna */
+        padding: 20px; /* Ajusta el relleno */
+        align-items: center; /* Centra los elementos */
+    }
+
+    .pie div {
+        width: 100%; /* Hace que cada sección ocupe todo el espacio disponible */
+        margin-bottom: 15px; /* Añade margen inferior */
+    }
+
+    .logo img {
+        width: 120px; /* Ajusta el tamaño del logo */
+    }
+
+    .busqueda input {
+        width: 100%; /* Hace que el campo de búsqueda ocupe todo el ancho */
+        margin-bottom: 10px; /* Añade margen inferior */
+    }
+
+    .busqueda button {
+        width: 100%; /* Hace que el botón ocupe todo el ancho */
+        margin-bottom: 10px; /* Añade margen inferior */
+    }
+}
+
+/* Media Query para pantallas muy pequeñas (320px o menos) */
+@media (max-width: 320px) {
+    h1 {
+        font-size: 18px; /* Ajusta el tamaño del título */
+    }
+
+    .logo img {
+        width: 100px; /* Ajusta el tamaño del logo */
+    }
+
+    .busqueda input {
+        width: 100%; /* Hace que el campo de búsqueda ocupe todo el espacio disponible */
+        padding: 8px; /* Ajusta el relleno */
+    }
+
+    .busqueda button {
+        width: 100%; /* Hace que el botón ocupe todo el ancho */
+        padding: 8px; /* Ajusta el relleno */
+    }
+
+    .remove-btn,
+    .checkout-btn {
+        padding: 8px; /* Ajusta el relleno de los botones */
+    }
+} 

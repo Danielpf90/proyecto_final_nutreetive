@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="../img/logo.ico">
+    <link rel="stylesheet" href="../css/productos-paginas.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Nutreetive- Tienda Online</title>
+</head>
+<body>
+    <!-- Contenedor principal -->
+    <div class="contenedor-principal">
+        <!-- Cabecera -->
+        <header class="cabecera">
+            <div class="logo">
+                <a href="../html/index.html"><img src="../img/logo.png" alt="Logo"></a>
+            </div>
+            <div class="envio-gratis">¡Envío gratis a partir de 50€!</div>
+            <div class="busqueda">
+                <input type="text" placeholder="Buscar producto..." id="producto">
+                <button onclick="buscarProducto()">Buscar</button>
+            </div>
+            <div class="acciones">
+                <a href="../html/login.html" class="enlace-cabecera"><i class="fas fa-user"></i>Iniciar Sesión</a>
+                <a href="../html/registrarse.html" class="enlace-cabecera"><i class="fas fa-user-plus"></i>Crear cuenta</a>
+                <a href="../html/carrito.html" class="enlace-cabecera"><i class="fas fa-shopping-cart"></i></a>
+                <span id="precioTotal" class="contador-carrito">0 €</span>
+            </div>
+        </header>
+        <!-- Menú de navegación -->
+        <nav class="menu-navegacion">
+            <ul>
+              <li class="menu-desplegable">
+                <a href="#">PRODUCTOS</a>
+                <ul class="submenu">
+                  <li><a href="../html/alimentacion.html">ALIMENTACIÓN</a></li>
+                  <li><a href="../html/complementos.html">NUTRICIÓN DEPORTIVA</a></li>
+                  <li><a href="../html/depurativos.html">HERBOLARIO</a></li>
+                  <li><a href="../html/cabello.html">HIGIENE</a></li>
+                  <li><a href="../html/energeticos.html">ENERGÉTICOS</a></li>
+                </ul>
+              </li>
+              <li><a href="../html/ofertas.html">OFERTAS</a></li>
+              <li><a href="../html/sobre-nosotros.html">SOBRE NOSOTROS</a></li>
+              <li><a href="../html/blog.html">BLOG</a></li>
+              <li><a href="../html/contacto.html">CONTACTO</a></li>
+            </ul>
+          </nav>
+<!-- Sección de producto -->
+<div class="producto">
+    <div class="imagen">
+        <img src="../img/prenatal.jpg" alt="Prenatal Care" />
+    </div>
+    <div class="informacion-producto">
+        <h2 class="titulo-producto">PRENATAL CARE</h2>
+        <p class="descripcion-producto">Prenatal Care es un suplemento nutricional especialmente formulado para satisfacer las necesidades de las mujeres durante el embarazo. Con una mezcla de vitaminas, minerales y ácidos grasos esenciales, este suplemento ayuda a apoyar el desarrollo saludable del bebé y el bienestar de la madre. Ideal para tomar antes y durante el embarazo, proporcionando una nutrición completa y equilibrada.</p>
+        <p class="precio">Precio: 7.65 €</p><br>
+        <p class="fecha">Fecha: 26 de noviembre de 2024</p><br>
+        <p class="creador">Proveedor: hsn</p><br>
+        <button class="btn-carrito" onclick="agregarAlCarrito(7.65, 'PRENATAL CARE', '../img/prenatal.jpg')">AÑADIR AL CARRITO</button>
+    </div>
+</div>
+
+<!-- Sección de elegir descripción -->
+<div class="tabs-container">
+    <div class="tabs">
+        <button class="tab-button active" onclick="mostrarContenido('opcion1')">Beneficios</button>
+        <button class="tab-button" onclick="mostrarContenido('opcion2')">Detalles del Producto</button>
+    </div>
+    <div id="contenido-opcion1" class="contenido-tab active">
+        <h3>Beneficios de Prenatal Care</h3><br>
+        <p>Prenatal Care ofrece una variedad de beneficios para la salud de la madre y el bebé:</p><br>
+        <ul>
+            <li><strong>Soporte nutricional completo</strong>: Con vitaminas y minerales clave para el embarazo, como ácido fólico, hierro y calcio.</li><br>
+            <li><strong>Desarrollo saludable del bebé</strong>: Ayuda en el desarrollo de los órganos y tejidos del bebé, especialmente durante el primer trimestre.</li><br>
+            <li><strong>Reducción de riesgo de deficiencias</strong>: Asegura que la madre y el bebé reciban los nutrientes esenciales para evitar deficiencias comunes en el embarazo.</li><br>
+            <li><strong>Mejora el bienestar materno</strong>: Contribuye a la energía y vitalidad de la madre, ayudando a reducir los síntomas comunes como fatiga y náuseas.</li><br>
+            <li><strong>Apoyo durante todo el embarazo</strong>: Ideal para tomar desde la concepción hasta el post-parto, proporcionando beneficios continuos a lo largo del embarazo.</li><br>
+        </ul>
+    </div>
+
+    <div id="contenido-opcion2" class="contenido-tab">
+        <h3>Detalles del Producto</h3><br>
+        <p>Prenatal Care está formulado con una combinación equilibrada de nutrientes esenciales que las mujeres necesitan durante el embarazo. Con ácido fólico para prevenir defectos en el tubo neural, hierro para combatir la anemia, y calcio para fortalecer los huesos y dientes, este suplemento está diseñado para apoyar tanto la salud de la madre como el desarrollo saludable del bebé. Además, contiene ácidos grasos esenciales y vitaminas que ayudan a mantener el equilibrio hormonal y mejorar la función inmunológica.</p><br>
+        <p>Este producto está libre de gluten y es apto para vegetarianos, garantizando una opción segura y efectiva para todas las mujeres embarazadas.</p><br>
+    </div>
+</div>
+
+<!-- Sección de Opiniones de Usuarios -->
+<div class="opiniones">
+    <h2 class="titulo-opiniones">OPINIONES DE USUARIOS SOBRE PRENATAL CARE</h2><br>
+    <div class="contenedor-opiniones">
+        <div class="opinion">
+            <h2>LAURA</h2><br>
+            <p class="textos">"Estoy en mi segundo trimestre de embarazo y he notado que este suplemento me da más energía. Me siento mejor en general y creo que mi bebé también está más saludable." </p>
+            <div class="estrellas" data-valor="5">
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+            </div>
+        </div>
+        <div class="opinion">
+            <h2>MARÍA</h2><br>
+            <p class="textos">"Me lo recomendó mi ginecóloga. Me siento más tranquila sabiendo que estoy cubriendo todas mis necesidades nutricionales durante el embarazo." </p>
+            <div class="estrellas" data-valor="5">
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+            </div>
+        </div>
+        <div class="opinion">
+            <h2>ANDREA</h2><br>
+            <p class="textos">"Me siento más equilibrada y menos fatigada desde que comencé a tomar Prenatal Care. Es fácil de tomar y no tengo problemas con los efectos secundarios." </p>
+            <div class="estrellas" data-valor="4">
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9734;</span>
+            </div>
+        </div>
+        <div class="opinion">
+            <h2>ANA</h2><br>
+            <p class="textos">"Excelente suplemento para el embarazo. Me siento mucho mejor y más saludable, y creo que mi bebé también lo está haciendo muy bien." </p>
+            <div class="estrellas" data-valor="5">
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+            </div>
+        </div>
+    </div>
+</div>
+        <!-- Pie de página -->
+        <footer class="pie">
+            <div class="informacion-adicional">
+                <h4>NUTREETIVE</h4>
+                <hr>
+                <br>
+                <p>Fray Paulino s/n 33600 Mieres</p><br>
+                <p>Email: Nutreetive@gmail.com</p><br>
+                <p>Teléfono: 612 34 56 78.</p><br>
+            </div>
+            <div class="informacion">
+                <h4>CONTACTO</h4>
+                <hr>
+                <a href="../html/aviso-legal.html" class="enlace-footer"><p>Aviso legal</p></a><br>
+                <a href="../html/politica-privacidad.html" class="enlace-footer"><p>Política de privacidad</p></a><br>
+                <a href="../html/politica-cookies.html" class="enlace-footer"><p>Política de cookies</p></a><br>
+                <a href="../html/envios.html" class="enlace-footer"><p>Envíos</p></a><br>
+                <a href="../html/devoluciones-reembolsos.html" class="enlace-footer"><p>Devoluciones y reembolsos</p></a><br>
+            </div>
+            <div class="redes-sociales">
+                <h4>REDES SOCIALES</h4>
+                <hr><br>
+                <a href="https://www.facebook.com/" class="enlace-footer"><img src="../img/facebook.png" alt="facebook" class="icono-footer"></a>
+                <a href="https://www.instagram.com/?hl=es" class="enlace-footer"><img src="../img/instagram.jpg" alt="instagram" class="icono-footer"></a>
+                <a href="https://x.com/?lang=es" class="enlace-footer"><img src="../img/twitter.png" alt="twitter" class="icono-footer"></a>
+            </div>
+            <div class="sobre-nosotros">
+                <h4>SOBRE NOSOTROS</h4>
+                <hr>
+                <a href="../html/blog.html" class="enlace-footer"><p>Blog</p></a><br>
+                <a href="../html/contacto.html" class="enlace-footer"><p>Contacte con nosotros</p></a><br>
+                <a href="../html/eleccion.html" class="enlace-footer"><p>Herbolario - ¿Por qué elegirnos?</p></a><br>
+                <a href="../html/sobre-nosotros.html" class="enlace-footer"><p>Sobre nosotros - Herbolario Online</p></a>
+            </div>
+        </footer>
+    </div>
+</body>
+<script src="../js/index.js"></script>
+<script src="../js/buscador.js"></script>
+<script src="../js/estrellas.js"></script>
+</html>

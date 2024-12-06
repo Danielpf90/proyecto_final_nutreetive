@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="../img/logo.ico">
+    <link rel="stylesheet" href="../css/productos-paginas.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Nutreetive- Tienda Online</title>
+</head>
+<body>
+    <!-- Contenedor principal -->
+    <div class="contenedor-principal">
+        <!-- Cabecera -->
+        <header class="cabecera">
+            <div class="logo">
+                <a href="../html/index.html"><img src="../img/logo.png" alt="Logo"></a>
+            </div>
+            <div class="envio-gratis">¡Envío gratis a partir de 50€!</div>
+            <div class="busqueda">
+                <input type="text" placeholder="Buscar producto..." id="producto">
+                <button onclick="buscarProducto()">Buscar</button>
+            </div>
+            <div class="acciones">
+                <a href="../html/login.html" class="enlace-cabecera"><i class="fas fa-user"></i>Iniciar Sesión</a>
+                <a href="../html/registrarse.html" class="enlace-cabecera"><i class="fas fa-user-plus"></i>Crear cuenta</a>
+                <a href="../html/carrito.html" class="enlace-cabecera"><i class="fas fa-shopping-cart"></i></a>
+                <span id="precioTotal" class="contador-carrito">0 €</span>
+            </div>
+        </header>
+        <!-- Menú de navegación -->
+        <nav class="menu-navegacion">
+            <ul>
+              <li class="menu-desplegable">
+                <a href="#">PRODUCTOS</a>
+                <ul class="submenu">
+                  <li><a href="../html/alimentacion.html">ALIMENTACIÓN</a></li>
+                  <li><a href="../html/complementos.html">NUTRICIÓN DEPORTIVA</a></li>
+                  <li><a href="../html/depurativos.html">HERBOLARIO</a></li>
+                  <li><a href="../html/cabello.html">HIGIENE</a></li>
+                  <li><a href="../html/energeticos.html">ENERGÉTICOS</a></li>
+                </ul>
+              </li>
+              <li><a href="../html/ofertas.html">OFERTAS</a></li>
+              <li><a href="../html/sobre-nosotros.html">SOBRE NOSOTROS</a></li>
+              <li><a href="../html/blog.html">BLOG</a></li>
+              <li><a href="../html/contacto.html">CONTACTO</a></li>
+            </ul>
+          </nav>
+<!-- Sección de producto -->
+<div class="producto">
+    <div class="imagen">
+        <img src="../img/producto7.jpg" alt="EvoMeal" />
+    </div>
+    <div class="informacion-producto">
+        <h2 class="titulo-producto">EVOMEAL 2.0 (SUSTITUTO DE COMIDA)</h2>
+        <p class="descripcion-producto">EvoMeal es una comida sustitutiva completa diseñada para ofrecer todos los nutrientes esenciales en una sola toma. Ideal para personas con un estilo de vida acelerado, esta comida proporciona proteínas de alta calidad, carbohidratos complejos, grasas saludables, y una rica fuente de vitaminas y minerales.</p>
+        <p class="precio">Precio: 11.14 €</p><br>
+        <p class="fecha">Fecha: 21 de noviembre de 2024</p><br>
+        <p class="creador">Proveedor: HSN</p><br>
+        <button class="btn-carrito" onclick="agregarAlCarrito(11.14, 'EVOMEAL 2.0 SUSTITUTO DE COMIDA', '../img/producto7.jpg')">AÑADIR</button>
+    </div>
+</div>
+
+<!-- Sección de elegir descripción -->
+<div class="tabs-container">
+    <div class="tabs">
+        <button class="tab-button active" onclick="mostrarContenido('opcion1')">Beneficios</button>
+        <button class="tab-button" onclick="mostrarContenido('opcion2')">Detalles del Producto</button>
+    </div>
+    <div id="contenido-opcion1" class="contenido-tab active">
+        <h3>Beneficios de EvoMeal</h3><br>
+        <p>EvoMeal es la opción perfecta para quienes necesitan una solución rápida, nutritiva y equilibrada para las comidas diarias. Entre sus beneficios más destacados están:</p><br>
+        <ul>
+            <li><strong>Comida completa en polvo</strong>: EvoMeal proporciona todos los macronutrientes y micronutrientes que necesitas para una comida balanceada en un solo batido.</li><br>
+            <li><strong>Ideal para estilos de vida ajetreados</strong>: Perfecto para quienes tienen poco tiempo para cocinar o preparar comidas completas.</li><br>
+            <li><strong>Rica en proteínas</strong>: Con una alta cantidad de proteínas de alta calidad para apoyar la musculatura y el bienestar general.</li><br>
+            <li><strong>Fórmula baja en azúcar</strong>: EvoMeal está formulado para ofrecerte una comida energética sin azúcares añadidos, perfecta para dietas controladas.</li><br>
+        </ul>
+    </div>
+
+    <div id="contenido-opcion2" class="contenido-tab">
+        <h3>Detalles del Producto</h3><br>
+        <p>EvoMeal es una comida sustitutiva formulada con ingredientes de alta calidad. Su mezcla de proteínas, carbohidratos complejos y grasas saludables proporciona un perfil nutricional equilibrado. Cada porción contiene más de 20 gramos de proteína, una fuente de carbohidratos de bajo índice glucémico y grasas saludables provenientes de fuentes como aguacate y coco.</p><br>
+        <p>Este producto es ideal para personas que buscan conveniencia sin sacrificar la calidad nutricional. EvoMeal es libre de conservantes artificiales, y su fórmula está pensada para ser fácil de preparar, simplemente mezclando con agua o leche.</p><br>
+        <p>Además, EvoMeal está enriquecido con una amplia gama de vitaminas y minerales esenciales para garantizar que tu cuerpo reciba todo lo necesario para rendir al máximo durante el día.</p><br>
+        <p>Es una excelente opción para quienes necesitan una comida completa en cualquier momento del día, ya sea como desayuno, comida o cena.</p>
+    </div>
+</div>
+
+<!-- Sección de Opiniones de Usuarios -->
+<div class="opiniones">
+    <h2 class="titulo-opiniones">OPINIONES DE USUARIOS SOBRE EVOMEAL</h2><br>
+    <div class="contenedor-opiniones">
+        <div class="opinion">
+            <h2>PEPE</h2><br>
+            <p class="textos">"EvoMeal me ha salvado cuando no tengo tiempo para cocinar. Es nutritivo, fácil de preparar y tiene un gran sabor. Lo recomiendo mucho." </p>
+            <div class="estrellas" data-valor="5">
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+            </div>
+        </div>
+        <div class="opinion">
+            <h2>LORENZO</h2><br>
+            <p class="textos">"Excelente opción para mantener mi energía durante el día. Es como tener una comida completa en solo unos minutos. ¡Perfecto para mis días ocupados!" </p>
+            <div class="estrellas" data-valor="5">
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+            </div>
+        </div>
+        <div class="opinion">
+            <h2>MARÍA</h2><br>
+            <p class="textos">"Me ha encantado. Me mantiene llena de energía sin la sensación de pesadez. Es muy fácil de preparar y tiene un buen sabor." </p>
+            <div class="estrellas" data-valor="5">
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+            </div>
+        </div>
+        <div class="opinion">
+            <h2>LUIS</h2><br>
+            <p class="textos">"Es perfecto para mis entrenamientos. Me da la proteína y energía que necesito para el día sin perder tiempo cocinando. ¡Lo recomiendo!" </p>
+            <div class="estrellas" data-valor="5">
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+                <span class="estrella">&#9733;</span>
+            </div>
+        </div>
+    </div>
+</div>
+        <!-- Pie de página -->
+        <footer class="pie">
+            <div class="informacion-adicional">
+                <h4>NUTREETIVE</h4>
+                <hr>
+                <br>
+                <p>Fray Paulino s/n 33600 Mieres</p><br>
+                <p>Email: Nutreetive@gmail.com</p><br>
+                <p>Teléfono: 612 34 56 78.</p><br>
+            </div>
+            <div class="informacion">
+                <h4>CONTACTO</h4>
+                <hr>
+                <a href="../html/aviso-legal.html" class="enlace-footer"><p>Aviso legal</p></a><br>
+                <a href="../html/politica-privacidad.html" class="enlace-footer"><p>Política de privacidad</p></a><br>
+                <a href="../html/politica-cookies.html" class="enlace-footer"><p>Política de cookies</p></a><br>
+                <a href="../html/envios.html" class="enlace-footer"><p>Envíos</p></a><br>
+                <a href="../html/devoluciones-reembolsos.html" class="enlace-footer"><p>Devoluciones y reembolsos</p></a><br>
+            </div>
+            <div class="redes-sociales">
+                <h4>REDES SOCIALES</h4>
+                <hr><br>
+                <a href="https://www.facebook.com/" class="enlace-footer"><img src="../img/facebook.png" alt="facebook" class="icono-footer"></a>
+                <a href="https://www.instagram.com/?hl=es" class="enlace-footer"><img src="../img/instagram.jpg" alt="instagram" class="icono-footer"></a>
+                <a href="https://x.com/?lang=es" class="enlace-footer"><img src="../img/twitter.png" alt="twitter" class="icono-footer"></a>
+            </div>
+            <div class="sobre-nosotros">
+                <h4>SOBRE NOSOTROS</h4>
+                <hr>
+                <a href="../html/blog.html" class="enlace-footer"><p>Blog</p></a><br>
+                <a href="../html/contacto.html" class="enlace-footer"><p>Contacte con nosotros</p></a><br>
+                <a href="../html/eleccion.html" class="enlace-footer"><p>Herbolario - ¿Por qué elegirnos?</p></a><br>
+                <a href="../html/sobre-nosotros.html" class="enlace-footer"><p>Sobre nosotros - Herbolario Online</p></a>
+            </div>
+        </footer>
+    </div>
+</body>
+<script src="../js/index.js"></script>
+<script src="../js/buscador.js"></script>
+<script src="../js/estrellas.js"></script>
+</html>

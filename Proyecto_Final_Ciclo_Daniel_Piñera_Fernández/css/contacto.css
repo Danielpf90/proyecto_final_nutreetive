@@ -1,0 +1,500 @@
+/* Estilos globales */
+* {
+    margin: 0; /* Elimina el margen predeterminado de todos los elementos */
+    padding: 0; /* Elimina el padding predeterminado de todos los elementos */
+    box-sizing: border-box; /* Incluye padding y border en el ancho y alto total */
+}
+
+/* Estilo del body */
+body {
+    background-color: white; /* Color de fondo de la página */
+    margin: 0; /* Elimina el margen del body */
+    padding: 0; /* Elimina el padding del body */
+    width: 100%; /* Ancho del body */
+    overflow-x: hidden; /* Oculta el desbordamiento horizontal */
+    display: flex; /* Usa flexbox para el diseño */
+    flex-direction: column; /* Coloca los hijos en columna */
+    min-height: 100vh; /* Asegura que el body ocupe al menos el 100% de la altura de la ventana */
+}
+
+/* Estilos para los textos */
+.textos {
+    font-size: 15px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-top: 5px;
+    text-align: center;
+}
+
+/* Estilo para el contenedor principal */
+.contenedor-principal {
+    flex: 1; /* Permite que este contenedor crezca y ocupe espacio disponible */
+    display: flex; /* Usa flexbox para los hijos */
+    flex-direction: column; /* Coloca los hijos en columna */
+}
+
+/* Estilo del logo */
+.logo img {
+    width: 200px; /* Ancho de la imagen del logo */
+    margin-left: 50px; /* Margen izquierdo del logo */
+}
+
+/* Estilo de la cabecera */
+.cabecera {
+    display: flex; /* Usa flexbox para la cabecera */
+    justify-content: space-between; /* Espacio entre los elementos */
+    align-items: center; /* Centra verticalmente los elementos */
+    background-color: #000000; /* Color de fondo de la cabecera */
+    padding: 10px; /* Espacio interno de la cabecera */
+}
+
+/* Estilo de la sección de envío gratis */
+.envio-gratis {
+    text-align: center; /* Centra el texto */
+    color: white; /* Color del texto */
+    font-size: 20px;
+}
+
+/* Estilos para el campo de búsqueda */
+.busqueda {
+    display: flex; /* Alinea elementos en fila */
+    align-items: center; /* Centra verticalmente */
+    font-size: 20px;
+}
+
+.busqueda input {
+    width: 400px; /* Ancho del campo de búsqueda */
+    padding: 10px; /* Espacio interno del campo */
+    border: 1px solid #ccc; /* Borde del campo */
+    border-radius: 4px 0 0 4px; /* Bordes redondeados, solo el izquierdo */
+}
+
+.busqueda button {
+    padding: 10px 15px; /* Espacio interno del botón */
+    margin-left: 10px; /* Margen izquierdo del botón */
+    background-color: #8A9A5B; /* Color de fondo del botón */
+    color: white; /* Color del texto del botón */
+    border: none; /* Sin borde */
+    border-radius: 4px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+}
+
+.busqueda button:hover {
+    background-color: #7A8A4B; /* Cambio de color al pasar el ratón */
+}
+
+/* Estilos para las acciones (enlaces de la cabecera) */
+.acciones {
+    display: flex; /* Alinea los elementos en fila */
+    align-items: center; /* Centra verticalmente */
+}
+
+.enlace-cabecera, .enlace-footer {
+    text-decoration: none; /* Quita el subrayado de los enlaces */
+    color: white; /* Color del texto de los enlaces */
+}
+
+.acciones .enlace-cabecera {
+    margin-left: 15px; /* Espacio entre enlaces */
+    display: flex; /* Usa flexbox para alinear icono y texto */
+    align-items: center; /* Centra verticalmente */
+}
+
+.acciones .enlace-cabecera i {
+    margin-right: 5px; /* Espacio entre el icono y el texto */
+    font-size: 20px; /* Tamaño del icono */
+}
+
+/* Estilo del contador del carrito */
+.contador-carrito {
+    position: relative; /* Posición relativa para alinear con el icono */
+    top: -8px; /* Ajusta la posición vertical */
+    left: -5px; /* Ajusta la posición horizontal */
+    background-color: red; /* Color de fondo del contador */
+    color: white; /* Color del texto del contador */
+    border-radius: 50%; /* Bordes redondeados para hacer un círculo */
+    padding: 5px 8px; /* Espaciado interno */
+    font-size: 14px; /* Tamaño de fuente */
+    font-weight: bold; /* Peso de fuente */
+}
+
+/* Estilos generales del contenido */
+.contenido {
+    display: flex; /* Usa flexbox para alinear secciones */
+    flex-direction: column; /* Coloca secciones en columna */
+}
+
+/* Estilos para el menú de navegación */
+.menu-navegacion {
+    background-color: #39da24a4; /* Verde oscuro */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    position: relative;
+    z-index: 100; /* Asegura que el menú esté por encima de otros elementos */
+    margin-bottom: 20px;
+}
+
+.menu-navegacion ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.menu-navegacion a {
+    color: black;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+}
+
+.menu-navegacion a:hover {
+    color: white;
+}
+
+/* Estilos para el submenú desplegable */
+.menu-desplegable .submenu {
+    display: none;
+    position: absolute;
+    background-color: #39da24a4;
+    top: 100%;
+    width: auto;
+    max-height: auto;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Establece el ancho de cada producto en el submenú */
+.menu-desplegable .submenu li {
+    flex-basis: 30%;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Muestra el submenú cuando se pasa el ratón */
+.menu-desplegable:hover .submenu {
+    display: flex; /* Muestra el submenú */
+    opacity: 1; /* Hace visible el submenú con una transición suave */
+}
+
+/* Estilos generales para el formulario de contacto */
+.contacto {
+    background-color: white;
+    border-radius: 8px;
+    padding: 30px;
+    width: 80%;
+    max-width: 600px;
+    margin: 40px auto; /* Centrado en la página */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+    border: 1px solid #ccc; /* Borde gris por defecto */
+}
+
+/* Estilo para el título del formulario */
+.contacto h2 {
+    text-align: center;
+    color: #39da24; /* Verde */
+    margin-bottom: 20px;
+}
+
+/* Estilo para los campos del formulario */
+.campo {
+    margin-bottom: 20px;
+}
+
+.campo label {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.campo input,
+.campo textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc; /* Borde gris */
+    border-radius: 4px;
+    font-size: 1rem;
+    color: #333;
+    transition: border-color 0.3s ease; /* Efecto de transición en el borde */
+}
+
+/* Estilo cuando el campo está en foco */
+.campo input:focus,
+.campo textarea:focus {
+    border-color: #39da24; /* Borde verde cuando el campo tiene foco */
+    outline: none;
+}
+
+/* Estilo del área de texto */
+.campo textarea {
+    resize: vertical;
+    height: 150px;
+}
+
+/* Efecto en el borde del formulario cuando el ratón pasa por encima */
+.contacto:hover {
+    border-color: #39da24; /* Borde verde cuando el ratón está sobre el formulario */
+}
+
+/* Estilo del botón de envío */
+.btn-enviar {
+    background-color: #39da24; /* Verde */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+    display: block;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+.btn-enviar:hover {
+    background-color: #33c42a; /* Verde más oscuro */
+}
+
+/* Estilo para el pie de página */
+.pie {
+    display: flex; /* Usa flexbox para el pie */
+    justify-content: space-between; /* Espacio entre elementos */
+    background-color: black; /* Color de fondo del pie */
+    color: white; /* Color del texto */
+    padding: 20px; /* Espacio interno */
+}
+
+.pie div {
+    width: 23%; /* Ancho de los elementos del pie */
+}
+
+hr {
+    border: none; /* Elimina el borde predeterminado */
+    height: 2px; /* Grosor de la línea */
+    background-color: white; /* Color de la línea */
+    margin-top: 5px; /* Margen superior */
+    margin-bottom: 5px; /* Margen inferior */
+}
+
+/* Estilos para la información adicional en el pie */
+.informacion-adicional,
+.informacion,
+.redes-sociales,
+.sobre-nosotros {
+    text-align: center; /* Centra el texto */
+}
+
+/* Estilo para los iconos de redes sociales en el pie */
+.icono-footer {
+    width: 40px; /* Ajusta el tamaño de las imágenes en el pie */
+    height: 40px; /* Mantener la proporción */
+    margin-bottom: 5px; /* Espacio entre la imagen y el texto */
+}
+/* Para pantallas pequeñas (móviles) */
+@media (max-width: 576px) {
+    body {
+        overflow-x: hidden; /* Evita que aparezca el scroll horizontal */
+    }
+
+    .cabecera {
+        flex-direction: column; /* Coloca los elementos en columna */
+        padding: 10px; /* Asegura que el padding no sea excesivo */
+    }
+    
+    .logo img {
+        width: 150px; /* Asegura que el logo no se salga de la pantalla */
+        margin-left: 0; /* Elimina el margen izquierdo */
+    }
+
+    .busqueda input {
+        width: 100%; /* El input de búsqueda ocupa todo el ancho disponible */
+        margin-bottom: 10px; /* Añade un pequeño margen inferior */
+    }
+
+    .busqueda button {
+        width: 100%; /* Hace que el botón ocupe todo el ancho */
+        margin-left: 0; /* Elimina el margen izquierdo */
+    }
+
+    .acciones {
+        flex-direction: column; /* Coloca los enlaces en columna */
+        align-items: flex-start; /* Alinea los enlaces al principio */
+    }
+
+    .contador-carrito {
+        top: 0; /* Ajusta la posición */
+        left: 0; /* Ajusta la posición */
+    }
+
+    .menu-navegacion ul {
+        flex-direction: column; /* Cambia la dirección de los elementos a columna */
+        align-items: center; /* Centra los elementos */
+    }
+
+    .menu-navegacion a {
+        padding: 15px 20px; /* Añade más espacio al botón de navegación */
+    }
+
+    .contacto {
+        width: 100%; /* Hace que el formulario ocupe todo el ancho disponible */
+        padding: 20px; /* Ajuste de padding */
+    }
+
+    .contacto h2 {
+        font-size: 1.5rem; /* Ajuste de tamaño de fuente */
+    }
+
+    .campo input,
+    .campo textarea {
+        font-size: 0.9rem; /* Ajusta el tamaño de fuente para campos */
+    }
+
+    .btn-enviar {
+        font-size: 0.9rem; /* Ajuste de tamaño de fuente del botón */
+    }
+}
+
+/* Para pantallas medianas (tabletas) */
+@media (max-width: 768px) {
+    body {
+        overflow-x: hidden; /* Evita que aparezca el scroll horizontal */
+    }
+
+    .cabecera {
+        flex-direction: column; /* Cambia la disposición a columna */
+        padding: 10px;
+    }
+
+    .logo img {
+        width: 180px; /* Tamaño del logo reducido */
+    }
+
+    .busqueda input {
+        width: 100%; /* Ancho completo para el campo de búsqueda */
+    }
+
+    .busqueda button {
+        width: 100%; /* Hace que el botón ocupe todo el ancho */
+    }
+
+    .acciones {
+        flex-direction: column; /* Alinea los enlaces en columna */
+        align-items: flex-start; /* Alinea al principio */
+    }
+
+    .menu-navegacion ul {
+        flex-direction: column; /* Cambia la disposición a columna */
+        align-items: center; /* Centra los elementos */
+    }
+
+    .contacto {
+        width: 100%; /* Asegura que el formulario ocupe el 100% del ancho */
+        padding: 20px; /* Ajusta el padding */
+    }
+
+    .contacto h2 {
+        font-size: 1.8rem; /* Ajusta el tamaño del título */
+    }
+
+    .campo input,
+    .campo textarea {
+        font-size: 1rem; /* Ajusta el tamaño de la fuente de los campos */
+    }
+
+    .btn-enviar {
+        font-size: 1rem; /* Ajuste del tamaño del botón */
+    }
+}
+
+/* Para pantallas grandes (escritorios de tamaño medio) */
+@media (min-width: 1024px) {
+    .cabecera {
+        flex-direction: row; /* Vuelve a la disposición en fila */
+        padding: 20px; /* Añade más espacio */
+    }
+
+    .logo img {
+        width: 200px; /* Tamaño del logo estándar */
+    }
+
+    .busqueda input {
+        width: 400px; /* Ancho original del campo de búsqueda */
+    }
+
+    .busqueda button {
+        padding: 10px 15px; /* Espaciado estándar */
+    }
+
+    .acciones {
+        flex-direction: row;
+        justify-content: flex-end; /* Alinea a la derecha */
+    }
+
+    .menu-navegacion ul {
+        flex-direction: row; /* Disposición en fila para menús */
+        justify-content: space-around; /* Espacio entre los elementos */
+    }
+
+    .contacto {
+        width: 70%; /* Mantiene un ancho más estrecho en pantallas grandes */
+    }
+
+    .contacto h2 {
+        font-size: 2rem; /* Tamaño de fuente más grande */
+    }
+
+    .campo input,
+    .campo textarea {
+        font-size: 1.1rem; /* Aumenta el tamaño de la fuente */
+    }
+
+    .btn-enviar {
+        font-size: 1.1rem; /* Aumenta el tamaño del botón */
+    }
+}
+
+/* Para pantallas muy grandes (pantallas 4K y similares) */
+@media (min-width: 1600px) {
+    .cabecera {
+        padding: 30px; /* Más espacio en la cabecera */
+    }
+
+    .logo img {
+        width: 250px; /* Tamaño más grande para el logo */
+    }
+
+    .busqueda input {
+        width: 500px; /* Campo de búsqueda más grande */
+    }
+
+    .busqueda button {
+        padding: 12px 20px; /* Botón más grande */
+    }
+
+    .acciones {
+        justify-content: flex-start; /* Alinea los enlaces a la izquierda */
+    }
+
+    .menu-navegacion ul {
+        justify-content: space-evenly; /* Más espacio entre los elementos del menú */
+    }
+
+    .contacto {
+        width: 60%; /* Ancho más estrecho del formulario */
+        padding: 40px; /* Mayor espacio interno en el formulario */
+    }
+
+    .contacto h2 {
+        font-size: 2.5rem; /* Título aún más grande */
+    }
+
+    .campo input,
+    .campo textarea {
+        font-size: 1.2rem; /* Aumenta aún más el tamaño de la fuente */
+    }
+
+    .btn-enviar {
+        font-size: 1.2rem; /* Aumenta el tamaño del botón */
+    }
+}
